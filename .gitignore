@@ -1,0 +1,11 @@
+*~ 
+*.tmp
+*.pyc
+*.log
+*.aux
+*.synctex
+*.out
+*.gz
+
+/Project/Data/*
+/Project/Sandbox/*
