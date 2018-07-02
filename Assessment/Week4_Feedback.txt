@@ -1,0 +1,916 @@
+Starting weekly assessment for Oliver, Week4
+
+Current Marks = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 21.83 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week1, Assessment, Week5, Week2, Week4, .git, Week3
+
+Found the following files in parent directory: README.txt, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+*.pyc
+*.log
+*.aux
+*.synctex
+*.out
+Week6
+**********************************************************************
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+My CMEE 2017-18 Coursework Repository
+Do I like this better?
+
+
+.
+├── Assessment
+│   ├── Week1_Feedback.txt
+│   └── Week2_Feedback.txt
+├── README.txt
+├── temporary.tmp
+├── Week1
+│   ├── Code
+│   │   ├── boilerplate.sh
+│   │   ├── CompileLatex.sh
+│   │   ├── ConcatenateTwoFiles.sh
+│   │   ├── CountLines.sh
+│   │   ├── csvtospace.sh
+│   │   ├── FirstBiblio.bib
+│   │   ├── FirstExample.pdf
+│   │   ├── FirstExample.tex
+│   │   ├── MyExampleScript.sh
+│   │   ├── Results
+│   │   │   └── FirstExample.pdf
+│   │   ├── tabtocsv.sh
+│   │   ├── UnixPrac1.txt
+│   │   └── variables.sh
+│   ├── Data
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── spawannxs.txt
+│   │   └── Temperatures
+│   │       ├── 1800.csv
+│   │       ├── 1800.csv_space
+│   │       ├── 1801.csv
+│   │       ├── 1801.csv_space
+│   │       ├── 1802.csv
+│   │       ├── 1802.csv_space
+│   │       ├── 1803.csv
+│   │       └── 1803.csv_space
+│   ├── readme
+│   └── Sandbox
+│       ├── ListRootDir.txt
+│       ├── TestFind
+│       │   ├── Dir1
+│       │   │   ├── Dir11
+│       │   │   │   └── Dir111
+│       │   │   │       └── File111.txt
+│       │   │   ├── File1.csv
+│       │   │   ├── File1.tex
+│       │   │   └── File1.txt
+│       │   ├── Dir2
+│       │   │   ├── file2.csv
+│       │   │   ├── File2.tex
+│       │   │   └── File2.txt
+│       │   └── Dir3
+│       │       └── File3.txt
+│       ├── TestLaTex.tex
+│       ├── test.txt
+│       ├── test.txt.csv
+│       └── TestWild
+│           ├── Anotherfile.csv
+│           ├── Anotherfile.txt
+│           ├── File1.csv
+│           ├── File1.txt
+│           ├── File2.csv
+│           ├── File2.txt
+│           ├── File3.csv
+│           ├── File3.txt
+│           ├── File4.csv
+│           └── File4.txt
+├── Week2
+│   ├── Code
+│   │   ├── align_seqs_fasta.py
+│   │   ├── align_seqs.py
+│   │   ├── basic_csv.py
+│   │   ├── basic_io.py
+│   │   ├── boilerplate.py
+│   │   ├── cfexercises.py
+│   │   ├── control_flow.py
+│   │   ├── debugme.py
+│   │   ├── dictionary.py
+│   │   ├── lc1.py
+│   │   ├── lc2.py
+│   │   ├── loops.py
+│   │   ├── LV1.py
+│   │   ├── LV2.py
+│   │   ├── LV3.py
+│   │   ├── LV4.py
+│   │   ├── oaks.py
+│   │   ├── profileme.py
+│   │   ├── run_LV.py
+│   │   ├── scope.py
+│   │   ├── sysargv.py
+│   │   ├── test_control_flow.py
+│   │   ├── test_oaks.py
+│   │   ├── timeitme.py
+│   │   ├── tuple.py
+│   │   └── using_name.py
+│   ├── Data
+│   │   ├── bodymass.csv
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── Sequences.csv
+│   │   ├── testcsv.csv
+│   │   └── TestOaksData.csv
+│   ├── README
+│   ├── Results
+│   │   ├── align_407228326.fasta_407228412.fasta
+│   │   ├── align_407228326.fasta_E.coli.fasta
+│   │   ├── align_407228412.fasta_E.coli.fasta
+│   │   ├── align_too_few_args_have_an_example
+│   │   ├── JustOaksData.csv
+│   │   ├── prey_and_predators_1.pdf
+│   │   ├── prey_and_predators_2.pdf
+│   │   ├── prey_and_predators_3.pdf
+│   │   ├── prey_and_predators_4.pdf
+│   │   └── Sequences_aligned.txt
+│   └── Sandbox
+│       ├── bodymass.csv
+│       ├── temp.py
+│       ├── testout.txt
+│       ├── testp.p
+│       └── test.txt
+├── Week3
+│   ├── Code
+│   │   ├── apply1.R
+│   │   ├── apply2.R
+│   │   ├── basic_io.R
+│   │   ├── boilerplate.R
+│   │   ├── break.R
+│   │   ├── browse.R
+│   │   ├── control.R
+│   │   ├── DataWrang.R
+│   │   ├── get_TreeHeight.py
+│   │   ├── get_TreeHeight.R
+│   │   ├── Mapping.R
+│   │   ├── next.R
+│   │   ├── PP_Lattice.R
+│   │   ├── PP_Regress.R
+│   │   ├── Ricker.R
+│   │   ├── run_get_TreeHeight.sh
+│   │   ├── run_vectorize.sh
+│   │   ├── sample.R
+│   │   ├── SQLinR.R
+│   │   ├── TAutoCorr_Analysis.Rnw
+│   │   ├── TAutoCorr_Analysis.tex
+│   │   ├── TAutoCorrCode.R
+│   │   ├── TAutoCorr.R
+│   │   ├── TreeHeight.R
+│   │   ├── try.R
+│   │   ├── Vectorize1.py
+│   │   ├── Vectorize1.R
+│   │   ├── Vectorize2.py
+│   │   └── Vectorize2.R
+│   ├── Data
+│   │   ├── EcolArchives-E089-51-D1.csv
+│   │   ├── GPDDFiltered.RData
+│   │   ├── KeyWestAnnualMeanTemperature.RData
+│   │   ├── PoundHillData.csv
+│   │   ├── PoundHillMetaData.csv
+│   │   ├── Resource.csv
+│   │   ├── Results.txt
+│   │   └── trees.csv
+│   ├── README
+│   ├── Results
+│   │   ├── Girko.pdf
+│   │   ├── MyBars.pdf
+│   │   ├── MyData.csv
+│   │   ├── MyFirst-ggplot2-Figure.pdf
+│   │   ├── MyLinReg.pdf
+│   │   ├── PP_Regress_Results.csv
+│   │   ├── PP_Results.csv
+│   │   ├── Pred_Lattice.pdf
+│   │   ├── Pred_Prey_Overlay.pdf
+│   │   ├── Pred_Prey_Regress.pdf
+│   │   ├── Prey_Lattice.pdf
+│   │   ├── SizeRatio_Lattice.pdf
+│   │   ├── TAutoCorr_Analysis.pdf
+│   │   ├── Test.sqlite
+│   │   ├── TreeHts.csv
+│   │   ├── trees_heights.csv
+│   │   └── trees_treeheights.csv
+│   └── Sandbox
+│       ├── by.R
+│       ├── Case_study_1.R
+│       ├── Case_study_2.R
+│       ├── Case_study_3.R
+│       ├── Case_study_4.R
+│       └── tapply.R
+├── Week4
+│   ├── Code
+│   │   ├── Sparrows_handout_10.R
+│   │   ├── Sparrows_handout_15.R
+│   │   ├── Sparrows_handout_1to4.R
+│   │   ├── Sparrows_handout_5&6.R
+│   │   └── Sparrows_lecture_9.R
+│   ├── Data
+│   │   ├── daphnia.txt
+│   │   ├── DataWranglingCheatSheet.pdf
+│   │   ├── ipomopsis.txt
+│   │   ├── Meth. Ecol. Evol. 2010 Zuur.pdf
+│   │   ├── ObserverRepeatability.txt
+│   │   ├── SparrowSize.txt
+│   │   ├── StatsWithSparrows10_Lect.pdf
+│   │   ├── StatsWithSparrows10LinearModels.pdf
+│   │   ├── StatsWithSparrows13Anova.pdf
+│   │   ├── StatsWithSparrows14RepAnova.pdf
+│   │   ├── StatsWithSparrows16MultipleRegression.pdf
+│   │   ├── StatsWithSparrows17NonParametrics.pdf
+│   │   ├── StatsWithSparrows18Repeatability.pdf
+│   │   ├── StatsWithSparrows1.pdf
+│   │   ├── StatsWithSparrows2.pdf
+│   │   ├── StatsWithSparrows4.pdf
+│   │   ├── StatsWithSparrows5.pdf
+│   │   ├── The Auk 1987 Lessells copy.pdf
+│   │   └── timber.txt
+│   ├── Results
+│   └── Sandbox
+└── Week5
+    └── GIS_Practicals
+        ├── Practical1
+        │   ├── EU_project.qgs
+        │   ├── EU_project.qgs~
+        │   ├── GIS_Practical_1_files
+        │   │   ├── Borneo
+        │   │   │   ├── BorneoPractical1.qgs
+        │   │   │   ├── MODIS_blue_reflectance.tif
+        │   │   │   ├── MODIS_blue_reflectance.tif.aux.xml
+        │   │   │   ├── Modis_blue_reflectance_UTM50N.tif
+        │   │   │   ├── Modis_blue_reflectance_UTM50N.tif.aux.xml
+        │   │   │   ├── MODIS_EVI.tif
+        │   │   │   ├── MODIS_EVI.tif.aux.xml
+        │   │   │   ├── MODIS_NDVI.tif
+        │   │   │   ├── MODIS_NDVI.tif.aux.xml
+        │   │   │   ├── MODIS_NIR_reflectance.tif
+        │   │   │   ├── MODIS_NIR_reflectance.tif.aux.xml
+        │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif
+        │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif.aux.xml
+        │   │   │   ├── MODIS_red_reflectance.tif
+        │   │   │   ├── MODIS_red_reflectance.tif.aux.xml
+        │   │   │   ├── Modis_red_reflectance_UTM50N.tif
+        │   │   │   ├── Modis_red_reflectance_UTM50N.tif.aux.xml
+        │   │   │   ├── MODIS_reflectance.vrt
+        │   │   │   ├── NDVI.tif
+        │   │   │   ├── SAFE_layout_UTM50N_WGS84.dbf
+        │   │   │   ├── SAFE_layout_UTM50N_WGS84.prj
+        │   │   │   ├── SAFE_layout_UTM50N_WGS84.shp
+        │   │   │   └── SAFE_layout_UTM50N_WGS84.shx
+        │   │   ├── EU
+        │   │   │   ├── bio1_15.tif
+        │   │   │   ├── bio1_15.tif.aux.xml
+        │   │   │   ├── bio1_16.tif
+        │   │   │   ├── bio1_16.tif.aux.xml
+        │   │   │   ├── bio12_15.tif
+        │   │   │   ├── bio12_16.tif
+        │   │   │   ├── bio12_UK_BNG.tif
+        │   │   │   ├── bio1_merge.tif
+        │   │   │   ├── bio1_merge.tif.aux.xml
+        │   │   │   ├── bio1_UK_BNG.tif
+        │   │   │   ├── bio1_UK_BNG.tif.aux.xml
+        │   │   │   ├── bio1_UK.tif
+        │   │   │   ├── bio1_UK.tif.aux.xml
+        │   │   │   ├── clc_legend_qgis.txt
+        │   │   │   ├── CMEE_Example.py
+        │   │   │   ├── g250_06.tif
+        │   │   │   ├── G250_06_UK_BNG.tif
+        │   │   │   ├── g250_06_UK.tif
+        │   │   │   └── zonalstats.csv
+        │   │   ├── Global
+        │   │   │   ├── Background.dbf
+        │   │   │   ├── Background.prj
+        │   │   │   ├── Background.shp
+        │   │   │   ├── Background.shx
+        │   │   │   ├── bio12.bil
+        │   │   │   ├── bio12.hdr
+        │   │   │   ├── bio1.bil
+        │   │   │   ├── bio1.bil.aux.xml
+        │   │   │   ├── bio1.hdr
+        │   │   │   ├── bio1.stx
+        │   │   │   ├── cntry98.dbf
+        │   │   │   ├── cntry98.prj
+        │   │   │   ├── cntry98.shp
+        │   │   │   ├── cntry98.shx
+        │   │   │   ├── tissot.dbf
+        │   │   │   ├── tissot.prj
+        │   │   │   ├── tissot.shp
+        │   │   │   └── tissot.shx
+        │   │   └── Pratical_1.pdf
+        │   ├── Images
+        │   │   ├── AdvancedDigitizingToolbar.png
+        │   │   ├── AttributeTableBar.png
+        │   │   ├── BluetitNests.png
+        │   │   ├── ComposerElements.png
+        │   │   ├── ComposerOutputs.png
+        │   │   ├── DigitalElevationModel.png
+        │   │   ├── DigitizingToolbar.png
+        │   │   ├── FeederRegions.png
+        │   │   ├── Georeferenced.png
+        │   │   ├── GeoreferencerToolbar.png
+        │   │   ├── MainToolbar.png
+        │   │   ├── ManageLayersToolbar.png
+        │   │   ├── MapComposerOutput.pdf
+        │   │   ├── MODIS_sinu.png
+        │   │   ├── modis_sinusoidal_grid.jpg
+        │   │   ├── PlantRichnessAddedOrchids.png
+        │   │   ├── PlantRichnessAdded.png
+        │   │   ├── PlantRichnessAddedSelection.png
+        │   │   ├── ProjectionDifferencesBNG.png
+        │   │   ├── ProjectionDifferences.png
+        │   │   ├── Projection_types.png
+        │   │   ├── SAFE_UTM50N.png
+        │   │   ├── ScriptEditorToolbar.png
+        │   │   ├── ScriptEditorToolbar.tiff
+        │   │   ├── Territ100.png
+        │   │   ├── TerritoriesArea.png
+        │   │   ├── TerritoryModel.png
+        │   │   ├── Tissot_WGS84.png
+        │   │   └── VoronoiAndBuffer.png
+        │   ├── Pratical_1.aux
+        │   ├── Pratical_1.log
+        │   ├── Pratical_1.out
+        │   ├── Pratical_1.pdf
+        │   ├── Pratical_1.synctex
+        │   ├── Pratical_1.synctex.gz
+        │   └── Pratical_1.tex
+        └── Practical2
+            └── Data
+                ├── AGB_BetaregRad_Full.zip
+                ├── SRTM_UTM50N_aspect.tif
+                ├── SRTM_UTM50N_processed.tif
+                ├── SRTM_UTM50N_seamask.tif
+                └── SRTM_UTM50N_slope.tif
+
+41 directories, 290 files
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 5 weekly directories: Week1, Week2, Week3, Week4, Week5
+
+The Week4 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK4...
+
+Found the following directories: Code, Data
+
+Found the following files: README
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README
+
+Printing contents of README:
+**********************************************************************
+Week 4 Readme for statistics in R
+
+Code:
+
+	Sparrows_handout_1to4.R - Practice loading up, and inspecting data 
+							  as well as generating some basic statistics
+	
+	Sparrows_handout_5&6.R - Practice performing t-tests on data
+	
+	Sparrows_handout_10.R - Practice producing a simple linear regression
+	
+	Sparrows_hanout_15.R - Summarising the data and plotting in a histogram
+	
+	Sparrows_lecture_9.R - practice plotting a basic linear model
+
+Data:
+
+	All the handouts for the statistics in R week
+
+Results
+
+Sandbox
+**********************************************************************
+
+Results directory missing!
+
+Found 5 code files: Sparrows_lecture_9.R, Sparrows_handout_1to4.R, Sparrows_handout_10.R, Sparrows_handout_5&6.R, Sparrows_handout_15.R
+
+Found the following extra files: Rplots.pdf, .Rhistory
+0.5 pt deducted per extra file
+
+Current Marks = 99.0
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file Sparrows_lecture_9.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls())
+
+Data <- read.table("../Data/SparrowSize.txt",header = TRUE)
+###### Lecture 9 #######
+
+x <- c(1,2,3,4,8)
+y <- c(4,3,5,7,9)
+#running a simple linear model
+model1 <- (lm(y~x))
+model1
+#summary of model
+summary(model1)
+#
+anova(model1)
+#residuals
+resid(model1)
+#covarience
+cov(x,y)
+#variance
+var(x)
+#plotting the model
+plot(y~x)
+
+summary(model1)$coefficients
+
+**********************************************************************
+
+Testing Sparrows_lecture_9.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+Call:
+lm(formula = y ~ x)
+
+Coefficients:
+(Intercept)            x  
+     2.6164       0.8288  
+
+
+Call:
+lm(formula = y ~ x)
+
+Residuals:
+      1       2       3       4       5 
+ 0.5548 -1.2740 -0.1027  1.0685 -0.2466 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   2.6164     0.8214   3.185   0.0499 *
+x             0.8288     0.1894   4.375   0.0221 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.13941s
+
+======================================================================
+Inspecting script file Sparrows_handout_1to4.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls()) #clear current data
+
+d <- read.table("../Data/SparrowSize.txt",header =TRUE)
+str(d) #displays structure of the data
+names(d) #displays the column headers of the data
+head(d) # displays headers with first 5 rows of data
+length(d$Tarsus) # SHows number of entries in the Tarsus column of the data
+hist(d$Tarsus)#builds a histogram of Tarsus
+require(ggplot2)
+p <- ggplot(d,aes(x=Tarsus))+ geom_histogram()
+
+mean(d$Tarsus)
+mean(d$Tarsus,na.rm = TRUE) # mean removing the NAs
+median(d$Tarsus, na.rm = TRUE)
+mode(d$Tarsus)
+par(mfrow = c(2,2)) # splits ploting frame into a 2x2 grid
+hist(d$Tarsus , breaks = 3 , col ="grey")
+hist(d$Tarsus , breaks = 10, col = "grey")
+hist(d$Tarsus , breaks = 30 , col = "grey")
+hist(d$Tarsus , breaks = 100, col = "grey")
+require(modeest)
+mlv #estimates mode for continuous data (most likely value)
+d2 <- subset(d, d$Tarsus!="NA") # need to remove NAs
+length(d$Tarsus)
+length(d2$Tarsus)
+mlv(d2$Tarsus)
+mean(d$Tarsus,na.rm = TRUE)
+median(d$Tarsus,na.rm = TRUE)
+mlv(d2$Tarsus)
+range(d$Tarsus, na.rm = TRUE) # displays smallest and largest value
+range(d2$Tarsus, na.rm = TRUE)
+sum((d2$Tarsus - mean(d2$Tarsus))^2)/(length(d2$Tarsus)-1) # Variance
+sqrt(var(d2$Tarsus)) # standard deviavtion
+sqrt(0.74)
+sd(d2$Tarsus)
+
+zTarsus <- (d2$Tarsus - mean(d2$Tarsus))/sd(d2$Tarsus) # z values 
+var(zTarsus)
+sd(zTarsus)
+hist(zTarsus)
+
+
+set.seed(123) # sets a random number seed
+znormal <- rnorm(1e+06) # generates a random normal distribution 
+hist(znormal, breaks =100)
+summary(znormal) # gives summary of the z normal data
+
+qnorm(c(0.025,0.975)) # dispays the entered quantile values for normal distribution
+pnorm(.Last.value) # pnorm gives probability, .Last.Value resuses same values as last call
+
+par(mfrow = c(1,2))
+hist(znormal, breaks =100)
+abline(v = qnorm(c(0.25,0.5,0.75)), lwd = 2) #adds lines (width 2) at quartiles stated
+abline(v = qnorm(c(0.025, 0.975)), lwd = 2, lty = "dashed") # adds dashed lines at quatile stated
+plot(density(znormal)) # density plot
+abline(v = qnorm(c(0.25,0.5,0.75)), col = "grey")
+abline(v = qnorm(c(0.025, 0.975)), lty = "dotted", col = "black")
+abline(h = 0, lwd = 3, col = "blue") # adds blue line at the bottom
+text(2, 0.3, "1.96", col = "red", adj = 0) # adds 1.96 lable in red at specified position
+text(-2, 0.3, "-1.96", col = "red", adj = 1)
+
+dev.off() # closes graphics
+
+boxplot(d$Tarsus~d$Sex.1, col = c("red","blue"), ylab="Tarsus length (mm)") 
+# box plot seperated in males and females of Tarsus size
+
+#### lecture 3 #####
+plot(density(rnorm(10000))) # normal
+plot(density(rpois(10000,3))) # poison
+plot(density(rbinom(10000,10,0.5))) # binomal 10000 trials, 10 obs, 0.5 prob
+plot(density(rexp(10000))) #exponential
+plot(density(runif(100000))) #unifrom
+hist(d$Tarsus) # normal, slightly negative skew, cts numeric data
+hist(d$Bill) # normal, cts numeric data
+hist(d$Wing) # normal, negative skew, cts numeric data
+hist(d$Mass, breaks = 100) # normal, cts numeric data
+hist(d$Sex) # discrete numeric data
+#hist(d$Sex.1) # discrete categoric unranked data
+
+######lecture 4 ######
+#### Standard error
+#### se = (SD^2/n)^0.5 SD = standard deviation, n = sample size
+
+a<- subset(d$Tarsus, d$Tarsus!="NA")
+sqrt(var(a)/length(a)) # se of Tarsus (0.0209)
+
+
+b <- subset(d$Mass, d$Mass!="NA")
+sqrt(var(b)/length(b)) # se of Mass (0.0513)
+
+c <- subset(d$Wing, d$Wing!="NA")
+sqrt(var(c)/length(c)) # se of Wing (0.0587)
+
+e <- subset(d$Bill, d$Bill!="NA") 
+sqrt(var(e)/length(e)) #se of Bill (0.0177)
+# ds = subset(d, is.na!=TRUE)
+### for just 2001
+d1 <- subset(d, d$Year ==2001)
+
+a1 <- subset(d1$Tarsus, d1$Tarsus!="NA")
+sqrt(var(a1)/length(a1)) # se of 2001 data Tarsus (0.1031)
+
+b1 <- subset(d1$Mass, d1$Mass!="NA")
+sqrt(var(b1)/length(b1)) # se of 2001 data Mass (0.1807)
+
+c1 <- subset(d1$Wing, d1$Wing!="NA")
+sqrt(var(c1)/length(c1)) # se of 2001 data Wing (0.2219)
+
+e1 <- subset(d1$Bill, d1$Bill!="NA")
+sqrt(var(e1)/length(e1)) # se of 2001 data Bill (0 as all NA)
+
+**********************************************************************
+
+Testing Sparrows_handout_1to4.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+'data.frame':	1770 obs. of  8 variables:
+ $ BirdID: int  1 2 2 2 2 2 2 2 2 2 ...
+ $ Year  : int  2002 2001 2002 2003 2004 2004 2004 2004 2004 2005 ...
+ $ Tarsus: num  16.9 16.8 17.2 17.5 17.8 ...
+ $ Bill  : num  NA NA NA 13.5 13.4 ...
+ $ Wing  : num  76 76 76 76 77 78 77 77 77 77 ...
+ $ Mass  : num  23.6 27.5 28.1 27.8 26.5 ...
+ $ Sex   : int  0 1 1 1 1 1 1 1 1 1 ...
+ $ Sex.1 : Factor w/ 2 levels "female","male": 1 2 2 2 2 2 2 2 2 2 ...
+[1] "BirdID" "Year"   "Tarsus" "Bill"   "Wing"   "Mass"   "S
+**********************************************************************
+
+Encountered error:
+Loading required package: ggplot2
+Loading required package: modeest
+Warning message:
+In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called ‘modeest’
+Error: object 'mlv' not found
+Execution halted
+
+======================================================================
+Inspecting script file Sparrows_handout_10.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls())
+#import data
+d <- read.table("../Data/SparrowSize.txt", header = TRUE)
+# plot data interested in
+plot(d$Mass~d$Tarsus, ylab = "Mass (g)",
+     xlab = "Tarsus (mm)", pch =19, cex = 0.4)
+#plot a simple linear line
+x <- c(1:100)
+b <- 0.5
+m <- 1.5
+y <- m*x+b
+plot(x,y, xlim=c(0,100), ylim=c(0,100), pch=19, cex=0.5)
+# inspect mass data
+d$Mass
+length(d$Mass)
+d$Mass[1770]
+# plot data again
+plot(d$Mass~d$Tarsus, ylab="Mass (g)", xlab = "Tarsus (mm)",
+     pch = 19, cex = 0.4, ylim=c(-5,38), xlim = c(0,22))
+# # remove NA's
+d1 <- subset(d, d$Mass!="NA")
+d2 <- subset(d1, d1$Tarsus!="NA")
+# create linear model of subsetted data
+model1 <- lm(Mass~Tarsus, data = d2)
+# summarize the model
+summary(model1)
+#plot the residuals
+hist(model1$residuals)
+#view residuals
+head(model1$residuals)
+
+# create a second linear model of straight line
+model2<-lm(y~x)
+summary(model2)
+
+# run model of z-scores
+d2$z.Tarsus <- scale(d2$Tarsus)
+model3<- lm(Mass~z.Tarsus, data = d2)
+summary(model3)
+
+#plotting results
+plot(d2$Mass~d2$z.Tarsus, pch = 19, cex = 0.4)
+abline(v=0, lty = "dotted") # plot x axis
+
+#inspect data
+head(d)
+str(d)
+
+
+d$Sex <- as.numeric(d$Sex) #change sex to 0 or 1 so can plot
+par(mfrow=c(1,2)) # seperate plot area
+plot(d$Wing~d$Sex.1, ylab= "Wing(mm)") # plot box plot of sex vs Wing length
+plot(d$Wing~d$Sex, xlab="Sex", xlim=c(-0.1,1.1), ylab = " ") # Plot numerical sex against Wing length
+abline(lm(d$Wing~d$Sex), lwd =2) # Add a regression line of the linear model
+text(0.15,76,"intercept") # annotate the intercept
+text(0.9,77.5,"slope", col = "red") # annotate the slope
+
+
+d4 <- subset(d, d$Wing!="NA")
+m4 <- lm(Wing~Sex, data = d4)
+t4 <- t.test(d4$Wing~d4$Sex, var.equal=TRUE)
+summary(m4)
+
+par(mfrow=c(2,2))
+plot(model3)
+
+par(mfrow=c(2,2))
+plot(m4)
+##### JUST NEED EXERCISES AT THE END #####
+**********************************************************************
+
+Testing Sparrows_handout_10.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+   [1] 23.60 27.50 28.10 27.75 26.50 26.00 27.70 26.60 26.60 26.60 26.40 25.35
+  [13] 29.90 27.50 29.25 26.70 25.70 26.40 27.80 27.50 27.10 28.50 26.70 29.00
+  [25] 27.20    NA 26.50 26.50 28.00 26.20 28.00 28.10 25.50 25.60    NA 26.40
+  [37] 26.90 28.10 30.60 27.75 34.50 28.50 28.00 30.10 25.90 27.50 29.00 26.75
+  [49] 27.00 26.50 27.00    NA 25.30 25.20 25.60 25.40 28.60 26.00 27.20 26.40
+  [61] 26.90 24.80 24.25 27.40 27.00 27.80 30.80 28.90 25.90 25.60 25.20 27.75
+  [73] 27.70 30.40 28.75 30
+**********************************************************************
+
+Encountered error:
+Warning message:
+In summary.lm(model2) : essentially perfect fit: summary may be unreliable
+
+======================================================================
+Inspecting script file Sparrows_handout_5&6.R...
+
+File contents are:
+**********************************************************************
+d <- read.table("../Data/SparrowSize.txt", header = TRUE)
+# Performing a t-test to see if sample (2001) mean is 18.5
+d1<-subset(d,d$Year == 2001)
+t.test(d1$Tarsus, mu = 18.5, na.rm=TRUE)
+# Show significant. so not equal to 2001
+
+# Using a t-test to test a difference between means (are they equal)
+
+t.test(d1$Tarsus~d1$Sex, na.rm= TRUE)
+# Shows not significantly different so can accept H0 that they are the same
+
+#### Handout 5 #######
+rm(list = ls())
+d <- read.table("../Data/SparrowSize.txt", header = TRUE)
+boxplot(d$Mass~d$Sex.1, col = c("red","blue"), ylab = "Body mass (g)") # visualise the difference 
+
+t.test1 <- t.test(d$Mass~d$Sex.1)
+t.test1
+# shows significantly different
+d1 <- as.data.frame(head(d,50))
+length(d1$Mass)
+
+t.test2 <- t.test(d1$Mass~d1$Sex)
+t.test2
+# shows not significantly differenet. Not small sample size
+
+#### Exercise #####
+#Test if mean wing length in 2001 is significantly different than overall length
+d2 <- subset(d, d$Year==2001)
+t.test3 <- t.test(d2$Wing, mu = mean(d$Wing, na.rm =TRUE), na.rm=TRUE)
+t.test3
+# Not significantly different
+
+# Test if male and female wing lengths differ in 2001
+d2m <- subset(d2, d2$Sex.1 == "male")
+d2f <- subset(d2, d2$Sex.1 == "female")
+t.test4 <- t.test(d2m$Wing, d2f$Wing, na.rm=TRUE)
+t.test4
+# Significantly different
+
+# Test if overall male and female wing lengths differ
+dm <- subset(d, d$Sex.1 == "male", na.rm=TRUE)
+df <- subset(d, d$Sex.1 == "female", na.rm = TRUE)
+t.test5 <- t.test(dm$Wing, df$Wing , na.rm = TRUE)
+t.test5
+# Note use comma when lookign at different collumns, a ~ when looking at different factors
+# Significantly different
+library(reshape2)
+
+##### Lecture 6 #####
+library(pwr)
+pwr.t.test(d=(0-01.6)/0.96, power = 0.8,sig.level = 0.05, type= "two.sample", alternative = "two.sided")
+# to calculate power 
+# means of two groups are 0 and 0.16, sd of combined groups are 0.96
+# power level 80%
+
+
+### Run a power analysis to find out how large a sample of winglength data
+# must be to detect a difference of an effect size of 5mm
+sd_whole <- sd(d$Wing, na.rm = TRUE)
+pwr.t.test(d=(0-5)/sd_whole, power = 0.8, sig.level = 0.05, type = "two.sample"
+           , alternative = "two.sided")
+## Need a sample of size 5**********************************************************************
+
+Testing Sparrows_handout_5&6.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Fatal error: cannot open file 'Sparrows_handout_5': No such file or directory
+
+**********************************************************************
+
+Encountered error:
+/bin/sh: 1: 6.R: not found
+
+======================================================================
+Inspecting script file Sparrows_handout_15.R...
+
+File contents are:
+**********************************************************************
+rm(list = ls())
+
+daphina <- read.delim("../Data/daphnia.txt")
+summary(daphina) # quick look at data
+
+### check for outliers
+
+par(mfrow =c(1,2))
+plot(Growth.rate ~ Detergent , data = daphina)
+plot(Growth.rate ~ Daphnia, data = daphina)
+# no outliers
+
+require(dplyr) # load package
+
+### summarise the Gorwth rates by Detergent
+daphina %>%
+  group_by(Detergent) %>%
+  summarise(variance = var(Growth.rate))
+
+### summarise the Growth rates by Daphnia
+daphina %>%
+  group_by(Daphnia) %>%
+  summarise(variance=var(Growth.rate))
+
+
+#### Is the data normally distributed
+hist(daphina$Growth.rate)
+
+# Judging by histogram not excessively many zeros
+# Collinearity of the covariates doesn't apply here as
+# only have catergories
+# Previous boxplots suitable way to visually inspect 
+# relationships
+# Don't need to consider interactions here
+
+**********************************************************************
+
+Testing Sparrows_handout_15.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+  Growth.rate     Water     Detergent    Daphnia  
+ Min.   :1.762   Tyne:36   BrandA:18   Clone1:24  
+ 1st Qu.:2.797   Wear:36   BrandB:18   Clone2:24  
+ Median :3.788             BrandC:18   Clone3:24  
+ Mean   :3.852             BrandD:18              
+ 3rd Qu.:4.807                                    
+ Max.   :6.918                                    
+# A tibble: 4 × 2
+  Detergent variance
+     <fctr>    <dbl>
+1    BrandA 1.511245
+2    BrandB 1.089727
+3    BrandC 1.779843
+4    BrandD 2.380693
+**********************************************************************
+
+Encountered error:
+Loading required package: dplyr
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 4 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Marks for the Week = 99.0
+
+NOTE THAT THESE ARE NOT THE FINAL MARKS FOR THE WEEK, BUT AN UPPER BOUND ON THE MARKS!

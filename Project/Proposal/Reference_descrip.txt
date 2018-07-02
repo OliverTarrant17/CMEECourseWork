@@ -1,0 +1,7 @@
+Reuter et al.
+{Jason2015}
+Overview of different sequencing techniques.
+Quick history of sequencing and developments.
+Details on how sequencing is applied for different purposes and limitations
+
+ 

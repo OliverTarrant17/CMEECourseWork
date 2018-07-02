@@ -1,0 +1,14 @@
+\documentclass[11pt]{article}
+\title{Further Neutral theory and HPC}
+\author{James Rosindell}
+\date{29/11/2017}
+\begin{document}
+\maketitle
+\section{Dynamic equilibrium}
+Balance between speciation and extinction. Species themselves are changing. Quicker to develop equilibrium population using coalescence theory. 
+\section{Coalescence}
+Start by working backwards. Look at ancestors for each individual and look for speciation. Save simulation time as not simulating species which go extinct and also don't need to worry about a burn in period. J individuals, N is the number of unclassified individuals. Probability of each unclassified individual to have something happen to it is 1/N. Each individual in the previous generation has equal chance of being the parent. Speciation occurs at chance $\nu$. So at probability $\nu$ speciation occurs. With probability 1-$\nu$ the species picks a random parent other than itself at random (each choosen at $1/N-1$).\\
+Advantages of using coalescence - faster, no need for burn in time.
+\section{Example usage}
+Question of how many species do we lose immediately by fragmented habitat lose.  
+\end{document}

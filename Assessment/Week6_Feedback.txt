@@ -1,0 +1,1763 @@
+Starting weekly assessment for Oliver, Week6
+
+Current Marks = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 76.23 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week3, Week5, Week1, Week7, Week4, Week2, .git, Assessment, Week6
+
+Found the following files in parent directory: README, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+*.pyc
+*.log
+*.aux
+*.synctex
+*.out
+*.gz
+**********************************************************************
+
+Found README in parent directory, named: README
+
+Printing contents of README:
+**********************************************************************
+.
+├── Assessment
+│   ├── Week1_Feedback.txt
+│   ├── Week2_Feedback.txt
+│   ├── Week3_Feedback.txt
+│   ├── Week4_Feedback.txt
+│   └── Week5_Feedback.txt
+├── README.txt
+├── temporary.tmp
+├── Week1
+│   ├── Code
+│   │   ├── boilerplate.sh
+│   │   ├── CompileLatex.sh
+│   │   ├── ConcatenateTwoFiles.sh
+│   │   ├── CountLines.sh
+│   │   ├── csvtospace.sh
+│   │   ├── FirstBiblio.bib
+│   │   ├── FirstExample.pdf
+│   │   ├── FirstExample.tex
+│   │   ├── MyExampleScript.sh
+│   │   ├── Results
+│   │   │   └── FirstExample.pdf
+│   │   ├── tabtocsv.sh
+│   │   ├── UnixPrac1.txt
+│   │   └── variables.sh
+│   ├── Data
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── spawannxs.txt
+│   │   └── Temperatures
+│   │       ├── 1800.csv
+│   │       ├── 1800.csv_space
+│   │       ├── 1801.csv
+│   │       ├── 1801.csv_space
+│   │       ├── 1802.csv
+│   │       ├── 1802.csv_space
+│   │       ├── 1803.csv
+│   │       └── 1803.csv_space
+│   ├── readme
+│   └── Sandbox
+│       ├── ListRootDir.txt
+│       ├── TestFind
+│       │   ├── Dir1
+│       │   │   ├── Dir11
+│       │   │   │   └── Dir111
+│       │   │   │       └── File111.txt
+│       │   │   ├── File1.csv
+│       │   │   ├── File1.tex
+│       │   │   └── File1.txt
+│       │   ├── Dir2
+│       │   │   ├── file2.csv
+│       │   │   ├── File2.tex
+│       │   │   └── File2.txt
+│       │   └── Dir3
+│       │       └── File3.txt
+│       ├── TestLaTex.tex
+│       ├── test.txt
+│       ├── test.txt.csv
+│       └── TestWild
+│           ├── Anotherfile.csv
+│           ├── Anotherfile.txt
+│           ├── File1.csv
+│           ├── File1.txt
+│           ├── File2.csv
+│           ├── File2.txt
+│           ├── File3.csv
+│           ├── File3.txt
+│           ├── File4.csv
+│           └── File4.txt
+├── Week2
+│   ├── Code
+│   │   ├── align_seqs_fasta.py
+│   │   ├── align_seqs.py
+│   │   ├── basic_csv.py
+│   │   ├── basic_io.py
+│   │   ├── boilerplate.py
+│   │   ├── cfexercises.py
+│   │   ├── control_flow.py
+│   │   ├── debugme.py
+│   │   ├── dictionary.py
+│   │   ├── lc1.py
+│   │   ├── lc2.py
+│   │   ├── loops.py
+│   │   ├── oaks.py
+│   │   ├── scope.py
+│   │   ├── sysargv.py
+│   │   ├── test_control_flow.py
+│   │   ├── test_oaks.py
+│   │   ├── tuple.py
+│   │   └── using_name.py
+│   ├── Data
+│   │   ├── bodymass.csv
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── Sequences.csv
+│   │   ├── testcsv.csv
+│   │   └── TestOaksData.csv
+│   ├── README
+│   ├── Results
+│   │   ├── align_407228326.fasta_407228412.fasta
+│   │   ├── align_407228326.fasta_E.coli.fasta
+│   │   ├── align_407228412.fasta_E.coli.fasta
+│   │   ├── align_too_few_args_have_an_example
+│   │   ├── JustOaksData.csv
+│   │   ├── prey_and_predators_1.pdf
+│   │   ├── prey_and_predators_2.pdf
+│   │   ├── prey_and_predators_3.pdf
+│   │   ├── prey_and_predators_4.pdf
+│   │   └── Sequences_aligned.txt
+│   └── Sandbox
+│       ├── bodymass.csv
+│       ├── temp.py
+│       ├── testout.txt
+│       ├── testp.p
+│       └── test.txt
+├── Week3
+│   ├── Code
+│   │   ├── apply1.R
+│   │   ├── apply2.R
+│   │   ├── basic_io.R
+│   │   ├── boilerplate.R
+│   │   ├── break.R
+│   │   ├── browse.R
+│   │   ├── control.R
+│   │   ├── DataWrang.R
+│   │   ├── get_TreeHeight.py
+│   │   ├── get_TreeHeight.R
+│   │   ├── Mapping.R
+│   │   ├── next.R
+│   │   ├── PP_Lattice.R
+│   │   ├── PP_Regress.R
+│   │   ├── Ricker.R
+│   │   ├── run_get_TreeHeight.sh
+│   │   ├── run_vectorize.sh
+│   │   ├── sample.R
+│   │   ├── SQLinR.R
+│   │   ├── TAutoCorr_Analysis.Rnw
+│   │   ├── TAutoCorr_Analysis.tex
+│   │   ├── TAutoCorrCode.R
+│   │   ├── TAutoCorr.R
+│   │   ├── TreeHeight.R
+│   │   ├── try.R
+│   │   ├── Vectorize1.py
+│   │   ├── Vectorize1.R
+│   │   ├── Vectorize2.py
+│   │   └── Vectorize2.R
+│   ├── Data
+│   │   ├── EcolArchives-E089-51-D1.csv
+│   │   ├── GPDDFiltered.RData
+│   │   ├── KeyWestAnnualMeanTemperature.RData
+│   │   ├── PoundHillData.csv
+│   │   ├── PoundHillMetaData.csv
+│   │   ├── Resource.csv
+│   │   ├── Results.txt
+│   │   └── trees.csv
+│   ├── README
+│   ├── Results
+│   │   ├── Girko.pdf
+│   │   ├── MyBars.pdf
+│   │   ├── MyData.csv
+│   │   ├── MyFirst-ggplot2-Figure.pdf
+│   │   ├── MyLinReg.pdf
+│   │   ├── PP_Regress_Results.csv
+│   │   ├── PP_Results.csv
+│   │   ├── Pred_Lattice.pdf
+│   │   ├── Pred_Prey_Overlay.pdf
+│   │   ├── Pred_Prey_Regress.pdf
+│   │   ├── Prey_Lattice.pdf
+│   │   ├── SizeRatio_Lattice.pdf
+│   │   ├── TAutoCorr_Analysis.pdf
+│   │   ├── Test.sqlite
+│   │   ├── TreeHts.csv
+│   │   ├── trees_heights.csv
+│   │   └── trees_treeheights.csv
+│   └── Sandbox
+│       ├── by.R
+│       ├── Case_study_1.R
+│       ├── Case_study_2.R
+│       ├── Case_study_3.R
+│       ├── Case_study_4.R
+│       └── tapply.R
+├── Week4
+│   ├── Code
+│   │   ├── Sparrows_handout_10.R
+│   │   ├── Sparrows_handout_15.R
+│   │   ├── Sparrows_handout_1to4.R
+│   │   ├── Sparrows_handout_5&6.R
+│   │   └── Sparrows_lecture_9.R
+│   ├── Data
+│   │   ├── daphnia.txt
+│   │   ├── DataWranglingCheatSheet.pdf
+│   │   ├── ipomopsis.txt
+│   │   ├── Meth. Ecol. Evol. 2010 Zuur.pdf
+│   │   ├── ObserverRepeatability.txt
+│   │   ├── SparrowSize.txt
+│   │   ├── StatsWithSparrows10_Lect.pdf
+│   │   ├── StatsWithSparrows10LinearModels.pdf
+│   │   ├── StatsWithSparrows13Anova.pdf
+│   │   ├── StatsWithSparrows14RepAnova.pdf
+│   │   ├── StatsWithSparrows16MultipleRegression.pdf
+│   │   ├── StatsWithSparrows17NonParametrics.pdf
+│   │   ├── StatsWithSparrows18Repeatability.pdf
+│   │   ├── StatsWithSparrows1.pdf
+│   │   ├── StatsWithSparrows2.pdf
+│   │   ├── StatsWithSparrows4.pdf
+│   │   ├── StatsWithSparrows5.pdf
+│   │   ├── The Auk 1987 Lessells copy.pdf
+│   │   └── timber.txt
+│   ├── README
+│   ├── Results
+│   └── Sandbox
+├── Week5
+│   ├── Lectures
+│   │   ├── GIS_Concepts.pdf
+│   │   └── GIS_Concepts.tex
+│   ├── Practical1
+│   │   ├── Code
+│   │   │   └── Python_automation.py
+│   │   ├── Data
+│   │   │   ├── Borneo
+│   │   │   │   ├── MODIS_blue_reflectance.tif
+│   │   │   │   ├── MODIS_blue_reflectance.tif.aux.xml
+│   │   │   │   ├── Modis_blue_reflectance_UTM50N.tif
+│   │   │   │   ├── Modis_blue_reflectance_UTM50N.tif.aux.xml
+│   │   │   │   ├── MODIS_EVI.tif
+│   │   │   │   ├── MODIS_EVI.tif.aux.xml
+│   │   │   │   ├── MODIS_NDVI.tif
+│   │   │   │   ├── MODIS_NDVI.tif.aux.xml
+│   │   │   │   ├── MODIS_NIR_reflectance.tif
+│   │   │   │   ├── MODIS_NIR_reflectance.tif.aux.xml
+│   │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif
+│   │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif.aux.xml
+│   │   │   │   ├── MODIS_red_reflectance.tif
+│   │   │   │   ├── MODIS_red_reflectance.tif.aux.xml
+│   │   │   │   ├── Modis_red_reflectance_UTM50N.tif
+│   │   │   │   ├── Modis_red_reflectance_UTM50N.tif.aux.xml
+│   │   │   │   ├── MODIS_reflectance.vrt
+│   │   │   │   ├── NDVI.tif
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_layout_UTM50N_WGS84.shx
+│   │   │   ├── EU
+│   │   │   │   ├── bio1_15.tif
+│   │   │   │   ├── bio1_16.tif
+│   │   │   │   ├── bio12_15.tif
+│   │   │   │   ├── bio12_16.tif
+│   │   │   │   ├── bio12_UK_BNG.tif
+│   │   │   │   ├── bio1_UK_BNG.tif
+│   │   │   │   ├── clc_legend_qgis.txt
+│   │   │   │   ├── g250_06.tif
+│   │   │   │   └── g250_06_UK_BNG.tif
+│   │   │   └── Global
+│   │   │       ├── Background.dbf
+│   │   │       ├── Background.prj
+│   │   │       ├── Background.shp
+│   │   │       ├── Background.shx
+│   │   │       ├── bio12.bil
+│   │   │       ├── bio12.bil.aux.xml
+│   │   │       ├── bio12.hdr
+│   │   │       ├── bio12.stx
+│   │   │       ├── bio1.bil
+│   │   │       ├── bio1.bil.aux.xml
+│   │   │       ├── bio1.hdr
+│   │   │       ├── bio1.stx
+│   │   │       ├── cntry98.dbf
+│   │   │       ├── cntry98.prj
+│   │   │       ├── cntry98.shp
+│   │   │       ├── cntry98.shx
+│   │   │       ├── tissot.dbf
+│   │   │       ├── tissot.prj
+│   │   │       ├── tissot.shp
+│   │   │       └── tissot.shx
+│   │   ├── EU_project.qgs~
+│   │   ├── Images
+│   │   │   ├── AdvancedDigitizingToolbar.png
+│   │   │   ├── AttributeTableBar.png
+│   │   │   ├── BluetitNests.png
+│   │   │   ├── ComposerElements.png
+│   │   │   ├── ComposerOutputs.png
+│   │   │   ├── DigitalElevationModel.png
+│   │   │   ├── DigitizingToolbar.png
+│   │   │   ├── FeederRegions.png
+│   │   │   ├── Georeferenced.png
+│   │   │   ├── GeoreferencerToolbar.png
+│   │   │   ├── MainToolbar.png
+│   │   │   ├── ManageLayersToolbar.png
+│   │   │   ├── MapComposerOutput.pdf
+│   │   │   ├── MODIS_sinu.png
+│   │   │   ├── modis_sinusoidal_grid.jpg
+│   │   │   ├── PlantRichnessAddedOrchids.png
+│   │   │   ├── PlantRichnessAdded.png
+│   │   │   ├── PlantRichnessAddedSelection.png
+│   │   │   ├── ProjectionDifferencesBNG.png
+│   │   │   ├── ProjectionDifferences.png
+│   │   │   ├── Projection_types.png
+│   │   │   ├── SAFE_UTM50N.png
+│   │   │   ├── ScriptEditorToolbar.png
+│   │   │   ├── ScriptEditorToolbar.tiff
+│   │   │   ├── Territ100.png
+│   │   │   ├── TerritoriesArea.png
+│   │   │   ├── TerritoryModel.png
+│   │   │   ├── Tissot_WGS84.png
+│   │   │   └── VoronoiAndBuffer.png
+│   │   ├── Instructions
+│   │   │   ├── Pratical_1.aux
+│   │   │   ├── Pratical_1.log
+│   │   │   ├── Pratical_1.out
+│   │   │   ├── Pratical_1.pdf
+│   │   │   └── Pratical_1.tex
+│   │   ├── Projects
+│   │   │   ├── BorneoPractical1.qgs
+│   │   │   └── EU_project.qgs
+│   │   └── Results
+│   │       └── zonalstats.csv
+│   ├── Practical2
+│   │   ├── Data
+│   │   │   ├── AGB_BetaregRad_Full
+│   │   │   │   ├── AGBChigh.r10stackatm.tif
+│   │   │   │   ├── AGBChigh.r10stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r11stackatm.tif
+│   │   │   │   ├── AGBChigh.r11stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r12stackatm.tif
+│   │   │   │   ├── AGBChigh.r12stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r13stackatm.tif
+│   │   │   │   ├── AGBChigh.r13stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r14stackatm.tif
+│   │   │   │   ├── AGBChigh.r14stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r15stackatm.tif
+│   │   │   │   ├── AGBChigh.r15stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r16stackatm.tif
+│   │   │   │   ├── AGBChigh.r16stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r5stackatm.tif
+│   │   │   │   ├── AGBChigh.r6stackatm.tif
+│   │   │   │   ├── AGBChigh.r6stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r7stackatm.tif
+│   │   │   │   ├── AGBChigh.r7stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r7stackatm.tif.enp
+│   │   │   │   ├── AGBChigh.r8stackatmNew.tif
+│   │   │   │   ├── AGBChigh.r8stackatmNew.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r9stackatm.tif
+│   │   │   │   ├── AGBChigh.r9stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r10stackatm.tif
+│   │   │   │   ├── AGBClow.r10stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r11stackatm.tif
+│   │   │   │   ├── AGBClow.r11stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r12stackatm.tif
+│   │   │   │   ├── AGBClow.r12stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r13stackatm.tif
+│   │   │   │   ├── AGBClow.r13stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r14stackatm.tif
+│   │   │   │   ├── AGBClow.r14stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r15stackatm.tif
+│   │   │   │   ├── AGBClow.r15stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r16stackatm.tif
+│   │   │   │   ├── AGBClow.r16stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r5stackatm.tif
+│   │   │   │   ├── AGBClow.r6stackatm.tif
+│   │   │   │   ├── AGBClow.r7stackatm.tif
+│   │   │   │   ├── AGBClow.r8stackatmNew.tif
+│   │   │   │   ├── AGBClow.r9stackatm.tif
+│   │   │   │   ├── AGBMean.r10stackatm.tif
+│   │   │   │   ├── AGBMean.r11stackatm.tif
+│   │   │   │   ├── AGBMean.r12stackatm.tif
+│   │   │   │   ├── AGBMean.r13stackatm.tif
+│   │   │   │   ├── AGBMean.r14stackatm.tif
+│   │   │   │   ├── AGBMean.r15stackatm.tif
+│   │   │   │   ├── AGBMean.r16stackatm.tif
+│   │   │   │   ├── AGBMean.r5stackatm.tif
+│   │   │   │   ├── AGBMean.r6stackatm.tif
+│   │   │   │   ├── AGBMean.r7stackatm.tif
+│   │   │   │   ├── AGBMean.r8stackatmNew.tif
+│   │   │   │   ├── AGBMean.r9stackatm.tif
+│   │   │   │   ├── ModelSummary.text
+│   │   │   │   ├── Obsandpredi_msavi2.jpg
+│   │   │   │   └── ObsVersusPredicted.jpg
+│   │   │   ├── Modis_blue_reflectance_UTM50N.tif.aux.xml
+│   │   │   ├── Modis_NIR_reflectance_UTM50N.tif.aux.xml
+│   │   │   ├── Modis_red_reflectance_UTM50N.tif.aux.xml
+│   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84
+│   │   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_core_sampling_stations_UTM50N_WGS84.shx
+│   │   │   ├── SAFE_layout_shapefiles
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_planned_fragments_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_planned_fragments_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_planned_fragments_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_planned_fragments_UTM50N_WGS84.shx
+│   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84
+│   │   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_MammalTraps_UTM50N_WGS84.shx
+│   │   │   ├── SAFE_shore_and_country_borders
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.shx
+│   │   │   ├── Sampling_area_borders_UTM50N_WGS84
+│   │   │   │   ├── Sampling_area_borders_UTM50N_WGS84.dbf
+│   │   │   │   ├── Sampling_area_borders_UTM50N_WGS84.prj
+│   │   │   │   ├── Sampling_area_borders_UTM50N_WGS84.shp
+│   │   │   │   └── Sampling_area_borders_UTM50N_WGS84.shx
+│   │   │   ├── SRTM_Channels_network
+│   │   │   │   ├── SRTM_Channels_network.dbf
+│   │   │   │   ├── SRTM_Channels_network.prj
+│   │   │   │   ├── SRTM_Channels_network.shp
+│   │   │   │   └── SRTM_Channels_network.shx
+│   │   │   ├── SRTM_Flow_Direction.tif
+│   │   │   ├── SRTM_Flow_Direction.tif.aux.xml
+│   │   │   ├── SRTM_Log_Flow_Accum.tif
+│   │   │   ├── SRTM_Log_Flow_Accum.tif.aux.xml
+│   │   │   ├── SRTM_UTM50N_aspect.tif
+│   │   │   ├── SRTM_UTM50N_aspect.tif.aux.xml
+│   │   │   ├── SRTM_UTM50N_contour
+│   │   │   │   ├── SRTM_UTM50N_contour.dbf
+│   │   │   │   ├── SRTM_UTM50N_contour.prj
+│   │   │   │   ├── SRTM_UTM50N_contour.shp
+│   │   │   │   └── SRTM_UTM50N_contour.shx
+│   │   │   ├── SRTM_UTM50N_processed.tif
+│   │   │   ├── SRTM_UTM50N_processed.tif.aux.xml
+│   │   │   ├── SRTM_UTM50N_seamask.tif
+│   │   │   ├── SRTM_UTM50N_seamask.tif.aux.xml
+│   │   │   └── SRTM_UTM50N_slope.tif
+│   │   ├── Large_map.qgs~
+│   │   ├── Map.qpt
+│   │   ├── MyMap.qgs~
+│   │   ├── Practical2.qgs~
+│   │   ├── Projects
+│   │   │   ├── Large_map.qgs
+│   │   │   ├── MyMap.qgs
+│   │   │   └── Practical2.qgs
+│   │   └── Results
+│   │       └── My_map.pdf
+│   └── README
+├── Week6
+│   ├── Code
+│   │   ├── frqx2geno.pl
+│   │   ├── HWE_analysis_pipe.sh
+│   │   ├── kmercountexact.sh
+│   │   ├── Moving_F_myVers.R
+│   │   ├── Moving_F.R
+│   │   ├── Ob_v_Ex_het_myVers.R
+│   │   ├── Ob_v_Ex_het.R
+│   │   ├── Pop_gen_prac.R
+│   │   ├── Practical_4_code.sh
+│   │   ├── Practical_script.sh
+│   │   └── Rplots.pdf
+│   ├── Data
+│   │   ├── Dataset1_Analysis
+│   │   │   ├── 01_LD_Trim_Dataset1_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── results
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.bed
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.bim
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.fam
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.log
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.prune.in
+│   │   │   │   │   └── ME_Dataset1_LDpruned_0.1.prune.out
+│   │   │   │   └── scripts
+│   │   │   │       └── LDprune.pl
+│   │   │   ├── 02_MDS_Dataset1_2015
+│   │   │   │   ├── plink.cluster1
+│   │   │   │   ├── plink.cluster2
+│   │   │   │   ├── plink.cluster3
+│   │   │   │   ├── plink.log
+│   │   │   │   ├── plink.mds
+│   │   │   │   ├── plink.nosex
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── results
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.genome
+│   │   │   │   │   └── ME_Dataset1_LDpruned_0.1_ibs.log
+│   │   │   │   └── scripts
+│   │   │   │       ├── MDS.pl
+│   │   │   │       ├── MDSPlot.R
+│   │   │   │       └── plinkMDS2R.pl
+│   │   │   ├── 03_ADMIXTURE_Dataset1_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── Rakefile~
+│   │   │   │   ├── results
+│   │   │   │   │   ├── Cross_Validation
+│   │   │   │   │   │   ├── CV_error
+│   │   │   │   │   │   │   ├── CVerror.plot.pdf
+│   │   │   │   │   │   │   └── CVerror.Rtable
+│   │   │   │   │   │   ├── log1.out
+│   │   │   │   │   │   ├── log2.out
+│   │   │   │   │   │   ├── log3.out
+│   │   │   │   │   │   ├── log4.out
+│   │   │   │   │   │   ├── log5.out
+│   │   │   │   │   │   ├── log6.out
+│   │   │   │   │   │   ├── log7.out
+│   │   │   │   │   │   ├── log8.out
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.1.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.1.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.2.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.2.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.3.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.3.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.4.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.4.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.5.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.5.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.6.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.6.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.7.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.7.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.8.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.8.Q
+│   │   │   │   │   │   └── ME_Dataset1_LDpruned_0.1.CVerror
+│   │   │   │   │   └── plots
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.1.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.2.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.3.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.4.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.5.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.6.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.7.Rtable
+│   │   │   │   │       └── ME_Dataset1_LDpruned_0.1.8.Rtable
+│   │   │   │   └── scripts
+│   │   │   │       ├── admixCV.pl
+│   │   │   │       ├── admixPlot_old.pl
+│   │   │   │       ├── admixPlot.pl
+│   │   │   │       ├── admixture2R.pl
+│   │   │   │       ├── AdPlot.R
+│   │   │   │       ├── errorPlot.R
+│   │   │   │       ├── R_code_backup.txt
+│   │   │   │       └── snpexclude.pl
+│   │   │   └── 04_ADMIX_Datset1_Pretty_Plot_2015
+│   │   │       ├── ordered_popdata.csv
+│   │   │       ├── Rakefile
+│   │   │       ├── results
+│   │   │       │   ├── Dataset1.csv
+│   │   │       │   └── Dataset3_plot.pdf
+│   │   │       └── scripts
+│   │   │           ├── plotcsv.pl
+│   │   │           └── structure_plots.R
+│   │   ├── Dataset2_Analysis
+│   │   │   ├── 01_LD_Trim_Dataset2_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       └── LDprune.pl
+│   │   │   ├── 02_MDS_Dataset2_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       ├── MDS.pl
+│   │   │   │       ├── MDSPlot.R
+│   │   │   │       └── plinkMDS2R.pl
+│   │   │   ├── 03_ADMIXTURE_Dataset2_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── Rakefile~
+│   │   │   │   └── scripts
+│   │   │   │       ├── admixCV.pl
+│   │   │   │       ├── admixPlot_old.pl
+│   │   │   │       ├── admixPlot.pl
+│   │   │   │       ├── admixture2R.pl
+│   │   │   │       ├── AdPlot.R
+│   │   │   │       ├── errorPlot.R
+│   │   │   │       ├── R_code_backup.txt
+│   │   │   │       └── snpexclude.pl
+│   │   │   └── 04_ADMIX_Datset2_Pretty_Plot_2015
+│   │   │       ├── ordered_popdata.csv
+│   │   │       ├── Rakefile
+│   │   │       └── scripts
+│   │   │           ├── plotcsv.pl
+│   │   │           └── structure_plots.R
+│   │   ├── Dataset3_Analysis
+│   │   │   ├── 01_LD_Trim_Dataset3_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       └── LDprune.pl
+│   │   │   ├── 02_MDS_Dataset3_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       ├── MDS.pl
+│   │   │   │       ├── MDSPlot.R
+│   │   │   │       └── plinkMDS2R.pl
+│   │   │   ├── 03_ADMIXTURE_Dataset3_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── Rakefile~
+│   │   │   │   └── scripts
+│   │   │   │       ├── admixCV.pl
+│   │   │   │       ├── admixPlot_old.pl
+│   │   │   │       ├── admixPlot.pl
+│   │   │   │       ├── admixture2R.pl
+│   │   │   │       ├── AdPlot.R
+│   │   │   │       ├── errorPlot.R
+│   │   │   │       ├── R_code_backup.txt
+│   │   │   │       └── snpexclude.pl
+│   │   │   └── 04_ADMIX_Datset3_Pretty_Plot_2015
+│   │   │       ├── ordered_popdata.csv
+│   │   │       ├── Rakefile
+│   │   │       └── scripts
+│   │   │           ├── plotcsv.pl
+│   │   │           └── structure_plots.R
+│   │   ├── General_Data
+│   │   │   ├── Dataset1
+│   │   │   │   ├── ME_Dataset1.bed
+│   │   │   │   ├── ME_Dataset1.bim
+│   │   │   │   └── ME_Dataset1.fam
+│   │   │   ├── Dataset2
+│   │   │   │   ├── ME_Dataset2.bed
+│   │   │   │   ├── ME_Dataset2.bim
+│   │   │   │   └── ME_Dataset2.fam
+│   │   │   ├── Dataset3
+│   │   │   │   ├── ME_Dataset3.bed
+│   │   │   │   ├── ME_Dataset3.bim
+│   │   │   │   └── ME_Dataset3.fam
+│   │   │   ├── H938_chr15.geno
+│   │   │   ├── ME_Full_Dataset
+│   │   │   │   ├── ME_full_data.bed
+│   │   │   │   ├── ME_full_data.bim
+│   │   │   │   └── ME_full_data.fam
+│   │   │   ├── ME_popinfo.txt
+│   │   │   ├── ME_Sample_Localities.gif
+│   │   │   ├── ME_Sample_Localities.gif.pdf
+│   │   │   ├── mutant_R1.fastq
+│   │   │   ├── mutant_R1_fastqc.zip
+│   │   │   ├── mutant_R2.fastq
+│   │   │   ├── mutant_R2_fastqc.zip
+│   │   │   ├── mutant-trimmed.log
+│   │   │   ├── mutant-trimmed-pair1.fastq.gz
+│   │   │   ├── mutant-trimmed-pair2.fastq.gz
+│   │   │   ├── names.txt
+│   │   │   ├── primate_aligned.fasta
+│   │   │   ├── primate_raw.fasta
+│   │   │   ├── science.txt
+│   │   │   ├── wildtype.fna
+│   │   │   ├── wildtype.gbk
+│   │   │   └── wildtype.gff
+│   │   ├── HWE_analysis_pipe.sh
+│   │   ├── __MACOSX
+│   │   │   └── Updated_Practical_3
+│   │   │       ├── Data
+│   │   │       │   ├── Dataset1
+│   │   │       │   ├── Dataset2
+│   │   │       │   ├── Dataset3
+│   │   │       │   └── ME_Full_Dataset
+│   │   │       ├── Dataset1_Analysis
+│   │   │       │   ├── 01_LD_Trim_Dataset1_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 02_MDS_Dataset1_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 03_ADMIXTURE_Dataset1_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   └── 04_ADMIX_Datset1_Pretty_Plot_2015
+│   │   │       │       └── scripts
+│   │   │       ├── Dataset2_Analysis
+│   │   │       │   ├── 01_LD_Trim_Dataset2_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 02_MDS_Dataset2_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 03_ADMIXTURE_Dataset2_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   └── 04_ADMIX_Datset2_Pretty_Plot_2015
+│   │   │       │       └── scripts
+│   │   │       ├── Dataset3_Analysis
+│   │   │       │   ├── 01_LD_Trim_Dataset3_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 02_MDS_Dataset3_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 03_ADMIXTURE_Dataset3_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   └── 04_ADMIX_Datset3_Pretty_Plot_2015
+│   │   │       │       └── scripts
+│   │   │       └── scripts
+│   │   └── ME_Dataset1.log
+│   ├── Lecture
+│   │   ├── DemographicHistory.pdf
+│   │   ├── DemographicHistory.tex
+│   │   ├── GeneFlow&Migrations.aux
+│   │   ├── GeneFlow&Migrations.log
+│   │   ├── GeneFlow&Migrations.pdf
+│   │   ├── GeneFlow&Migrations.synctex.gz
+│   │   ├── GeneFlow&Migrations.tex
+│   │   ├── GenomicData&bioinformatics.pdf
+│   │   ├── GenomicData&bioinformatics.tex
+│   │   ├── Genomics&bioinformatics1.pdf
+│   │   ├── Genomics&bioinformatics1.tex
+│   │   ├── NaturalSelection.aux
+│   │   ├── NaturalSelection.log
+│   │   ├── NaturalSelection.pdf
+│   │   ├── NaturalSelection.synctex.gz
+│   │   ├── NaturalSelection.tex
+│   │   ├── PhylogenomicsIntroduction.aux
+│   │   ├── PhylogenomicsIntroduction.idx
+│   │   ├── PhylogenomicsIntroduction.log
+│   │   ├── PhylogenomicsIntroduction.pdf
+│   │   ├── PhylogenomicsIntroduction.synctex.gz
+│   │   ├── PhylogenomicsIntroduction.tex
+│   │   ├── PopulationStructure.pdf
+│   │   └── PopulationStructure.tex
+│   ├── Readme
+│   ├── Results
+│   │   ├── 1_Data_and_databases_2017.docx
+│   │   ├── biglist
+│   │   ├── Dataset1_HWE_Analysis_results
+│   │   │   ├── Dataset1_HWE_Analysis_F.pdf
+│   │   │   ├── Dataset1_HWE_Analysis.frqx
+│   │   │   ├── Dataset1_HWE_Analysis.geno
+│   │   │   ├── Dataset1_HWE_Analysis.hwe
+│   │   │   ├── Dataset1_HWE_Analysis_HWE_outliers.txt
+│   │   │   ├── Dataset1_HWE_Analysis.log
+│   │   │   └── Dataset1_HWE_Analysis_Ob_v_Ex_het.pdf
+│   │   ├── list1
+│   │   ├── list2
+│   │   ├── ME_Dataset1_HWE_outliers.txt
+│   │   ├── ME_Dataset1HW.hwe
+│   │   ├── ME_Dataset1HW.log
+│   │   ├── ME_Dataset1HW.nosex
+│   │   ├── ME_DatasetA_F.pdf
+│   │   ├── ME_DatasetA.frqx
+│   │   ├── ME_DatasetA.geno
+│   │   ├── ME_DatasetA.log
+│   │   ├── ME_DatasetA_ObvEx_het_myVers.pdf
+│   │   ├──  Moving_F .pdf
+│   │   ├── mutant-trimmed.log
+│   │   ├── mutant-trimmed-pair1.fastq.gz
+│   │   ├── mutant-trimmed-pair2.fastq.gz
+│   │   ├──  Ob_vs_Ex_het .pdf
+│   │   ├── _results
+│   │   │   └── _HWE_outliers.txt
+│   │   ├── slist
+│   │   └── trimmed.khist
+│   └── Sandbox
+│       └── backups
+│           └── science.bak
+└── Week7
+    ├── Code
+    │   ├── blackbirds.py
+    │   ├── DrawFW.py
+    │   ├── fmr.R
+    │   ├── LV1.py
+    │   ├── LV2A.py
+    │   ├── LV2.py
+    │   ├── LV3.py
+    │   ├── LV4.py
+    │   ├── LV5.py
+    │   ├── MyFirstJupyterNB.ipynb
+    │   ├── Nets.py
+    │   ├── Nets.R
+    │   ├── profileme.py
+    │   ├── re4.py
+    │   ├── regexs.py
+    │   ├── run_fmr_R.py
+    │   ├── run_LV.py
+    │   ├── TestR.py
+    │   ├── TestR.R
+    │   ├── timeitme.py
+    │   └── using_os.py
+    ├── Data
+    │   ├── blackbirds.txt
+    │   ├── NagyEtAl1999.csv
+    │   ├── QMEE_Net_Mat_edges.csv
+    │   └── QMEE_Net_Mat_nodes.csv
+    ├── README
+    ├── Results
+    │   ├── fmr_plot.pdf
+    │   ├── prey_and_predators_1.pdf
+    │   ├── prey_and_predators_2.pdf
+    │   ├── prey_and_predators_3.pdf
+    │   ├── prey_and_predators_4.pdf
+    │   ├── prey_and_predators_5.pdf
+    │   ├── prey_and_predators_LV3.pdf
+    │   ├── QMEENet_py.svg
+    │   ├── QMEENet.svg
+    │   ├── TestR_errFile.Rout
+    │   └── TestR.Rout
+    └── Sandbox
+        ├── DateMatch.py
+        └── Netss.py
+
+143 directories, 647 files
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 7 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7
+
+The Week6 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK6...
+
+Found the following directories: Lecture, Data, Code, Results
+
+Found the following files: Readme, .gitignore
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: Readme
+
+Printing contents of Readme:
+**********************************************************************
+Week 6's readme, lectures and practicals on genomics and bioinformatics
+
+	Code:
+	
+		frqx2geno.pl - A perl script that takes an input file in .frqx 
+					   format and converts it to a .geno format
+					   
+		HWE_analysis_pipe.sh - A bash script to produce al the results of 
+							   practical 2
+							   
+		kmercountexact.sh - A script from the bbmap package to count kmers
+		
+		Moving_F.R - An R script that calculates the 5 point moving average 
+					 for the F value for an input file of SNPs
+		
+		Moving_F_myVers.R - My version of Moving_F.R
+		
+		Ob_v_Ex_het.R - A R script that takes an input file of genetic
+						information and then the observed vs expected 
+						hetrozygoscity is plotted to a pdf
+						
+		Ob_v_Ex_het_myVers.R - My version of Ob_v_Ex_het.R
+		
+		Pop_gen_prac.R - An R scipt that runs practical 3
+		
+		Practical_4_code.sh - A bash script for practical 4
+		
+		Practical_script.sh - A bash script of practical 3
+
+	Data:
+	
+		Contains all the data files for the practicals
+		
+	Lectures:
+	
+		Contains all the notes taken in lectures. All written up in 
+		latex documents
+		
+	Results:
+	
+		Contains all the results produced from running the practicals
+**********************************************************************
+
+Found 9 code files: Ob_v_Ex_het_myVers.R, Pop_gen_prac.R, Moving_F.R, Moving_F_myVers.R, kmercountexact.sh, Practical_4_code.sh, Practical_script.sh, Ob_v_Ex_het.R, HWE_analysis_pipe.sh
+
+Found the following extra files: Rplots.pdf, .Rhistory, frqx2geno.pl
+0.5 pt deducted per extra file
+
+Current Marks = 98.5
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file Ob_v_Ex_het_myVers.R...
+
+File contents are:
+**********************************************************************
+#! /usr/bin/Rscript
+### A script that outputs a plot of the observed
+### versus expected heterozygoscity as a pdf file
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(tools)
+# check correct command line arguments are added
+cargs <- commandArgs(T)
+if(length(cargs)<2) stop("Not enough arguents")
+if(length(cargs)>2) stop("Too many arguments")
+
+infile <- cargs[1] # input data file name
+outfile <- cargs[2] # output data file name
+outfile <- tools::file_path_sans_ext(outfile) # strip file extension
+
+
+g <- read.table(file = infile, header=TRUE)
+#### There are 19560 snps ###
+g <- mutate(g, nObs= nA1A1 + nA1A2 + nA2A2) # add observation no.
+# add genotype frequencies
+g <- mutate(g, p11 = nA1A1/nObs, p12 = nA1A2/nObs, p22 = nA2A2/nObs)
+# Compute allele frequencies from genotype frequencies
+g <- mutate(g, p1 = p11+0.5*p12, p2=p22+0.5*p12)
+
+# plot of expected vs observed heterozygosity
+p <- ggplot(g) + geom_point(aes(x=2*p1*(1-p1), y = p12),color = "blue")
+p <- p + scale_x_continuous(name = "Observed heterozygosity") +
+  scale_y_continuous(name = "Expected heterozygosity") + 
+  ggtitle("Plot of observed vs expected heterozygosity") +
+  geom_abline(intercept = 0, slope = 1, color = "red", size = 1.5)
+
+#print graph to pdf
+pdf(file = paste("../Results/", outfile, ".pdf"), 11.7, 8.3)
+print(p)
+dev.off()
+**********************************************************************
+
+Testing Ob_v_Ex_het_myVers.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error: Not enough arguents
+Execution halted
+
+======================================================================
+Inspecting script file Pop_gen_prac.R...
+
+File contents are:
+**********************************************************************
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+g <- read.table(file = "../Data/General_Data/H938_chr15.geno", header=TRUE)
+head(g)
+dim(g)
+#### There are 19560 snps ###
+g <- mutate(g, nObs= nA1A1 + nA1A2 + nA2A2)
+head(g)
+summary(g$nObs)
+qplot(nObs, data = g, bins = 20)
+### most do have complete data as both 1st Qu. all the way up to Max are 938 
+### so atleast 75% have full data
+### Lowest count observed is 887 this is 94.5% 
+# compute genotype frequencies
+g <- mutate(g, p11 = nA1A1/nObs, p12 = nA1A2/nObs, p22 = nA2A2/nObs)
+# Compute allele frequencies from genotype frequencies
+g <- mutate(g, p1 = p11+0.5*p12, p2=p22+0.5*p12)
+# plot frequency of A2 vs frequency of A1
+qplot(p1, p2, data = g)
+### equation of relationship p2 = 1 - p1 
+### note p1+p2 must sum to 1
+
+## Plot genotype vs allele frequencies
+gTidy <- select(g, c(p1,p11,p12,p22)) %>%
+  melt(id='p1', value.name = "Genotype.Proportion")
+# seclect subsets data on columns we want then pass to melt
+# to reformat it
+head(gTidy)
+dim(gTidy)
+ggplot(gTidy) + geom_point(aes(x = p1, y = Genotype.Proportion, 
+                               color = variable, shape = variable))
+### plot looks like HWE 
+### p11 ~ p1^2
+### p12 ~ 2p1(1-p1)
+### p22 ~ (1-p1)^2
+# add in HWE lines
+ggplot(gTidy) +geom_point(aes(x=p1, y = Genotype.Proportion,
+                             color = variable, shape = variable)) +
+  stat_function(fun=function(p) p^2, geom = "line", color = "red",
+                size = 2.5) + stat_function(fun=function(p) 2*p*(1-p),
+                                            geom = "line", colour = "green",
+                                            size = 2.5) + stat_function(
+                                              fun = function(p) (1-p)^2,
+                                              geom="line", colour = "blue",
+                                              size = 2.5)
+## systematic deficiency of heterozygots and excess of homozygotes
+## This is probably due to population structure
+
+####### Testing Hardy Weinberg ########
+# pearsons chi squared test
+# there is 1DF 
+g <- mutate(g, X2 = (nA1A1-nObs*p1^2)^2/(nObs*p1^2) + 
+              (nA1A2 - nObs * 2 * p1 * p2)^2/(nObs * 2 * p1 * p2) +
+              (nA2A2 - nObs * p2^2)^2/(nObs*p2^2))
+g <- mutate(g, pval = 1 - pchisq(X2,1))
+head(g$pval)
+# p- value gives srequency at which observed departure from expectations 
+# or more extreme departure would occur if the null hypothesis is true. 
+# generally reject null if p < 0.05 and keep otherwise
+# note problem as if 50000 SNPS all obeyign the null then would on average
+# reject the null nievely in ~2500
+sum(g$pval < 0.05, na.rm = TRUE)
+# 14314 below 0.05
+# more than would be expected if HWE was true so looking like not a 
+# good statistical fit
+qplot(pval, data = g)
+# if distributed under the null the pvalues should be approximately
+# uniformly distributed
+# our data is very positivly skewed suggesting systematic departure from HWE
+# quick plot of expected vs observed heterozygosity
+qplot(2*p1*(1-p1),p12, data = g) + geom_abline(intercept = 0, slope = 1,
+                                               color = "red", size = 1.5)
+# note most points below the y = x line (deficiency in heterozygotes)
+
+## The correlation of uniting gametes:
+# A1A1 individual requires A1 egg and A1 sperm, expect at rate p1^2
+# but if correlated so that A egg is more likely to join with an A sperm 
+# then more A1A1 that 2p1^2 and fewer A1A2 than 2p1p2
+### As our data is from 52 subpopulations, and alleles have probability of 
+### clustering in populations, a good hypothesis for deficiency of heterozygotes
+### is the presence of population structure (non random mating)
+### note seems statistically significant but not too wildly (by plot)
+## Average deficiency of heterozygotes 
+g <- mutate(g, hetro.def = (2*p1*(1-p1)-p12)/(2*p1*(1-p1)))
+mean(g$hetro.def)
+g$hetro.def <- NULL
+head(g)
+# average heterozygosity deficiency is 0.1102838
+# rule of thumb is approx 10% in human global population 
+# Human populations are not very deeply structured
+# most alleles in this sample are globally widespread and not suficiently 
+# geographically clustered to generate correlations amoung the uniting alleles
+# This is as humans developed from an original popualtion only 100-150 
+# thousand years ago (small time to develop genetic variation)
+
+###### Finding specific loci that are large departures from Hardy Weinberg #####
+# Want to find deficiency per SNP. This number is reffered to as F
+# and has connectiosn to correlation coefficients 
+# If we assume there is no inbreeding within populations then 
+# this number is an estimate of F_ST
+# adding this number to the dataframe 
+g <- mutate(g, F = (2*p1*(1-p1)-p12)/(2*p1*(1-p1)))
+# plot the results
+plot(g$F, xlab = "SNP number", ylab = "F value")
+# When a high/low F value is due to genotyping error then likely only affects 
+# a single SNP. However, when some population genetic force acting on the region 
+# of the genome, likely that it'll affect multiple SNPs in the region.
+# Want a local average in a sliding window of SNPs across the genome
+# computing an average F over every 5 consecutive SNPs.
+# stats::filter calls filter frim stats library
+movingavg <- function(x,n=5){stats::filter(x, rep(1/n,n), sides = 2)}
+# function takes 5 values centered on a focal SNP
+# gives each weigth 1/5 then takes sum to produce the local average
+# plot the moving average
+plot(movingavg(g$F), xlab = "SNP number")
+# look at largest spike
+outlier = which(movingavg(g$F) == max(movingavg(g$F), na.rm = TRUE))
+g[outlier,]
+# outlier is SNP rs12440301
+# nearest gene is SEMA6D
+# It is thought high F value here is because natural selection led to a 
+# geographic clustering of alleles in these gene region
+# increasing the window size absorbs the larger peaks and reduces the averages
+# decreasing it makes them more prominant and the graph less smooth
+**********************************************************************
+
+Testing Pop_gen_prac.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+  CHR        SNP A1 A2 nA1A1 nA1A2 nA2A2
+1  15 rs12905389  A  G    52   310   572
+2  15  rs6599770  A  C    70   323   544
+3  15  rs7170864  A  G   142   417   379
+4  15 rs12440100  A  G    57   274   607
+5  15  rs4932079  G  T    71   337   530
+6  15  rs2665033  G  T     0   144   772
+[1] 19560     7
+  CHR        SNP A1 A2 nA1A1 nA1A2 nA2A2 nObs
+1  15 rs12905389  A  G    52   310   572  934
+2  15  rs6599770  A  C    70   323   544  937
+3  15  rs7170864  A  G   142   417   379  938
+4  15 rs124401
+**********************************************************************
+
+Encountered error:
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+======================================================================
+Inspecting script file Moving_F.R...
+
+File contents are:
+**********************************************************************
+#~ #!/usr/bin/Rscript
+
+
+#~ #A script that outputs a .pdf plot of the moving average F value.
+#~ ##Written by: Udita Bansal udita.bansal17@imperial.ac.uk
+#~ #Written on: 8/11/2017
+
+
+
+#~ #remove all existing lists    HIS IS AN UNECESSARY STEP FOR A STANDALONE SCRIPT SINCE NONE WILL EXIST UNLESS YOU HAVE CREATED THEM IN THE SCRIPT
+#~ #rm(list=ls())
+
+#~ #install package dplyr and ggplot2    NEVER INSTALL PACKAGES IN A REUSABLE SCRIPT BECAUSE YOU WILL END UP REINSTALLING THE SAME PACKAGE OVER AND OVER AGAN.
+#~ #install.packages("dplyr")
+#~ #install.packages("ggplot2")
+
+#~ #call for the installed packages
+#~ library(dplyr)
+#~ library(ggplot2)
+
+#~ #assign the commandArgs function to cargs
+#~ cargs<- commandArgs(T)
+
+#~ #get infile from command line
+#~ infile<- cargs[1]
+
+#~ #assign output file name using command line
+#~ outfile<- cargs[2]
+
+#~ #load data
+#~ g <- read.table(file=infile, header=TRUE)
+
+#~ #add up number of observatuons in last three columns and create a new column with the sum
+#~ g<- mutate(g, nObs= nA1A1 + nA1A2 + nA2A2)
+
+#~ #Compute observed genotype frequencies
+#~ g <- mutate(g, p11 = nA1A1/nObs , p12 = nA1A2/nObs, p22 = nA2A2/nObs ) 
+
+#~ #Compute allele frequencies (using Hardy Weinberg rule) from genotype frequencies
+#~ g <- mutate(g, p1 = p11 + 0.5*p12, p2 = p22 + 0.5*p12)
+
+#~ #compute F value and add it to the data table
+#~ g <- mutate(g, F = (2*p1*(1-p1)-p12) / (2*p1*(1-p1))) 
+
+#~ #compute moving average
+#~ movingavg <- function(x, n=5){stats::filter(x, rep(1/n,n), sides = 2)} 
+
+#~ #plot a graph for moving average and save it as pdf in the current working directory
+#~ pdf(outfile, 11.7, 8.3)       # YOU HAD OUTFILE IN QUOTES HERE WHICH NAMED THE FILES ALL "outfile"
+#~ plot(movingavg(g$F), xlab="SNP number")
+**********************************************************************
+
+Testing Moving_F.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.05461s
+
+======================================================================
+Inspecting script file Moving_F_myVers.R...
+
+File contents are:
+**********************************************************************
+#! /usr/bin/Rscript
+### A script that outputs pdf plot of the moving average F value
+rm(list = ls())
+library(dplyr)
+
+library(ggplot2)
+library(reshape2)
+library(tools)
+# check correct command line arguments are added
+cargs <- commandArgs(T)
+if(length(cargs)<2) stop("Not enough arguents")
+if(length(cargs)>2) stop("Too many arguments")
+
+infile <- cargs[1] # input data file name
+outfile <- cargs[2] # output data file name
+outfile <- tools::file_path_sans_ext(outfile) # strip file extension
+
+
+# read data
+g <- read.table(file = infile, header=TRUE)
+# add observation no.
+g <- mutate(g, nObs= nA1A1 + nA1A2 + nA2A2) 
+# add genotype frequencies
+g <- mutate(g, p11 = nA1A1/nObs, p12 = nA1A2/nObs, p22 = nA2A2/nObs)
+# Compute allele frequencies from genotype frequencies
+g <- mutate(g, p1 = p11+0.5*p12, p2=p22+0.5*p12)
+# Calculate F value for each SNP
+g <- mutate(g, F = (2*p1*(1-p1)-p12)/(2*p1*(1-p1)))
+# computing an average F over every 5 consecutive SNPs.
+# stats::filter calls filter frim stats library
+movingavg <- function(x,n=5){stats::filter(x, rep(1/n,n), sides = 2)}
+# function takes 5 values centered on a focal SNP
+# gives each weigth 1/5 then takes sum to produce the local average
+# plot the moving average
+
+
+
+#print graph to pdf
+pdf(file = paste("../Results/", outfile, ".pdf"), 11.7, 8.3)
+plot(movingavg(g$F), xlab = "SNP number", ylab = "Moving Average", 
+          main = "Plot of the moving average for 5 values of the F value for each SNP",
+          col = "Purple")
+dev.off()
+**********************************************************************
+
+Testing Moving_F_myVers.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error: Not enough arguents
+Execution halted
+
+======================================================================
+Inspecting script file kmercountexact.sh...
+
+File contents are:
+**********************************************************************
+#~ #!/bin/bash
+
+#~ usage(){
+#~ echo "
+#~ Written by Brian Bushnell
+#~ Last modified October 18, 2017
+
+#~ Description:  Counts the number of unique kmers in a file.
+#~ Generates a kmer frequency histogram and genome size estimate (in peaks output),
+#~ and prints a file containing all kmers and their counts.
+#~ Supports K=1 to infinity, though not all values are allowed.
+#~ SEE ALSO: bbnorm.sh/khist.sh, loglog.sh, and kmercountmulti.sh.
+
+#~ Usage:   kmercountexact.sh in=<file> khist=<file> peaks=<file> out=<file>
+
+#~ Input may be fasta or fastq, compressed or uncompressed.
+#~ Output may be stdout or a file.  out, khist, and peaks are optional.
+
+#~ Input parameters:
+#~ in=<file>           Primary input file.
+#~ in2=<file>          Second input file for paired reads.
+
+#~ Output parameters:
+#~ out=<file>          Print kmers and their counts.
+#~ fastadump=t         Print kmers and counts as fasta versus 2-column tsv.
+#~ mincount=1          Only print kmers with at least this depth.
+#~ reads=-1            Only process this number of reads, then quit (-1 means all).
+#~ dumpthreads=-1      Use this number of threads for dumping kmers (-1 means auto).
+
+#~ Hashing parameters:
+#~ k=31                Kmer length (1-31 is fastest).
+#~ prealloc=t          Pre-allocate memory rather than dynamically growing; faster and more memory-efficient.  A float fraction (0-1) may be specified, default 1.
+#~ prefilter=0         If set to a positive integer, use a countmin sketch to ignore kmers with depth of that value or lower.
+#~ prehashes=2         Number of hashes for prefilter.
+#~ prefiltersize=0.2   Fraction of memory to use for prefilter.
+#~ minq=6              Ignore kmers containing bases with quality below this. (TODO)
+#~ minprob=0.0         Ignore kmers with overall probability of correctness below this.
+#~ threads=X           Spawn X hashing threads (default is number of logical processors).
+#~ onepass=f           If true, prefilter will be generated in same pass as kmer counts.  Much faster but counts will be lower, by up to prefilter's depth limit.
+#~ rcomp=t             Store and count each kmer together and its reverse-complement.
+
+#~ Histogram parameters:
+#~ khist=<file>        Print kmer frequency histogram.
+#~ histcolumns=2       2 columns: (depth, count).  3 columns: (depth, rawCount, count).
+#~ histmax=100000      Maximum depth to print in histogram output.
+#~ histheader=t        Set true to print a header line.
+#~ nzo=t               (nonzeroonly) Only print lines for depths with a nonzero kmer count.
+#~ smooth=f            Smooth the kmer histogram.
+#~ smoothradius=1      Initial radius of progressive smoothing function.
+#~ maxradius=10        Maximum radius of progressive smoothing function.
+#~ progressivemult=2   Increment radius each time depth increases by this factor.
+#~ gchist=f            Add an extra histogram column with the average GC%.
+
+#~ Peak calling parameters:
+#~ peaks=<file>        Write the peaks to this file.  Default is stdout. 
+                    #~ Also contains the genome size estimate in bp.
+#~ minHeight=2         (h) Ignore peaks shorter than this.
+#~ minVolume=2         (v) Ignore peaks with less area than this.
+#~ minWidth=2          (w) Ignore peaks narrower than this.
+#~ minPeak=2           (minp) Ignore peaks with an X-value below this.
+#~ maxPeak=BIG         (maxp) Ignore peaks with an X-value above this.
+#~ maxPeakCount=12     (maxpc) Print up to this many peaks (prioritizing height).
+#~ ploidy=-1           Specify ploidy; otherwise it will be autodetected.
+
+#~ Sketch parameters (for making a MinHashSketch):
+#~ sketch=<file>       Write a minhash sketch to this file.
+#~ sketchlen=10000     Output the top 10000 kmers.  Only kmers with at least mincount are included.
+#~ sketchname=         Name of output sketch.
+#~ sketchid=           taxID of output sketch.
+
+#~ Quality parameters:
+#~ qtrim=f             Trim read ends to remove bases with quality below minq.
+                    #~ Values: t (trim both ends), f (neither end), r (right end only), l (left end only).
+#~ trimq=4             Trim quality threshold.
+#~ minavgquality=0     (maq) Reads with average quality (before trimming) below this will be discarded.
+
+#~ Overlap parameters (for overlapping paired-end reads only):
+#~ merge=f             Attempt to merge reads before counting kmers.
+#~ ecco=f              Error correct via overlap, but do not merge reads.   
+
+#~ Java Parameters:
+#~ -Xmx                This will be passed to Java to set memory usage, overriding the program's automatic memory detection.
+                    #~ -Xmx20g will specify 20 gigs of RAM, and -Xmx200m will specify 200 megs.  The max is typically 85% of physical memory.
+#~ -eoom               This flag will cause the process to exit if an out-of-memory exception occurs.  Requires Java 8u92+.
+#~ -da                 Disable assertions.
+#~ "
+#~ }
+
+#~ pushd . > /dev/null
+#~ DIR="${BASH_SOURCE[0]}"
+#~ while [ -h "$DIR" ]; do
+  #~ cd "$(dirname "$DIR")"
+  #~ DIR="$(readlink "$(basename "$DIR")")"
+#~ done
+#~ cd "$(dirname "$DIR")"
+#~ DIR="$(pwd)/"
+#~ popd > /dev/null
+
+#~ #DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/"
+#~ CP="$DIR""current/"
+
+#~ z="-Xmx1g"
+#~ z2="-Xms1g"
+#~ EA="-ea"
+#~ EOOM=""
+#~ set=0
+
+#~ if [ -z "$1" ] || [[ $1 == -h ]] || [[ $1 == --help ]]; then
+	#~ usage
+	#~ exit
+#~ fi
+
+#~ calcXmx () {
+	#~ source "$DIR""/calcmem.sh"
+	#~ parseXmx "$@"
+	#~ if [[ $set == 1 ]]; then
+		#~ return
+	#~ fi
+	#~ freeRam 3200m 84
+	#~ z="-Xmx${RAM}m"
+	#~ z2="-Xms${RAM}m"
+#~ }
+#~ calcXmx "$@"
+
+#~ kmercountexact() {
+	#~ if [[ $NERSC_HOST == genepool ]]; then
+		#~ module unload oracle-jdk
+		#~ module load oracle-jdk/1.8_144_64bit
+		#~ module load pigz
+	#~ fi
+	#~ local CMD="java $EA $EOOM $z $z2 -cp $CP jgi.KmerCountExact $@"
+	#~ echo $CMD >&2
+	#~ eval $CMD
+#~ }
+
+#~ kmercountexact "$@"
+**********************************************************************
+
+Testing kmercountexact.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00245s
+
+======================================================================
+Inspecting script file Practical_4_code.sh...
+
+File contents are:
+**********************************************************************
+###### Code for bioinformatics pracical 4 #####
+# Have a look at the data
+cat ../Data/General_Data/mutant_R1.fastq | less
+# Assess the quality of the data
+fastqc --nogroup ../Data/General_Data/mutant_R1.fastq ../Data/General_Data/mutant_R2.fastq
+#firefox mutant_R1_fastqc.html &
+# Sequence quality is pretty good
+
+### Removing low quality bases
+skewer --help
+skewer -m pe -q 30 -Q 35 -l 75 -z -o ../Results/mutant ../Data/General_Data/mutant_R1.fastq ../Data/General_Data/mutant_R2.fastq
+
+
+## Kmer counting - a way of estimating assembly coverage 
+# (the average number of reads which align under each assembled nucleotide)
+#kmercountexact.sh in1=../Results/mutant-trimmed-pair1.fastq.gz in2=../Results/mutant-trimmed-pair2.fastq.gz khist=../Results/trimmed.khist
+# plot results
+##Rscript ~/software/plot_kmer.R ../Results/trimmed.khist
+###eog ../Results/kmercov.png
+
+############Genome assembly ##########
+### Using Spades assembly
+#spades.py -o ../Results/mutant_assembly --careful -1 ../Results/mutant-trimmed-pair1.fastq.gz -2 ../Results/mutant-trimmed-pair2.fastq.gz
+#less ../Results/mutant_assembly/scaffolds.fasta
+#quast.py ../Results/wildtype.fna ../Results/mutant_assembly/scaffolds.fasta
+#firefox quast_results/latest/report.html &
+
+##### Annotating the new mutant genome
+#prokka ../Results/mutant_assembly/scaffolds.fasta
+### Count the protein sequences
+# grep -c ">" PROKKA_{DATE}/PROKKA_11092017.faa
+
+### Map the reads from the mutants to tghe wildtypes
+## Creates an index file
+# bwa index wildtype.fna
+##Maps the mutant reads to the wildtype genome 
+# bwa mem wildtype.fna ../Results/mutant-trimmed-pair1.fastq.gz ../Results/mutant-trimmed-pair2.fastq.gz > ../Results/mutant.vs.wildtype.sam
+# samtools sort -@ 2 -0 bam -T temp_${RANDOM} ../Results/mutant.vs.wildtype.sam > mutant.vs.wildtype.bam
+
+## Find the variant sites
+# freebayes -f wildtype.fna -p 1 ../Results/mutant.vs.wildtype.bam > ../Results/mutant.vs.wildtype.bam.vcf
+## Summaris the file
+# vcfstats ../Results/mutant.vs.wildtype.bam.vcf
+
+
+**********************************************************************
+
+Testing Practical_4_code.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+@mutant-no_snps.gff-24960/1
+AATGTTGTCACTTGGATTCAAATGACATTTTAAATCTAATTATTCATGAATCGAACTAGTACGAAATGCAATGAGCATCTTGTCTAGTTCGATTTTTTAATGTCTAAAAATGTCGTATATGTAATCAGAGTAGAAAGTGTTGAGGCGTTT
++
+5??A9?BBBDDDBEDDBFF+FGHHIIHHHEIHIIHIIAHDHIIHIG#IIHIFHHHFGIII*IHHHIHFIIHGICIHHIHFFFHHHIIIIIHIHDHIIIAHHH?GHHHHHF@HGGH6GGHEEGBGGGGGFGFE6FGFEFE?GF5EGGEEAC
+@mutant-no_snps.gff-24958/1
+CAAAGTCGTTGGTCATATAAAAAACCGCGTACAGTCAACTATAGATACAATCAAGATAAACTCATGCACAGATTGGGAGATATTTTAGTGCAATATGGAATTCAACATGACACAGGGTTATTACCACATGAATGGCATTAT
+**********************************************************************
+
+Encountered error:
+Practical_4_code.sh: line 5: fastqc: command not found
+Practical_4_code.sh: line 10: skewer: command not found
+Practical_4_code.sh: line 11: skewer: command not found
+
+======================================================================
+Inspecting script file Practical_script.sh...
+
+File contents are:
+**********************************************************************
+#! /bin/bash
+### Working through practical 3 worksheet.
+
+### Open the plink data sets and explore the data
+
+### number of samples (lines in ME_Dataset1.fam)
+
+wc -l ../Data/General_Data/Dataset1/ME_Dataset1.fam
+# answer = 69
+
+
+### Number of SNPs in the data (lines in ME_Dataset1.bim)
+
+wc -l ../Data/General_Data/Dataset1/ME_Dataset1.bim
+# answer 158487
+
+### Check if expected number of heterozygotes given Harfy Weinburg
+### expectations
+## Count the number of each genotype using plink
+
+plink --bfile ../Data/General_Data/Dataset1/ME_Dataset1 --freqx --out ../Results/ME_DatasetA
+# 4. remove unwanted output files
+rm ../Results/ME_DatasetA.nosex
+# 5. inspect the genotype counts
+head ../Results/ME_DatasetA.frqx
+# 6. Convert .frqx file to .geno file
+./frqx2geno.pl ../Results/ME_DatasetA.frqx ../Results/ME_DatasetA.geno
+# 7. Plot the observed vs expected genotype frequecies
+./Ob_v_Ex_het.R ../Data/General_Data/H938_chr15.geno ../Results/ME_DatasetA_ObvEx_het_myVers.pdf
+# most points are above the line this suggests higher number of heterozygotes
+# than at Hardy Weinburg 
+
+# 8. Plot moving F-vaues for the dataset
+./Moving_F.R ../Results/ME_DatasetA.geno ../Results/ME_DatasetA_F.pdf
+# There are no major outlier regions
+
+# 9. Test for HWE on each SNP using the exact test
+plink --bfile ../Data/General_Data/Dataset1/ME_Dataset1 --hardy --out ../Results/ME_Dataset1HW
+
+# 10. Inspect outputted file
+head ../Results/ME_Dataset1HW.hwe
+# gives observed and expected heterozygosity for each SNP along with associated p value
+
+# 11. Find 50 SNPs with greatest departure from HWE (do by sorting by p value)
+sort -k9 ../Results/ME_Dataset1HW.hwe | tail -n 50
+# -k9 says to sort by the 9th column of the data set from greatest to smallest
+
+# 12. Save these lines as a file of outliers
+sort -k9 ../Results/ME_Dataset1HW.hwe | tail -n 50 >../Results/ME_Dataset1_HWE_outliers.txt
+
+
+**********************************************************************
+
+Testing Practical_script.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+CHR	SNP	A1	A2	C(HOM A1)	C(HET)	C(HOM A2)	C(HAP A1)	C(HAP A2)	C(MISSING)
+1	rs3934834	T	C	1	16	51	0	0	1
+1	rs3737728	T	C	1	27	41	0	0	0
+1	rs6687776	T	C	14	25	30	0	0	0
+1	rs2298217	T	C	0	16	53	0	0	0
+1	rs11260549	A	G	4	17	48	0	0	0
+1	rs3813199	T	C	1	13	55	0	0	0
+1	rs7515488	T	C	2	15	52	0	0	0
+1	rs6675798	C	T	5	20	44	0	0	0
+1	rs6685064	C	T	5	37	26	0	0	1
+ CHR         SNP     TEST   A1   A2                 GENO   O(HET)   E(HET)            P 
+   1   rs3934834  ALL(NP)    T    C              1/16/51   0.2353   
+**********************************************************************
+
+Encountered error:
+wc: ../Data/General_Data/Dataset1/ME_Dataset1.fam: No such file or directory
+wc: ../Data/General_Data/Dataset1/ME_Dataset1.bim: No such file or directory
+Practical_script.sh: line 21: plink: command not found
+rm: cannot remove '../Results/ME_DatasetA.nosex': No such file or directory
+Practical_script.sh: line 38: plink: command not found
+
+======================================================================
+Inspecting script file Ob_v_Ex_het.R...
+
+File contents are:
+**********************************************************************
+#~ #! /usr/bin/Rscript  
+
+#~ #  I CHANGED THIS TO /usr/local/bin/Rscript This is likely the cause of your bad interpreter problem
+
+#~ #A script that outputs a plot of the observed versus expected heterozygosity as a .pdf file.
+#~ #Written by: Udita Bansal udita.bansal17@imperial.ac.uk
+#~ #Written on: 8/11/2017
+
+#~ #remove all existing lists   	THIS IS AN UNECESSARY STEP FOR A STANDALONE SCRIPT SINCE NONE WILL EXIST UNLESS YOU HAVE CREATED THEM IN THE SCRIPT
+#~ #rm(list=ls())
+
+#~ #install package dplyr and ggplot2     NEVER INSTALL PACKAGES IN A REUSABLE SCRIPT BECAUSE YOU WILL END UP REINSTALLING THE SAME PACKAGE OVER AND OVER AGAN.
+#~ #install.packages("dplyr")
+#~ #install.packages("ggplot2")
+
+#~ #call for the installed packages
+#~ library(dplyr)
+#~ library(ggplot2)
+
+#~ #assign the commandArgs function to cargs
+#~ cargs<- commandArgs(T)
+
+#~ #get infile from command line
+#~ infile<- cargs[1]
+
+#~ #assign output file name using command line
+#~ outfile<- cargs[2]
+
+#~ #load data
+#~ g <- read.table(file=infile, header=TRUE)
+
+#~ #add up number of observatuons in last three columns and create a new column with the sum
+#~ g<- mutate(g, nObs= nA1A1 + nA1A2 + nA2A2)
+
+#~ #Compute observed genotype frequencies
+#~ g <- mutate(g, p11 = nA1A1/nObs , p12 = nA1A2/nObs, p22 = nA2A2/nObs ) 
+
+#~ #Compute allele frequencies (using Hardy Weinberg rule) from genotype frequencies
+#~ g <- mutate(g, p1 = p11 + 0.5*p12, p2 = p22 + 0.5*p12)
+
+#~ #Compute expected heterozygous frequency from calculated allelic frequencies (according to HWE, p1+p2=1)
+#~ g<- mutate(g, expP12 = 2*p1*(1-p1))
+
+#~ #plot a graph of observed versus expected heterozygosity using qplot and output as a pdf file
+#~ pdf(file= outfile, 11.7, 8.3) #open blank pdf page
+#~ qplot(p12, expP12, data= g)+ geom_abline(intercept = 0, slope=1, color="red", size=1.5)
+**********************************************************************
+
+Testing Ob_v_Ex_het.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.05605s
+
+======================================================================
+Inspecting script file HWE_analysis_pipe.sh...
+
+File contents are:
+**********************************************************************
+#~ #!/bin/bash
+#~ ### Create all results from analysis in Practical_script.sh
+#~ ### and store in results directory
+
+#~ # usage: ./Analysis.sh [PLINKIN] [outfile_prefix]
+#~ ### Plink in starts from path General_Data directory
+
+#~ ### Setting variabls so it knows first file entered is to be treated as
+#~ ### plink file and the second as the output file
+
+#~ PLINK=../Data/General_Data/$1    # Plink file set indicated by the user
+#~ OUT=../Results/$2      # outfile prefix indicated by the user
+
+
+#~ # the following are the necessary file names needed for the various steps
+
+#~ FRQX=$OUT".frqx"
+#~ GENO=$OUT".geno"
+#~ OVE=$OUT"_Ob_v_Ex_het.pdf"
+#~ FPLOT=$OUT"_F.pdf"
+#~ HWE=$OUT".hwe"
+#~ HWEOUT=$OUT"_HWE_outliers.txt"
+#~ DIR=$OUT"_results"
+
+
+#~ # Make a results directory 
+
+
+#~ mkdir $DIR
+
+
+#~ # give the commands for running the analyses exactly as you would on the terminal,
+#~ # however you should replace the file names with the appropriate variables
+
+
+#~ plink --bfile $PLINK --freqx --out $OUT   #run plink to calculate genotype proportions
+
+
+#~ ./frqx2geno.pl $FRQX $GENO   #convert the plink output to .geno format
+
+
+#~ ./Ob_v_Ex_het.R $GENO $OVE   # plot the observed versus expected heterozygosity
+
+
+#~ ./Moving_F.R $GENO $FPLOT      # plot the moving F values
+
+
+#~ plink --bfile $PLINK --hardy --out $OUT    # run Hardy Weinberg analysis
+
+
+#~ sort -k9 $HWE | tail -n 50 >$HWEOUT
+
+
+
+#~ # Move everything into the results directory
+
+#~ mv $FRQX $DIR
+#~ mv $GENO $DIR
+#~ mv $OVE $DIR
+#~ mv $FPLOT $DIR
+#~ mv $HWE $DIR
+#~ mv $HWEOUT $DIR
+#~ mv $OUT".log" $DIR # also save the plink log. This is the record of what you have done
+
+
+#~ # cleanup 
+ 
+#~ rm $OUT.nosex  #get rid of unnecessary files
+
+
+
+**********************************************************************
+
+Testing HWE_analysis_pipe.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00212s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 5 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Marks for the Week = 98.5
+
+NOTE THAT THESE ARE NOT THE FINAL MARKS FOR THE WEEK, BUT AN UPPER BOUND ON THE MARKS!

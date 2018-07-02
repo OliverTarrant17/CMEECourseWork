@@ -1,0 +1,51 @@
+Interpret delta original has
+meandepth 20,50,100
+base ploidy 1,2,3
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with fixed NSAMS at 20 and Err depth at 0.2
+10x with NSAMS 17-23 with Err depth at 0.2
+(3600)
+-----------------------------------------------
+Interpret delta has
+meandepth 5,10,15,20,50,100
+base ploidy 1,2,3
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with NSAMS 17-23 with Err depth at 0.2-0.4
+(3600)
+------------------------------------------------
+Interpret delta combined 
+meandepth 20,50,100
+base ploidy 1,2,3
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with NSAMS 17-23 with Err depth at 0.2
+(1800)
+meandepth 5,10,15,20,50,100
+base ploidy 1,2,3
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with NSAMS 17-23 with Err depth at 0.2-0.4
+(3600)
+meandepth 5,10,15
+base ploidy 1,2,3
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with NSAMS 17-23 with Err depth at 0.2-0.4
+(1800)
+meandepth 5,10,15,20
+base ploidy 4,5
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with NSAMS 17-23 with Err depth at 0.2-0.4
+(1600)
+(8800)
+-----------------------------------------------
+Interpret delta new
+meandepth 2,5,10,15,20,50,100
+base ploidy 1,2,3,4,5
+no.aneploidy 1,2,3,4
+aneuploidy level 1,2,3,4,5
+10x with NSAMS 5-11 with Err depth at 0.2-0.4
+(7000)

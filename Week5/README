@@ -1,0 +1,35 @@
+Week's work on GIS 
+
+Lectures: Contains a tex file and pdf that contains my notes taken in 
+		  the lecture
+		  
+Practical1: Contains all the files for practical1. A guide to using the
+			basic features from GIS including: Adding layers, clipping,
+			and changing the projection 
+
+		Code: The python script that automates the GIS practical 1
+		
+		Data: All the data files to be used in the practical. Seperated
+			  into EU, Borneo and Global for the seperate parts of the 
+			  practical
+			  
+		Images: Images from the lecture notes
+		
+		Instructions: Instructions for the practical
+		
+		Projects: The project workspaces from the practical
+		
+		Results: Contains the output file from practical1 
+		
+Practical2: Producing a map which emulates or betters the ones provided
+			in the pdf.
+			
+		Data: contains all the layers and data files needed to produce
+			  the map
+			  
+		Projects: The workspaces for the maps
+		
+		Results: Contains a pdf of my map
+		
+			
+		

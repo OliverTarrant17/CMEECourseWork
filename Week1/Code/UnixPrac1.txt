@@ -1,0 +1,15 @@
+# 1. count how many lines are in each file
+wc -l ~/CMEECourseWork/Week1/Data/fasta/407228326.fasta && wc -l ~/CMEECourseWork/Week1/Data/fasta/407228412.fasta && wc -l ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta  # 1.
+### Basic line count (wc -l) for each file
+# 2. Print everything starting from the second line for the E.coli genome
+tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta # 2.
+### Tail -n+2 prints from the 2nd to nth line of the file
+# 3. Count the sequence length of this genome
+tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d "\n" | wc -m # 3.
+### Once again taking all but the first line and then removing the line breaks. Finally doing a character count overall.
+# 4. Count the matches of a particular sequence "ATGC" in the genome of E.coli
+tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d "\n" | tr "A" "\n" | grep -c '\<TGC' # 4.
+### Repeat as in 3 but rather than character count, replace A's with new line break and then count the number of the new lines which start with TGC
+# 5. Compute the AT/GC ratio
+A=$(tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d "\n" | tr "A" "\n" | wc -l ) && T=$(tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d "\n" | tr "T" "\n" | wc -l) && C=$(tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d "\n" | tr "C" "\n" | wc -l) && G=$(tail -n+2 ~/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d "\n" | tr "G" "\n" | wc -l) && echo "scale=5 ; ($A + $T) / ($C + $G)" | bc # 5.
+### Same method as 4 but counting the number of new lines in each case when replacing letters in turn with new lines.

@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\author{James Rosindell}
+\title{High Performance Computing}
+\date{28/11/2017}
+\begin{document}
+\maketitle
+Look up how to log in to HPC\\
+HPC is useful for embarrassingly parallel problems (graphics, simulations with multiple parameters) and Non embarrassingly parallel problems (fluid dynamics, a lot of the tasks run by a single problem).
+\section{How do you parallelize your code?}
+Imagine before using HPC you want to do one simulation then 3 parallel in HPC.\\ Important line of code:\\
+$as.numeric(Sys.getenv("PBS_ARRAY_INDEX"))$
+Using PC: for i in 1:10 do simulation(i)\\
+$HPC: i <- as.numeric(Sys.getenv("PBS_ARRAY_INDEX"))do_simulation(i)&$\\
+do_simulation <- function(i) { set random seed as i, select your simulation parameters, do your simulation, save your output in a file named ....i..., include a timer}.\\
+Use different random number seeds when running parallel to ensure that they are independent.\\
+Handling memory: Save your results in memory and then write to disk at the end. Output your code to a series of files. Write local code to read in your series of files automatically. Build a timer into your code. Test your code locally to know your memory and time requirements.
+\section{Running code on a cluster}
+Will be using: cx1 - a cluster of many ordinary computers. Access via a login node. Login node, your potal to cx1, Login.cx1.hpc.ic.ac.uk\\
+Where is data stored? \\
+\$Home- backed up main area 10GB\\
+\$Work - for running jobs not backed up 150GB\\
+\$TMPDIR - Ignore these temporary files but be careful you don't lose work in here\\
+Need to write command in shell script to move files back from tmpdir to home. \\
+Step1: Go to filezilla-project.org\\
+Download FileZilla Client and install it\\
+Open FileZilla and put in the following settings:\\ (see dropbox)
+\section{For exercises}
+Adapt code from yesterday to run the cluster for a much bigger ecological community size. Need to collect species abundance data as before and average over a large number of parallel simulations. Use burn in period and check the species abundance distribution periodically.
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[11pt]{article}
+\author{James Rosindell}
+\title{Fractals in nature}
+\date{30/11/2017}
+\begin{document}
+\maketitle
+\section{Introduction}
+Fractals have infinite detail and self similarity. Example is the mandelbrot set. Constructed by looking at $Z -> Z^2+C$ where C is coordinates in the complex plane. If this diverges to infinity outside of the Mandelbrot set, if not then inside. Coloured by how quickly diverges. \\
+In nature fractals exist in plants, coastlines, leaves, lungs, snowflakes etc.
+\section{What is a fractal?}
+A line is not (dimension 1). Neither is a square (dimension 2) or a cube (dimension 3). Increase a line by 2 and need twice as much material. Increase a square by two and need $4 = 2^2$ times the material etc.\\
+For fractals, dimensions are not a whole number. They are self similar. Koch curve, at each stage remove line and replace with original fractal. By increasing its width by 3 need 4 times the material thus dimension is x where $4=3^x$ so $x=log(4)/log(3)$. In terms of fractals in nature, (e.g. coastline) use the stick method. E.g take a circle and have many sticks. COuld apprixmate cirlce with triangle inside made from sticks, increase accuracy by using square, keep increasing number of sticks to get closer to the circle. Iterating this converges to the circumference of the circle. Try this on a coastline, start by measuring wth few very large sticks. Then half size and measure again. Keep going and plot log of stick length to the log of the distance measuring (i.e sum of length of sticks). For a fractal this doesn't converge as infinite detail. Can then take the fractal dimension = 1 - gradient. The intercept gives an idea of size. in biology usually a limit to the fractal behaviour if zoom in too much or out too much. Generalised formula $C(\delta) = K\delta^{1-D}$ K is a constant, D is dimension, $C(\delta)$ is the total length $\delta$ is the fractinal length of the stick.\\
+Alternaticely can use the box counting algorithm. Cover the object with increasingly smaller square and count how many are needed to cover the object. In this case plotting log of the number of boxes and log of length of the size of the boxes get formula D=-1*gradiant. Generalised formula $C(\delta) = K\delta^{-D}$(check?)
+\section{Why do fractas appear in nature?}
+In organisms there is a simple set of rules (DNA), complex things are thus created from repeats of simple parts. Fractals are heritable. Need to maximize surface area but minimise volume. In geography have the sme processes happening at multiple scales. In landscape ecology, animal behaviour and chaos wait until next lecture.   
+\end{document}

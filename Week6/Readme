@@ -1,0 +1,41 @@
+Week 6's readme, lectures and practicals on genomics and bioinformatics
+
+	Code:
+	
+		frqx2geno.pl - A perl script that takes an input file in .frqx 
+					   format and converts it to a .geno format
+					   
+		HWE_analysis_pipe.sh - A bash script to produce al the results of 
+							   practical 2
+							   
+		kmercountexact.sh - A script from the bbmap package to count kmers
+		
+		Moving_F.R - An R script that calculates the 5 point moving average 
+					 for the F value for an input file of SNPs
+		
+		Moving_F_myVers.R - My version of Moving_F.R
+		
+		Ob_v_Ex_het.R - A R script that takes an input file of genetic
+						information and then the observed vs expected 
+						hetrozygoscity is plotted to a pdf
+						
+		Ob_v_Ex_het_myVers.R - My version of Ob_v_Ex_het.R
+		
+		Pop_gen_prac.R - An R scipt that runs practical 3
+		
+		Practical_4_code.sh - A bash script for practical 4
+		
+		Practical_script.sh - A bash script of practical 3
+
+	Data:
+	
+		Contains all the data files for the practicals
+		
+	Lectures:
+	
+		Contains all the notes taken in lectures. All written up in 
+		latex documents
+		
+	Results:
+	
+		Contains all the results produced from running the practicals

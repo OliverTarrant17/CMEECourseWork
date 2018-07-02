@@ -1,0 +1,451 @@
+Starting weekly assessment for Oliver, Week5
+
+Current Marks = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 21.83 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week1, Assessment, Week5, Week2, Week4, .git, Week3
+
+Found the following files in parent directory: README.txt, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+*.pyc
+*.log
+*.aux
+*.synctex
+*.out
+Week6
+**********************************************************************
+
+Found README in parent directory, named: README.txt
+
+Printing contents of README.txt:
+**********************************************************************
+My CMEE 2017-18 Coursework Repository
+Do I like this better?
+
+
+.
+├── Assessment
+│   ├── Week1_Feedback.txt
+│   └── Week2_Feedback.txt
+├── README.txt
+├── temporary.tmp
+├── Week1
+│   ├── Code
+│   │   ├── boilerplate.sh
+│   │   ├── CompileLatex.sh
+│   │   ├── ConcatenateTwoFiles.sh
+│   │   ├── CountLines.sh
+│   │   ├── csvtospace.sh
+│   │   ├── FirstBiblio.bib
+│   │   ├── FirstExample.pdf
+│   │   ├── FirstExample.tex
+│   │   ├── MyExampleScript.sh
+│   │   ├── Results
+│   │   │   └── FirstExample.pdf
+│   │   ├── tabtocsv.sh
+│   │   ├── UnixPrac1.txt
+│   │   └── variables.sh
+│   ├── Data
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── spawannxs.txt
+│   │   └── Temperatures
+│   │       ├── 1800.csv
+│   │       ├── 1800.csv_space
+│   │       ├── 1801.csv
+│   │       ├── 1801.csv_space
+│   │       ├── 1802.csv
+│   │       ├── 1802.csv_space
+│   │       ├── 1803.csv
+│   │       └── 1803.csv_space
+│   ├── readme
+│   └── Sandbox
+│       ├── ListRootDir.txt
+│       ├── TestFind
+│       │   ├── Dir1
+│       │   │   ├── Dir11
+│       │   │   │   └── Dir111
+│       │   │   │       └── File111.txt
+│       │   │   ├── File1.csv
+│       │   │   ├── File1.tex
+│       │   │   └── File1.txt
+│       │   ├── Dir2
+│       │   │   ├── file2.csv
+│       │   │   ├── File2.tex
+│       │   │   └── File2.txt
+│       │   └── Dir3
+│       │       └── File3.txt
+│       ├── TestLaTex.tex
+│       ├── test.txt
+│       ├── test.txt.csv
+│       └── TestWild
+│           ├── Anotherfile.csv
+│           ├── Anotherfile.txt
+│           ├── File1.csv
+│           ├── File1.txt
+│           ├── File2.csv
+│           ├── File2.txt
+│           ├── File3.csv
+│           ├── File3.txt
+│           ├── File4.csv
+│           └── File4.txt
+├── Week2
+│   ├── Code
+│   │   ├── align_seqs_fasta.py
+│   │   ├── align_seqs.py
+│   │   ├── basic_csv.py
+│   │   ├── basic_io.py
+│   │   ├── boilerplate.py
+│   │   ├── cfexercises.py
+│   │   ├── control_flow.py
+│   │   ├── debugme.py
+│   │   ├── dictionary.py
+│   │   ├── lc1.py
+│   │   ├── lc2.py
+│   │   ├── loops.py
+│   │   ├── LV1.py
+│   │   ├── LV2.py
+│   │   ├── LV3.py
+│   │   ├── LV4.py
+│   │   ├── oaks.py
+│   │   ├── profileme.py
+│   │   ├── run_LV.py
+│   │   ├── scope.py
+│   │   ├── sysargv.py
+│   │   ├── test_control_flow.py
+│   │   ├── test_oaks.py
+│   │   ├── timeitme.py
+│   │   ├── tuple.py
+│   │   └── using_name.py
+│   ├── Data
+│   │   ├── bodymass.csv
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── Sequences.csv
+│   │   ├── testcsv.csv
+│   │   └── TestOaksData.csv
+│   ├── README
+│   ├── Results
+│   │   ├── align_407228326.fasta_407228412.fasta
+│   │   ├── align_407228326.fasta_E.coli.fasta
+│   │   ├── align_407228412.fasta_E.coli.fasta
+│   │   ├── align_too_few_args_have_an_example
+│   │   ├── JustOaksData.csv
+│   │   ├── prey_and_predators_1.pdf
+│   │   ├── prey_and_predators_2.pdf
+│   │   ├── prey_and_predators_3.pdf
+│   │   ├── prey_and_predators_4.pdf
+│   │   └── Sequences_aligned.txt
+│   └── Sandbox
+│       ├── bodymass.csv
+│       ├── temp.py
+│       ├── testout.txt
+│       ├── testp.p
+│       └── test.txt
+├── Week3
+│   ├── Code
+│   │   ├── apply1.R
+│   │   ├── apply2.R
+│   │   ├── basic_io.R
+│   │   ├── boilerplate.R
+│   │   ├── break.R
+│   │   ├── browse.R
+│   │   ├── control.R
+│   │   ├── DataWrang.R
+│   │   ├── get_TreeHeight.py
+│   │   ├── get_TreeHeight.R
+│   │   ├── Mapping.R
+│   │   ├── next.R
+│   │   ├── PP_Lattice.R
+│   │   ├── PP_Regress.R
+│   │   ├── Ricker.R
+│   │   ├── run_get_TreeHeight.sh
+│   │   ├── run_vectorize.sh
+│   │   ├── sample.R
+│   │   ├── SQLinR.R
+│   │   ├── TAutoCorr_Analysis.Rnw
+│   │   ├── TAutoCorr_Analysis.tex
+│   │   ├── TAutoCorrCode.R
+│   │   ├── TAutoCorr.R
+│   │   ├── TreeHeight.R
+│   │   ├── try.R
+│   │   ├── Vectorize1.py
+│   │   ├── Vectorize1.R
+│   │   ├── Vectorize2.py
+│   │   └── Vectorize2.R
+│   ├── Data
+│   │   ├── EcolArchives-E089-51-D1.csv
+│   │   ├── GPDDFiltered.RData
+│   │   ├── KeyWestAnnualMeanTemperature.RData
+│   │   ├── PoundHillData.csv
+│   │   ├── PoundHillMetaData.csv
+│   │   ├── Resource.csv
+│   │   ├── Results.txt
+│   │   └── trees.csv
+│   ├── README
+│   ├── Results
+│   │   ├── Girko.pdf
+│   │   ├── MyBars.pdf
+│   │   ├── MyData.csv
+│   │   ├── MyFirst-ggplot2-Figure.pdf
+│   │   ├── MyLinReg.pdf
+│   │   ├── PP_Regress_Results.csv
+│   │   ├── PP_Results.csv
+│   │   ├── Pred_Lattice.pdf
+│   │   ├── Pred_Prey_Overlay.pdf
+│   │   ├── Pred_Prey_Regress.pdf
+│   │   ├── Prey_Lattice.pdf
+│   │   ├── SizeRatio_Lattice.pdf
+│   │   ├── TAutoCorr_Analysis.pdf
+│   │   ├── Test.sqlite
+│   │   ├── TreeHts.csv
+│   │   ├── trees_heights.csv
+│   │   └── trees_treeheights.csv
+│   └── Sandbox
+│       ├── by.R
+│       ├── Case_study_1.R
+│       ├── Case_study_2.R
+│       ├── Case_study_3.R
+│       ├── Case_study_4.R
+│       └── tapply.R
+├── Week4
+│   ├── Code
+│   │   ├── Sparrows_handout_10.R
+│   │   ├── Sparrows_handout_15.R
+│   │   ├── Sparrows_handout_1to4.R
+│   │   ├── Sparrows_handout_5&6.R
+│   │   └── Sparrows_lecture_9.R
+│   ├── Data
+│   │   ├── daphnia.txt
+│   │   ├── DataWranglingCheatSheet.pdf
+│   │   ├── ipomopsis.txt
+│   │   ├── Meth. Ecol. Evol. 2010 Zuur.pdf
+│   │   ├── ObserverRepeatability.txt
+│   │   ├── SparrowSize.txt
+│   │   ├── StatsWithSparrows10_Lect.pdf
+│   │   ├── StatsWithSparrows10LinearModels.pdf
+│   │   ├── StatsWithSparrows13Anova.pdf
+│   │   ├── StatsWithSparrows14RepAnova.pdf
+│   │   ├── StatsWithSparrows16MultipleRegression.pdf
+│   │   ├── StatsWithSparrows17NonParametrics.pdf
+│   │   ├── StatsWithSparrows18Repeatability.pdf
+│   │   ├── StatsWithSparrows1.pdf
+│   │   ├── StatsWithSparrows2.pdf
+│   │   ├── StatsWithSparrows4.pdf
+│   │   ├── StatsWithSparrows5.pdf
+│   │   ├── The Auk 1987 Lessells copy.pdf
+│   │   └── timber.txt
+│   ├── Results
+│   └── Sandbox
+└── Week5
+    └── GIS_Practicals
+        ├── Practical1
+        │   ├── EU_project.qgs
+        │   ├── EU_project.qgs~
+        │   ├── GIS_Practical_1_files
+        │   │   ├── Borneo
+        │   │   │   ├── BorneoPractical1.qgs
+        │   │   │   ├── MODIS_blue_reflectance.tif
+        │   │   │   ├── MODIS_blue_reflectance.tif.aux.xml
+        │   │   │   ├── Modis_blue_reflectance_UTM50N.tif
+        │   │   │   ├── Modis_blue_reflectance_UTM50N.tif.aux.xml
+        │   │   │   ├── MODIS_EVI.tif
+        │   │   │   ├── MODIS_EVI.tif.aux.xml
+        │   │   │   ├── MODIS_NDVI.tif
+        │   │   │   ├── MODIS_NDVI.tif.aux.xml
+        │   │   │   ├── MODIS_NIR_reflectance.tif
+        │   │   │   ├── MODIS_NIR_reflectance.tif.aux.xml
+        │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif
+        │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif.aux.xml
+        │   │   │   ├── MODIS_red_reflectance.tif
+        │   │   │   ├── MODIS_red_reflectance.tif.aux.xml
+        │   │   │   ├── Modis_red_reflectance_UTM50N.tif
+        │   │   │   ├── Modis_red_reflectance_UTM50N.tif.aux.xml
+        │   │   │   ├── MODIS_reflectance.vrt
+        │   │   │   ├── NDVI.tif
+        │   │   │   ├── SAFE_layout_UTM50N_WGS84.dbf
+        │   │   │   ├── SAFE_layout_UTM50N_WGS84.prj
+        │   │   │   ├── SAFE_layout_UTM50N_WGS84.shp
+        │   │   │   └── SAFE_layout_UTM50N_WGS84.shx
+        │   │   ├── EU
+        │   │   │   ├── bio1_15.tif
+        │   │   │   ├── bio1_15.tif.aux.xml
+        │   │   │   ├── bio1_16.tif
+        │   │   │   ├── bio1_16.tif.aux.xml
+        │   │   │   ├── bio12_15.tif
+        │   │   │   ├── bio12_16.tif
+        │   │   │   ├── bio12_UK_BNG.tif
+        │   │   │   ├── bio1_merge.tif
+        │   │   │   ├── bio1_merge.tif.aux.xml
+        │   │   │   ├── bio1_UK_BNG.tif
+        │   │   │   ├── bio1_UK_BNG.tif.aux.xml
+        │   │   │   ├── bio1_UK.tif
+        │   │   │   ├── bio1_UK.tif.aux.xml
+        │   │   │   ├── clc_legend_qgis.txt
+        │   │   │   ├── CMEE_Example.py
+        │   │   │   ├── g250_06.tif
+        │   │   │   ├── G250_06_UK_BNG.tif
+        │   │   │   ├── g250_06_UK.tif
+        │   │   │   └── zonalstats.csv
+        │   │   ├── Global
+        │   │   │   ├── Background.dbf
+        │   │   │   ├── Background.prj
+        │   │   │   ├── Background.shp
+        │   │   │   ├── Background.shx
+        │   │   │   ├── bio12.bil
+        │   │   │   ├── bio12.hdr
+        │   │   │   ├── bio1.bil
+        │   │   │   ├── bio1.bil.aux.xml
+        │   │   │   ├── bio1.hdr
+        │   │   │   ├── bio1.stx
+        │   │   │   ├── cntry98.dbf
+        │   │   │   ├── cntry98.prj
+        │   │   │   ├── cntry98.shp
+        │   │   │   ├── cntry98.shx
+        │   │   │   ├── tissot.dbf
+        │   │   │   ├── tissot.prj
+        │   │   │   ├── tissot.shp
+        │   │   │   └── tissot.shx
+        │   │   └── Pratical_1.pdf
+        │   ├── Images
+        │   │   ├── AdvancedDigitizingToolbar.png
+        │   │   ├── AttributeTableBar.png
+        │   │   ├── BluetitNests.png
+        │   │   ├── ComposerElements.png
+        │   │   ├── ComposerOutputs.png
+        │   │   ├── DigitalElevationModel.png
+        │   │   ├── DigitizingToolbar.png
+        │   │   ├── FeederRegions.png
+        │   │   ├── Georeferenced.png
+        │   │   ├── GeoreferencerToolbar.png
+        │   │   ├── MainToolbar.png
+        │   │   ├── ManageLayersToolbar.png
+        │   │   ├── MapComposerOutput.pdf
+        │   │   ├── MODIS_sinu.png
+        │   │   ├── modis_sinusoidal_grid.jpg
+        │   │   ├── PlantRichnessAddedOrchids.png
+        │   │   ├── PlantRichnessAdded.png
+        │   │   ├── PlantRichnessAddedSelection.png
+        │   │   ├── ProjectionDifferencesBNG.png
+        │   │   ├── ProjectionDifferences.png
+        │   │   ├── Projection_types.png
+        │   │   ├── SAFE_UTM50N.png
+        │   │   ├── ScriptEditorToolbar.png
+        │   │   ├── ScriptEditorToolbar.tiff
+        │   │   ├── Territ100.png
+        │   │   ├── TerritoriesArea.png
+        │   │   ├── TerritoryModel.png
+        │   │   ├── Tissot_WGS84.png
+        │   │   └── VoronoiAndBuffer.png
+        │   ├── Pratical_1.aux
+        │   ├── Pratical_1.log
+        │   ├── Pratical_1.out
+        │   ├── Pratical_1.pdf
+        │   ├── Pratical_1.synctex
+        │   ├── Pratical_1.synctex.gz
+        │   └── Pratical_1.tex
+        └── Practical2
+            └── Data
+                ├── AGB_BetaregRad_Full.zip
+                ├── SRTM_UTM50N_aspect.tif
+                ├── SRTM_UTM50N_processed.tif
+                ├── SRTM_UTM50N_seamask.tif
+                └── SRTM_UTM50N_slope.tif
+
+41 directories, 290 files
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 5 weekly directories: Week1, Week2, Week3, Week4, Week5
+
+The Week5 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK5...
+
+Found the following directories: Practical2, Practical1, Lectures
+
+Found the following files: .gitignore, README
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README
+
+Printing contents of README:
+**********************************************************************
+Week's work on GIS 
+
+Lectures: Contains a tex file and pdf that contains my notes taken in 
+		  the lecture
+		  
+Practical1: Contains all the files for practical1. A guide to using the
+			basic features from GIS including: Adding layers, clipping,
+			and changing the projection 
+
+		Code: The python script that automates the GIS practical 1
+		
+		Data: All the data files to be used in the practical. Seperated
+			  into EU, Borneo and Global for the seperate parts of the 
+			  practical
+			  
+		Images: Images from the lecture notes
+		
+		Instructions: Instructions for the practical
+		
+		Projects: The project workspaces from the practical
+		
+		Results: Contains the output file from practical1 
+		
+Practical2: Producing a map which emulates or betters the ones provided
+			in the pdf.
+			
+		Data: contains all the layers and data files needed to produce
+			  the map
+			  
+		Projects: The workspaces for the maps
+		
+		Results: Contains a pdf of my map
+		
+			
+		
+**********************************************************************
+
+Code directory missing!
+Aborting this weeks assessment!
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Marks for the Week = 100
+
+NOTE THAT THESE ARE NOT THE FINAL MARKS FOR THE WEEK, BUT AN UPPER BOUND ON THE MARKS!

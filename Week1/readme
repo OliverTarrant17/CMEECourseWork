@@ -1,0 +1,28 @@
+Week 1's work submission. Developed three directories: Code, Data and Sandbox.
+	
+	Code contains all the bash scripts created and the UnixPrac1.txt which is the text document for the solutions to chapter 1's practical
+		The bash scripts are: 
+			boilerplate.sh which is a first test bash script
+			tabtocsv.sh - converts a tab delimited file to a comma delimited file. (execute with: bash tabtocsv.sh [file name])
+			variables.sh - starts by presenting the variable as 'Hello' then gets the executer to enter a new varible value. Next asks executer to enter 2 numers and returns the sum of them.
+			MyExampleScript.sh - returrns 'Hello [user's name] via both reading two seperate messages and combining them and entering the first message already in the script and just adding the second. 
+			CountLines.sh - counts the number of lines in a file. 
+			ConcatenateTwoFiles.sh - takes two files and combines them into a new file which is the first followed by the second.
+			csvtospace.sh - converts a csv file to a space delimited version and saves the new copy as filename_space
+			CompileLatex.sh - Compiles a tex document into it's pdf LaTex file
+		Code also contains FirstBiblio.bib and FirstExample.tex. These are a first example LaTex file and corresponding bibliography
+		Results - this is a subdirectory in code which contains the compiled LaTex files
+	
+	Data contains:
+		spawannxs.txt file which was used in exercises in chapter one for using grep
+		The fasta directory copied from the master repository. These files are called on and used in UnixPrac1
+		The Temperatures directory copied from the master repository. This contains the temperature csv files used in exercise 2 of practical 2 and the  counterparts in space delimited form resulting from running csvtospace.sh on the csv originals 
+
+	Sandbox contains:
+		ListRootDir.txt - formed in chapter 1 this file displays the files in the root directory
+		test.txt - formed in week to test tabtocsv.sh on
+		test.txt.csv - the resulting csv file from running tabtocsv.sh on test.txt
+		The directory TestFind - created to practice using the find command
+		The directory TestWild - created to practice using wildcards 
+		Testlatex - A LaTex example from PNAS Journal
+	

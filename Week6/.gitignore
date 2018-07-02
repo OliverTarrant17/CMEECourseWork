@@ -1,0 +1,15 @@
+Sandbox
+backups
+Dataset1_Analysis
+Dataset2_Analysis
+Dataset3_Analysis
+Dataset4_Analysis
+__MACOSX
+*.bim
+*.bin
+*.bed
+*.fam
+*.out
+*.in
+*.zip
+*.gif

@@ -1,0 +1,128 @@
+
+\documentclass[11pt]{article}
+\begin{document}
+\title{GIS Concepts}
+\author{Rob Ewers}
+\maketitle
+
+\section{GIS}
+\subsection{What is GIS}
+\begin{itemize}
+\item GIS is a tool
+\item Used in conservation modelling, lunar mapping, crime mapping etc. Anything with spatial data
+\item GIS is esentially a database with a spatial component. E.g Latitude and longitude
+\ Can use it to answer spatial questions
+\item Not a fancy form of analysis. (use R etc)
+\item Geographic information - Any piece of data that can be located in space using : A set of coordinates and a known coordinate system
+\item Generally will be using spherical coordinates (always remember north south east west direction in the coordinates)
+\end{itemize}
+\subsection{Longitude and Latitude}
+\begin{itemize}
+\item Latitude - An angle above or below the equator
+\item Points of equal latitude for a parallel, distance between parallels is constant
+\item Longitude - An angle around the equator.
+\item Points of equal longitude form a meridian. Distance between meridians varies
+
+\end{itemize}
+
+\subsection{Geographic Coordinate systems}
+\begin{itemize}
+\item Earth is not exactly a sphere
+\item ~ 1 in 298 flattening
+\item Estimated coordinate systems (Datum) have varied over the years
+\item Datum (Geographical coordinates system) matters as different datum would give different angles to the same location
+\item Earth's not quite an ellipsode wither as distribution of mass is uneven and dynamic.
+\item Now often use GEOIDs. Gravitational measurments. These start with a surface of equal gravitational force. Then up and down are perpendicular to the local geoid. A level surface is tangent to the local geoid
+\item Since 1984 have been using WGS 1984. This combines datum and geiods giving a standard global coordinate system
+\item Uses modern satalite data to provide ellipsoid measurements and gravity model. (Used by GPD). Prime meridian is at 
+\begin{equation}
+0^o5.31"E!
+\end{equation}
+\item The fit between a geoid and datum varies in space. Global model works well on average but countries have developed their own local datum
+\item British national grid uses OSGB 36 datum. Same latitude and longitude but different datum. In some places WGS up to 70m East and 70m South of OSGB 36. This shift varies nationally
+\end{itemize}
+\subsection{Spherical geometry and projected coordinates}
+\begin{itemize}
+\item Lots of GIS involves finding distance between points. So need to use length along great circles
+\item Need to use sperical geometry. Same for areas
+\item As not spere though we need to use Ellipsoid geometry
+\item Impossible to project a sphere onto a plane without distortion. Ellipsoid surface of the Earth isflat enough in small scale (around 10km) but not larger
+\item When looking for a projection want to try and preserve: shape, area, distance and direction. Ususally can only preserve one
+\item Tissot indicatrix - Place circles on the Earths suface and then can see how they are distorted in the map.
+\item One method is to treat longitude and latitude as x and y - This stretches the poles a lot
+\end{itemize}
+\subsection{Projected coordinate systems}
+\begin{itemize}
+\item projection onto a flat plane. Preserves only distance from a central point. Looks very distorted
+\item Cylindrical projection. Preserves area 
+\item Mercator projection. Preserves shape but not area etc
+\item Fuller Dymaxion projection. Tries to preserve shape and distance but loses direction in the process
+\item Many many others
+\end{itemize}
+\section{2 types of geographic data we will come across}
+\subsection{Raster data}
+\begin{itemize}
+\item An image covering a continuous surface. Made up of individual pixels, each with a value (either categorical or continuous). Has a resolution and needs an origin and coordinate system
+\end{itemize}
+\subsection{Vector data}
+\begin{itemize}
+\item A set of features containing one of:
+\indent \begin{itemize}
+\item Individual points
+\item sets of connected points forming lines or polygons
+\item Needs a coordinate system 
+\item Coordinates of points are a recise location, but may have precision or accuracy information. Features may have an attribute table
+\end{itemize}
+\end{itemize}
+\bigskip
+\section{Remote Sensing}
+\subsection{Introduction} Mapping landscapes by hand allows you to get a very fine level of detail but it is exspensive, slow and inconsistent. Thus we often use remote sensing (using satilites and imagary to produce maps). Remote sensors can be passive e.g look at reflected solar radiation, using photographs \\ Or active: emit and sense reflections \begin{itemize}
+\item LiDAR (light)
+\item RADAR (microwaves)
+\item Detect alteration in reflected light
+\item Trip time gives height
+\end{itemize}
+Active methods are often expensive so often use the passive types.
+\subsection{Reflection}
+\begin{itemize}
+\item Albedo: The proportion of radiation reflected from a surface
+\item Texture and angle strongly affect albedo so need to take account of this
+\item Monochrome images: Different objects have different albedos. \\ Construct maps by looking at contrast, texture and edgesmote sensing won't just use visible light. Will use multispectra imaging 
+\begin{itemize}
+\item The albedo of a surface varies with the wavelength of the radiation
+\item different surfaces have different reflective profiles
+\item Composed of multiple layers recording reflectance in different wavelengths
+\end{itemize}
+\end{itemize}
+\subsection{Using Satellites}
+\begin{itemize}
+\item Height of satellite orbits affect the field of view. Also sycronise the angle of the sun so that reflection is the same for all readings
+\item Spatiotemporal resoultion - Low Earth orbits provide a high spatial resolution. Norrow path widths, samll scenes and less frequent images. Satellite costellations can increase temporal resolution
+\item Spectral resolution      - Determined by the satellite mission, constrained by absorbtion of radiation by the atmosphere. Light gathering sets resolution and band width
+\item Different satellites have recorders for different wavelengths providing different spatial resolution 
+\end{itemize}
+\subsection{Using the images}
+\begin{itemize}
+\item Georeferencing - Where is the image?
+\item Orthorectification - Remove perspective and terrain effects. 
+\item Calibration - Convert the sensor value (relative wavelengths) to an actual reflectance value
+\item Atmospheric correction - aerosols and water vapour can all impose spectral biases on reflected light and vary on a daily basis. I.e harder to see around clouds etc. Know something through a cloud won't ve reflecting as much as that which isn't
+\item Earth observation products - use satellite data to produce derived maps using standardised algorithms, map land surface at global scale. Temporal scales: daily to annual, resolution: 250m to > 8km. Validation: many have pixel by pixel accuracy
+\item Vegetation indicies - Simple, direct calculated from sensor values: Normalised difference vegetation index and the enhanced vegetation index (looking at how many leaves there are in an area)
+\item Digital elevattion models - Give height of the land
+\item Fire signatures - looking for a peak in infra-red radiation. Burned areas - change detection in successive images around fire pixels
+\item land cover - Spectral signatures differ between surfaces so should be able to pick up different types of surfaces. Can also look at the temporal change of the land surface i.e how the surface is in summer and winter. 
+\begin{itemize}
+\item Ground signalling ties spectral signatures to habitats.
+\item Profiles can then be used to classify pixels to habitats
+\end{itemize}
+\item Productivity - Plants use light to store carbon. If we know the amount of photosynthetically active light absorbed, the radiation conversion efficiency (given by teperature and humidity) and the respiration costs then we can predict gross and net primary productivity.
+\begin{itemize}
+\item remotely sensed reflected light
+\item ground measured incident light
+\item Biome based models for: conversion efficieny and respiration
+\end{itemize}
+
+\end{itemize}
+
+\end{document}

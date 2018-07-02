@@ -1,0 +1,96 @@
+Readme for week7 work, advanced biological programming in python
+
+
+Code:
+		blackbirds.py - A script that searches through a text file of animal 
+						taxa and returns the Kingdom, phylum and species for 
+						each organism. Performs this by using regular expressions
+						in particular re.findall
+		
+		DrawFW.py - Plot a snapshot of a food web graph/network. Example 
+					of using networkx through python. Generating a 
+					random list of connections with a set connectivity
+					and produce a visualisation of this network
+					
+		fmr.R - An example script in R to practice being run through 
+				subprocesses in python. The script plots log(field metabolic
+				rate) against log(body mass) for the Nagy et al 1999 dataset 
+				to a file fmr.pdf. 
+					
+		LV1.py - The basic Lotka-Volterra model to show the relationship between predator and prey with default arguments.
+				 The script integrates the ODE and returns a graph of the results
+		
+		LV2.py - The modified Lotka-Volterra model for predator prey relationship. This modified script also accepts arguments
+				 in the command line to set the values of the constants and the values of these are annotated on the resulting
+				 graph	
+				 
+		LV2A.py - The same script as LV2.py but with initial conditions choosen specifically so that the predators and prey have
+				 both exist as in a steady state of the population
+				 
+		LV3.py - A discrete time version of the LV model
+		
+		LV4.py - A discrete time version Lotka-Volterra Model 
+				 with random gaussian fluctations in resource 
+				 growth at each step simulated using scipy
+		
+		LV5.py - A discrete time version Lotka-Volterra Model 
+				 with random gaussian fluctations in resource and predators
+				 growth at each step simulated using scipy 
+				 
+		MyFirstJupyterNB.ipynb - A exxample jupyter notebook displaying 
+								 many of the usefu features including: basic 
+								 features, numerical analysis, mathematical 
+								 modelling, and data analysis. Packages explored
+								 include Pandas and sympy
+		
+		Nets.py - A python version of Nets.R , Takes the QMEE CDT data and returns a 
+				  visualisation of the network of connections coloured and sized by
+				  the type of institution and the number of Phd students connected to it
+		
+		Nets.R - Takes the QMEE CDT data and returns a visualisation of the network of 
+				 connections coloured and sized by the type of institution and the number 
+				 of Phd students connected to it
+				 
+		profileme.py - A script with a few useless functions which take a long time to run. This has been designed to practice 
+					   profiling a script and working out where it is best to try and speed up the code
+		
+		regexs.py - A script giving an example of the uses of different regular exprressions
+		
+		re4.py - Further examples of regular expressions based on use in emails
+		
+		run_fmr_R.py - A python script to run the R script fmr.R
+					   Returns the outputs from the script and an 
+					   output if the script ran successfully or not
+					   
+		run_LV.py - This is part of chapter 6's practicle. The script runs and profiles LV1.py 
+					and LV2.py
+					
+		TestR.py - A script that practices subproccessing. This runs TestR.R through python
+				   and then outputs the results and any errors to seperate output files
+		
+		TestR.R - Basic R script printing "Hello this is R!" for use to practice subprocessing
+		
+		timeitme.py - A sript of functions each with two methods of producing the same result. 
+					  These can each be run with the timeit command to show the difference in 
+					  time it takes to run each of them
+		
+		using_os.py - This is a script using subprocesses to crawl through my home directory
+					  and then returns a list of the files whose name begins with C
+					  
+Data:
+		blackbirds.txt - The data file to be used in the blackbirds practical
+		
+		NagyEtAl1999.csv - The data frame used to create a network graph in 
+						   DrawFW.py
+		
+		QMEE_Net_Mat_edges.csv - The data file for edges data to be used in
+								 Nets.R and Nets.py
+								 
+		QMEE_Net_Mat_nodes.csv - The data file for node data to be used in 
+								 Nets.R and Nets.py
+							
+
+Results:
+		All outputted plots: LV1-LV5, Nets.R, Nets.py, and fmr.R
+		
+		Outputted results from running subprocesses in TestR.py

@@ -1,0 +1,5 @@
+# Ignore everything in this directory
+*
+# Except these files
+!Supercontig_1.20.mpileup
+!.gitignore

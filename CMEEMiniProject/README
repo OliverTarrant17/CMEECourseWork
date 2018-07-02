@@ -1,0 +1,133 @@
+Readme for CMEEMiniproject
+
+
+#################################################################IMPORTANT################################################################################
+# Full CMEEMiniproject with all raw data is ~120GB and takes ~100hours to run                                                                            #
+# For purpose of submission raw data has not been uploaded to git repository except for 1 supercontig's mpileup file from the real world data example.   #
+# Full workflow has all other data analysis commented out (lines 7-40 and lines 81-89 of run_MiniProject.py) with extra an extra fitting example added   #
+# to demonstrate the use of the fitting scripts on the uploaded data (lines 91-101 of run_MiniProject.py). Results of all other data                     #
+# analysis and model fitting are pre uploaded in the Results folder. All results processing remains as normal in the project workflow.                   #
+# Code adjustments result in CMEEMiniproject runtime of ~2.5 minutes                                                                                     #
+#                                                                                                                                                        #
+# Uncommenting lines 7-40 would produce all simulated data and script would continue to run properly. However, uncommenting lines 91-101 would cause     #
+# code to crash as data required for these processes is not uploaded. If this data is required please message Oliver Tarrant: o.tarrant17@imperial.ac.uk #
+##########################################################################################################################################################
+
+Running Project:
+
+From terminal ensure you are in the ~/userPath/CMEEMiniproject/Code folder and run:
+
+        python run_MiniProject.py
+
+Report will be produced and can be found at CMEEMiniproject/Writeup/MiniProject.pdf
+
+                
+
+
+Required languages and packages:
+    Python version 3.6.3:
+        numpy: to load and organising the data
+        scipy: for opperations such as percentile
+        scipy.stats: for statistical functions such as poisson distribution 
+        pandas: for creating and manipulating dataframes of results
+        lmfit: for fitting the models to the data
+        matplotlib.pyplot: for practice plotting the models fitted
+        re: Read the results and extract the values
+        os: to retrieve values from the bash script
+        math: for mathematical operations like factorial and exponential
+        subprocess: for subprocessing tasks within the workflow
+        sys: To take command line arguments when running scripts
+        
+
+    R version 3.2.3:
+        ggplot2: for producing graphs
+        reshape2: To melt the results data into a format for plotting
+
+
+    Scripts included: 
+
+                Choose_Model.py - Python script that fits singular binomial, negative binomial an poisson distributions to depth files
+                                  Depth files contains a list of occurances for each base on the genome. 
+                                  Runs independently taking inputs of data produced in Data_sim_1.sh. 
+                                  Models are fitted to the data and seperate csv files are formed for the outputted results. Outputted files are: Model_Analaysis_depth.csv 
+                                  which contains information on the AIC, BIC, Model parameters and the error in the model parameters.
+                                  Also produces Model_Model_Vals_depth.csv which contains the values from the model and the data values for 
+                                  ease with plotting. Each model is fitted at mean haploid depths 2, 5, 10, 25, 50 and 100. Also at each depth the 
+                                  models are tested on chromosomes of ploidy 1 through to 5.
+
+                Confusion_Matrix_Compare.R - Retrieves the confusion data from (ploidy of each genome against how many curves best fitted it) negative binomial
+                                             and poisson distribution and visualises the performance of the fitting using a confusion matrix. Plots the two 
+                                             matricies side by side to give a comparison of the results. Sources program multiplot within the code! Also prints to
+                                             the screen the number of occurances when each model had the lower AIC value. Perfoms analysis for depths: 2, 5, 10, 25, 50 
+                                             and 100 across a mixture of ploidies from a singular mixture to a mixture of 5.
+
+                CompileLatex.sh - Script to compile the report in latex
+
+                Data_sim_1.sh - Silmulated data generator which produces simulated data for a genome with 10000 bases at each ploidy from 1 to 5. 6 Genomes produced
+                                in total one for each mean haploid read depth of 2, 5, 10, 25, 50 and 100
+
+                Data_sim_2.sh - Silmulated data generator which produces simulated data for 500 genomes in a staircase fashion for ploidy levels. I.e for each chromosome
+                                in the genome the ploidy level increases by 1 starting at 1. The first 100 genomes just have 1 chromosome, the next 100 have 2 chromosomes
+                                and so on. Each chromosome is 1000bp long. Repeated 4 times at mean haploid read depths 2, 5, 10, 25, 50 and 100 respectively.
+
+                Data_sim_3.sh - Silmulated data generator which produces simulated data for 500 genomes each with 5 chromosomes length 10000bp. Each chromosome has a randomly
+                                assigned ploidy between 1 and 5. Process repeated 6 times at mean haploid read depths 2, 5, 10, 25, 50 and 100 respectively.
+
+                Example_Plots.R - R script used to produce a couple of visualisations of the fitted distributions to simulated data. Visualisations produced in the form of line 
+                                  graphs plotted over the raw data
+
+                First_Analysis.R - Retirieves results from Choose_Model.py, outputs plots of the data overlayed with the fitted distributions and plots the 5 ploidy cases 
+                                   in a multipained plot with 3 columns and 2 rows.
+
+                Fitting.py - Generalised model fitting code. Requires first command line argument of a text file of depths. Optained from extractign the read depths from an mpileup file.
+                             Second command line argument of output file stem. Three files will be outputted. The best fit data for a mixture of Poisson distributions, the best fit data for
+                             a mixture of negative binomial distributions and a file of which distribution fit best.
+
+                             Requires 3 command line inputs:
+                                First input is an mpileup file with correct path to it's saved location
+                                Second input is the number of supercontigs file to be combined 
+                                Third input is the number of samples within the mpileup file that are wanted to be fitted
+                                Fourth input is the stem for the results file. This will be added to during the script to create seperate files for 
+                                the poisson and negative binomial distributions.
+                            example running from terminal:
+                                python ../Data/example_mpileup 5 22 ../Results/example_results
+
+                                Running will result in the files ../Results/example_results_Poisson_data.csv & ../Results/example_results_Negative_Binomial_data.csv allong with 22 files of the form 
+                                ../Results/example_results_Model_Vals_Sample_i.csv each containing the values for of the fitted distributions for plotting purposes. 
+                                which will each contain the parameters of the optimally fitted model for each distribution respectively. 
+
+                Mixed_Fit.py - Python script used with depth files produced from Data_sim_2.sh where each genome is fitted with combination of 1 to 5 poisson and binomial distributions
+                               The optimal model for each distribution and the overall model (based on AIC value) is then returned ready to be proccessed in R (Confusion_Matrix_Compare.R)
+                               Data produced is what the best AIC value was and how many curves are in the optimal model, also ploidy level is recorded and passed on for creation of
+                               confusion matricies
+
+                Mixed_Fit_2.py - Python script which fits mixture distributions to the genomes produced in Data_sim_3.sh. Each genome is fitted with mixture of 1-5 Poisson and Negative binomial
+                                 distributions. The best model for each is recorded and parameters are retireved to analyse how well the model fits the true ploidy variation of the data.
+
+                mpileup_depth.sh - Script that converts an mpileup file into depth files. Called upon from Fitting.py
+                                   Takes 2 inputs:
+                                       First input - the name of the mpileup file including path to file
+                                       Second input - number of samples within the mpileup file
+                                   Outputs a seperate depth file for each of the samples present in the mpileup file
+
+                                   Example use from terminal: 
+                                       bash mpileup_depth.sh ../Data/example_mpileup 5
+
+                                   Resulting files would be ../Data/example_mpileup_i.txt for i=1,2,3,4,5
+
+                ngsJulia - Self contained package used to generate simulated mpileup files. See Readme within package directory for more information.
+
+                ngsPoly - Self contained package used to generate simulated mpileup files. See Readme within package directory for more information.
+
+                Plotting.R - R script of generalised plots of fitted models using the results produced from Fitting.py
+                             Run from the terminal as follows:
+                                Rscript --vanilla Plotting.R [input file name with path] [number of samples]
+                             Input file will be the output file from running Fitting.py
+                             Outputs pdf files of line graphs with the optimal distributions plotted over the raw data 
+                             Output files saved as [input file]_Sample[i]_plot.pdf for i = 1:[number of samples]
+
+                Random_Analysis.R - R script that computes the RMSD and plots confusion matrices for the results produced by fittting mixture distributions to the data produced from Data_sim_3
+
+                run_MiniProject.py - Python script used to subprocess the entire CMEEMiniproject
+
+                texcount.pl - Word counting script for report

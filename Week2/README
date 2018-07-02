@@ -1,0 +1,115 @@
+Week two's files. Week two is based aroud the learning and testing of basic python.
+	In Code the files are:
+	
+		align_seqs.py - Opens a CSV file from the Data directory containing 2 DNA sequences. This script 
+					   takes these two sequences and finds a best alignment for them. This best alignment
+					   is then returned with a score for this alignment (the number of matches).
+					   
+		align_seqs_fasta.py - This is a modified version of align_seq.py. This script accepts 2 fasta files
+							 in the command line and aligns the two sequences on them and returns them in
+							 the same way as in align_seq.py
+
+		basic_csv.py - This file gives example code for reading a csv file and printing out the first column of each row
+					   with the preceeding text "The species is". The second part of the code takes the file testcsv.csv 
+					   and then returns just the first and last columns (species and body mass) and saves the file as 
+					   body mass.csv (saved in sandbox)
+					   
+		basic_io.py - This file gives the example code for opening a file for reading using python.
+					  Then the code writes a new file called testout.txt which is the output of 1-100 
+					  and saves this file in Sandbox folder (see below). Finally the code gives an example of 
+					  storing objects for later use. In this example my_dictionary is stored as the file testp.p
+					  in sandbox. Pickle is used to serialize the objects hieracy
+					  						
+		boilerplate.py - This is a boilerplate function. Displays basic layout of a function and returns "This is a boilerplate "
+		
+		using_name.py - This file is an example file to give between a function being called upon from elsewhere and running it directly
+		
+		sysargv.py - This function visually displays how the arguments of a function are found and how argv works
+		
+		scope.py - This function gives an example bewteen the correct and incorrect way of defining a global variable (retains value after 
+				   leaving the function) and the difference of local variables
+				   
+		control_flow.py - Gives an example of multiple functions within a module and then callign each function seperatly
+		
+		cfexercise.py - Control flow exercises determining more about the way functions work and how to construcct them
+		
+		debugme.py - A basic function containing an infinite loop set up to practice using %pdb to debug a program
+		
+		dictionary.py - Part of chapter 5's practicals. This reads the data file taxa and returns a dictionary that
+						links each of the species with their correct order. This dictionary is then printed
+						
+		lc1.py - Part of chapter 5's practical. Takes the list of birds with there common names, latin names and 
+				 body mass and creates 3 seperate lists of just their common names, latin name and body masses 
+				 respectively. This is done twice. First using list comprehensiona and then by using loops.
+				 
+		lc2.py - Part of chapter 5's practical. Uses the provided rainfall data from the met office in 1910, this is then
+				 analysed to return two lists. One of the months and corresponding rainfall for the months where the rainfall
+				 was greater than 100 mm. The second of just the months that the rainfall was under 50 mm. This is done twice, 
+				 first by list comprehensiona and then by using loops.
+				 
+
+		loops.py - Shows different uses of for and while statements in python code
+		
+		oaks.py - Gives examples of using list comprehension to return oak species from a list of taxa 
+		
+		
+		test_control_flow.py - A modified version of control_flow.py where the function has been isolated and docstring tests have been 
+							   added to check that it runs as expected. This was set up to practice the use of docstring tests for 
+							   debuging
+		
+		test_oaks.py - Part of chapter 6's pactical. Program initially ran with a bug so was edited after using docstring tests to determine
+					   where the bug was and how to fix it. Now reads the data file of oaks and returns a list of just those that are oaks
+		
+		tuple.py - Part of chapter 5's practical. This reads the information stored in the tuples provided and seperates the information for each
+				   species onto a seperate line
+	
+	
+	In Data there is: 
+		The directory fasta - containing 3 fasta files of genomes that are aligned by being called on and used in the align_seq_fasta.py script
+		
+		bodymass.csv - see basic_csv
+		
+		Sequences.py - The csv file containg two DNA sequences to be aligned for the align_seq.py script
+		
+		testcsv.csv - data for basic_csv.py
+		
+		TestOaksData.csv - The csv file containg the entire list of species to be analysied by the test_oaks.py script (see above)
+		
+	
+	In Results there is:
+		
+		align_407228326.fasta_407228412.fasta - The optimal resulting alignment and alignment score from running align_seq_fasta.py on 407228326.fasta 
+			                                    and 407228412.fasta both of which are found in the fasta directory within Data
+
+		align_407228326.fasta_E.coli.fasta - The optimal resulting alignment and alignment score from running align_seq_fasta.py on E.coli.fasta 
+			                                 and 407228326.fasta both of which are found in the fasta directory within Data	     			                                    
+
+		align_407228412.fasta_E.coli.fasta - The optimal resulting alignment and alignment score from running align_seq_fasta.py on E.coli.fasta 
+			                                 and 407228412.fasta both of which are found in the fasta directory within Data
+                               
+		align_too_few_args_have_an_example - the reusulting example alignment file produced by running align_seq_fasta.py without specifying the two
+											 fasta files to be aligned
+											 
+		JustOaksData.csv - The resuting output from running test_oaks.py. I.e the species from TestOaksData.csv that are species of oak
+		
+		pey_and_predators_1.pdf - The pdf document of a graph representing the predator prey density relationship that occurs when running the version
+								  of the Lotka-Volterra model found in LV1.py
+		
+		pey_and_predators_2.pdf - The pdf document of a graph representing the predator prey density relationship that occurs when running the modified 
+								  version of the Lotka-Volterra model found in LV2.py
+								  
+		Sequences_aligned.txt - The resulting document of the aligned sequences specified and run from in align_seq.py 
+			 	
+	
+	
+	In Sandbox there is:
+	
+		testout.txt - outputed test file from basic_io.py
+	
+		testp.p - object written and saved in storing objects example code from basic_io.py
+	
+		test.txt - file created for practice opening to read in basic_io.py
+	
+		temp.py - test of for statement
+		
+		

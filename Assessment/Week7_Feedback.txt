@@ -1,0 +1,4095 @@
+Starting weekly assessment for Oliver, Week7
+
+Current Marks = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 76.23 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week3, Week5, Week1, Week7, Week4, Week2, .git, Assessment, Week6
+
+Found the following files in parent directory: README, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~ 
+*.tmp
+*.pyc
+*.log
+*.aux
+*.synctex
+*.out
+*.gz
+**********************************************************************
+
+Found README in parent directory, named: README
+
+Printing contents of README:
+**********************************************************************
+.
+├── Assessment
+│   ├── Week1_Feedback.txt
+│   ├── Week2_Feedback.txt
+│   ├── Week3_Feedback.txt
+│   ├── Week4_Feedback.txt
+│   └── Week5_Feedback.txt
+├── README.txt
+├── temporary.tmp
+├── Week1
+│   ├── Code
+│   │   ├── boilerplate.sh
+│   │   ├── CompileLatex.sh
+│   │   ├── ConcatenateTwoFiles.sh
+│   │   ├── CountLines.sh
+│   │   ├── csvtospace.sh
+│   │   ├── FirstBiblio.bib
+│   │   ├── FirstExample.pdf
+│   │   ├── FirstExample.tex
+│   │   ├── MyExampleScript.sh
+│   │   ├── Results
+│   │   │   └── FirstExample.pdf
+│   │   ├── tabtocsv.sh
+│   │   ├── UnixPrac1.txt
+│   │   └── variables.sh
+│   ├── Data
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── spawannxs.txt
+│   │   └── Temperatures
+│   │       ├── 1800.csv
+│   │       ├── 1800.csv_space
+│   │       ├── 1801.csv
+│   │       ├── 1801.csv_space
+│   │       ├── 1802.csv
+│   │       ├── 1802.csv_space
+│   │       ├── 1803.csv
+│   │       └── 1803.csv_space
+│   ├── readme
+│   └── Sandbox
+│       ├── ListRootDir.txt
+│       ├── TestFind
+│       │   ├── Dir1
+│       │   │   ├── Dir11
+│       │   │   │   └── Dir111
+│       │   │   │       └── File111.txt
+│       │   │   ├── File1.csv
+│       │   │   ├── File1.tex
+│       │   │   └── File1.txt
+│       │   ├── Dir2
+│       │   │   ├── file2.csv
+│       │   │   ├── File2.tex
+│       │   │   └── File2.txt
+│       │   └── Dir3
+│       │       └── File3.txt
+│       ├── TestLaTex.tex
+│       ├── test.txt
+│       ├── test.txt.csv
+│       └── TestWild
+│           ├── Anotherfile.csv
+│           ├── Anotherfile.txt
+│           ├── File1.csv
+│           ├── File1.txt
+│           ├── File2.csv
+│           ├── File2.txt
+│           ├── File3.csv
+│           ├── File3.txt
+│           ├── File4.csv
+│           └── File4.txt
+├── Week2
+│   ├── Code
+│   │   ├── align_seqs_fasta.py
+│   │   ├── align_seqs.py
+│   │   ├── basic_csv.py
+│   │   ├── basic_io.py
+│   │   ├── boilerplate.py
+│   │   ├── cfexercises.py
+│   │   ├── control_flow.py
+│   │   ├── debugme.py
+│   │   ├── dictionary.py
+│   │   ├── lc1.py
+│   │   ├── lc2.py
+│   │   ├── loops.py
+│   │   ├── oaks.py
+│   │   ├── scope.py
+│   │   ├── sysargv.py
+│   │   ├── test_control_flow.py
+│   │   ├── test_oaks.py
+│   │   ├── tuple.py
+│   │   └── using_name.py
+│   ├── Data
+│   │   ├── bodymass.csv
+│   │   ├── fasta
+│   │   │   ├── 407228326.fasta
+│   │   │   ├── 407228412.fasta
+│   │   │   └── E.coli.fasta
+│   │   ├── Sequences.csv
+│   │   ├── testcsv.csv
+│   │   └── TestOaksData.csv
+│   ├── README
+│   ├── Results
+│   │   ├── align_407228326.fasta_407228412.fasta
+│   │   ├── align_407228326.fasta_E.coli.fasta
+│   │   ├── align_407228412.fasta_E.coli.fasta
+│   │   ├── align_too_few_args_have_an_example
+│   │   ├── JustOaksData.csv
+│   │   ├── prey_and_predators_1.pdf
+│   │   ├── prey_and_predators_2.pdf
+│   │   ├── prey_and_predators_3.pdf
+│   │   ├── prey_and_predators_4.pdf
+│   │   └── Sequences_aligned.txt
+│   └── Sandbox
+│       ├── bodymass.csv
+│       ├── temp.py
+│       ├── testout.txt
+│       ├── testp.p
+│       └── test.txt
+├── Week3
+│   ├── Code
+│   │   ├── apply1.R
+│   │   ├── apply2.R
+│   │   ├── basic_io.R
+│   │   ├── boilerplate.R
+│   │   ├── break.R
+│   │   ├── browse.R
+│   │   ├── control.R
+│   │   ├── DataWrang.R
+│   │   ├── get_TreeHeight.py
+│   │   ├── get_TreeHeight.R
+│   │   ├── Mapping.R
+│   │   ├── next.R
+│   │   ├── PP_Lattice.R
+│   │   ├── PP_Regress.R
+│   │   ├── Ricker.R
+│   │   ├── run_get_TreeHeight.sh
+│   │   ├── run_vectorize.sh
+│   │   ├── sample.R
+│   │   ├── SQLinR.R
+│   │   ├── TAutoCorr_Analysis.Rnw
+│   │   ├── TAutoCorr_Analysis.tex
+│   │   ├── TAutoCorrCode.R
+│   │   ├── TAutoCorr.R
+│   │   ├── TreeHeight.R
+│   │   ├── try.R
+│   │   ├── Vectorize1.py
+│   │   ├── Vectorize1.R
+│   │   ├── Vectorize2.py
+│   │   └── Vectorize2.R
+│   ├── Data
+│   │   ├── EcolArchives-E089-51-D1.csv
+│   │   ├── GPDDFiltered.RData
+│   │   ├── KeyWestAnnualMeanTemperature.RData
+│   │   ├── PoundHillData.csv
+│   │   ├── PoundHillMetaData.csv
+│   │   ├── Resource.csv
+│   │   ├── Results.txt
+│   │   └── trees.csv
+│   ├── README
+│   ├── Results
+│   │   ├── Girko.pdf
+│   │   ├── MyBars.pdf
+│   │   ├── MyData.csv
+│   │   ├── MyFirst-ggplot2-Figure.pdf
+│   │   ├── MyLinReg.pdf
+│   │   ├── PP_Regress_Results.csv
+│   │   ├── PP_Results.csv
+│   │   ├── Pred_Lattice.pdf
+│   │   ├── Pred_Prey_Overlay.pdf
+│   │   ├── Pred_Prey_Regress.pdf
+│   │   ├── Prey_Lattice.pdf
+│   │   ├── SizeRatio_Lattice.pdf
+│   │   ├── TAutoCorr_Analysis.pdf
+│   │   ├── Test.sqlite
+│   │   ├── TreeHts.csv
+│   │   ├── trees_heights.csv
+│   │   └── trees_treeheights.csv
+│   └── Sandbox
+│       ├── by.R
+│       ├── Case_study_1.R
+│       ├── Case_study_2.R
+│       ├── Case_study_3.R
+│       ├── Case_study_4.R
+│       └── tapply.R
+├── Week4
+│   ├── Code
+│   │   ├── Sparrows_handout_10.R
+│   │   ├── Sparrows_handout_15.R
+│   │   ├── Sparrows_handout_1to4.R
+│   │   ├── Sparrows_handout_5&6.R
+│   │   └── Sparrows_lecture_9.R
+│   ├── Data
+│   │   ├── daphnia.txt
+│   │   ├── DataWranglingCheatSheet.pdf
+│   │   ├── ipomopsis.txt
+│   │   ├── Meth. Ecol. Evol. 2010 Zuur.pdf
+│   │   ├── ObserverRepeatability.txt
+│   │   ├── SparrowSize.txt
+│   │   ├── StatsWithSparrows10_Lect.pdf
+│   │   ├── StatsWithSparrows10LinearModels.pdf
+│   │   ├── StatsWithSparrows13Anova.pdf
+│   │   ├── StatsWithSparrows14RepAnova.pdf
+│   │   ├── StatsWithSparrows16MultipleRegression.pdf
+│   │   ├── StatsWithSparrows17NonParametrics.pdf
+│   │   ├── StatsWithSparrows18Repeatability.pdf
+│   │   ├── StatsWithSparrows1.pdf
+│   │   ├── StatsWithSparrows2.pdf
+│   │   ├── StatsWithSparrows4.pdf
+│   │   ├── StatsWithSparrows5.pdf
+│   │   ├── The Auk 1987 Lessells copy.pdf
+│   │   └── timber.txt
+│   ├── README
+│   ├── Results
+│   └── Sandbox
+├── Week5
+│   ├── Lectures
+│   │   ├── GIS_Concepts.pdf
+│   │   └── GIS_Concepts.tex
+│   ├── Practical1
+│   │   ├── Code
+│   │   │   └── Python_automation.py
+│   │   ├── Data
+│   │   │   ├── Borneo
+│   │   │   │   ├── MODIS_blue_reflectance.tif
+│   │   │   │   ├── MODIS_blue_reflectance.tif.aux.xml
+│   │   │   │   ├── Modis_blue_reflectance_UTM50N.tif
+│   │   │   │   ├── Modis_blue_reflectance_UTM50N.tif.aux.xml
+│   │   │   │   ├── MODIS_EVI.tif
+│   │   │   │   ├── MODIS_EVI.tif.aux.xml
+│   │   │   │   ├── MODIS_NDVI.tif
+│   │   │   │   ├── MODIS_NDVI.tif.aux.xml
+│   │   │   │   ├── MODIS_NIR_reflectance.tif
+│   │   │   │   ├── MODIS_NIR_reflectance.tif.aux.xml
+│   │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif
+│   │   │   │   ├── Modis_NIR_reflectance_UTM50N.tif.aux.xml
+│   │   │   │   ├── MODIS_red_reflectance.tif
+│   │   │   │   ├── MODIS_red_reflectance.tif.aux.xml
+│   │   │   │   ├── Modis_red_reflectance_UTM50N.tif
+│   │   │   │   ├── Modis_red_reflectance_UTM50N.tif.aux.xml
+│   │   │   │   ├── MODIS_reflectance.vrt
+│   │   │   │   ├── NDVI.tif
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_layout_UTM50N_WGS84.shx
+│   │   │   ├── EU
+│   │   │   │   ├── bio1_15.tif
+│   │   │   │   ├── bio1_16.tif
+│   │   │   │   ├── bio12_15.tif
+│   │   │   │   ├── bio12_16.tif
+│   │   │   │   ├── bio12_UK_BNG.tif
+│   │   │   │   ├── bio1_UK_BNG.tif
+│   │   │   │   ├── clc_legend_qgis.txt
+│   │   │   │   ├── g250_06.tif
+│   │   │   │   └── g250_06_UK_BNG.tif
+│   │   │   └── Global
+│   │   │       ├── Background.dbf
+│   │   │       ├── Background.prj
+│   │   │       ├── Background.shp
+│   │   │       ├── Background.shx
+│   │   │       ├── bio12.bil
+│   │   │       ├── bio12.bil.aux.xml
+│   │   │       ├── bio12.hdr
+│   │   │       ├── bio12.stx
+│   │   │       ├── bio1.bil
+│   │   │       ├── bio1.bil.aux.xml
+│   │   │       ├── bio1.hdr
+│   │   │       ├── bio1.stx
+│   │   │       ├── cntry98.dbf
+│   │   │       ├── cntry98.prj
+│   │   │       ├── cntry98.shp
+│   │   │       ├── cntry98.shx
+│   │   │       ├── tissot.dbf
+│   │   │       ├── tissot.prj
+│   │   │       ├── tissot.shp
+│   │   │       └── tissot.shx
+│   │   ├── EU_project.qgs~
+│   │   ├── Images
+│   │   │   ├── AdvancedDigitizingToolbar.png
+│   │   │   ├── AttributeTableBar.png
+│   │   │   ├── BluetitNests.png
+│   │   │   ├── ComposerElements.png
+│   │   │   ├── ComposerOutputs.png
+│   │   │   ├── DigitalElevationModel.png
+│   │   │   ├── DigitizingToolbar.png
+│   │   │   ├── FeederRegions.png
+│   │   │   ├── Georeferenced.png
+│   │   │   ├── GeoreferencerToolbar.png
+│   │   │   ├── MainToolbar.png
+│   │   │   ├── ManageLayersToolbar.png
+│   │   │   ├── MapComposerOutput.pdf
+│   │   │   ├── MODIS_sinu.png
+│   │   │   ├── modis_sinusoidal_grid.jpg
+│   │   │   ├── PlantRichnessAddedOrchids.png
+│   │   │   ├── PlantRichnessAdded.png
+│   │   │   ├── PlantRichnessAddedSelection.png
+│   │   │   ├── ProjectionDifferencesBNG.png
+│   │   │   ├── ProjectionDifferences.png
+│   │   │   ├── Projection_types.png
+│   │   │   ├── SAFE_UTM50N.png
+│   │   │   ├── ScriptEditorToolbar.png
+│   │   │   ├── ScriptEditorToolbar.tiff
+│   │   │   ├── Territ100.png
+│   │   │   ├── TerritoriesArea.png
+│   │   │   ├── TerritoryModel.png
+│   │   │   ├── Tissot_WGS84.png
+│   │   │   └── VoronoiAndBuffer.png
+│   │   ├── Instructions
+│   │   │   ├── Pratical_1.aux
+│   │   │   ├── Pratical_1.log
+│   │   │   ├── Pratical_1.out
+│   │   │   ├── Pratical_1.pdf
+│   │   │   └── Pratical_1.tex
+│   │   ├── Projects
+│   │   │   ├── BorneoPractical1.qgs
+│   │   │   └── EU_project.qgs
+│   │   └── Results
+│   │       └── zonalstats.csv
+│   ├── Practical2
+│   │   ├── Data
+│   │   │   ├── AGB_BetaregRad_Full
+│   │   │   │   ├── AGBChigh.r10stackatm.tif
+│   │   │   │   ├── AGBChigh.r10stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r11stackatm.tif
+│   │   │   │   ├── AGBChigh.r11stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r12stackatm.tif
+│   │   │   │   ├── AGBChigh.r12stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r13stackatm.tif
+│   │   │   │   ├── AGBChigh.r13stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r14stackatm.tif
+│   │   │   │   ├── AGBChigh.r14stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r15stackatm.tif
+│   │   │   │   ├── AGBChigh.r15stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r16stackatm.tif
+│   │   │   │   ├── AGBChigh.r16stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r5stackatm.tif
+│   │   │   │   ├── AGBChigh.r6stackatm.tif
+│   │   │   │   ├── AGBChigh.r6stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r7stackatm.tif
+│   │   │   │   ├── AGBChigh.r7stackatm.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r7stackatm.tif.enp
+│   │   │   │   ├── AGBChigh.r8stackatmNew.tif
+│   │   │   │   ├── AGBChigh.r8stackatmNew.tif.aux.xml
+│   │   │   │   ├── AGBChigh.r9stackatm.tif
+│   │   │   │   ├── AGBChigh.r9stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r10stackatm.tif
+│   │   │   │   ├── AGBClow.r10stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r11stackatm.tif
+│   │   │   │   ├── AGBClow.r11stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r12stackatm.tif
+│   │   │   │   ├── AGBClow.r12stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r13stackatm.tif
+│   │   │   │   ├── AGBClow.r13stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r14stackatm.tif
+│   │   │   │   ├── AGBClow.r14stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r15stackatm.tif
+│   │   │   │   ├── AGBClow.r15stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r16stackatm.tif
+│   │   │   │   ├── AGBClow.r16stackatm.tif.aux.xml
+│   │   │   │   ├── AGBClow.r5stackatm.tif
+│   │   │   │   ├── AGBClow.r6stackatm.tif
+│   │   │   │   ├── AGBClow.r7stackatm.tif
+│   │   │   │   ├── AGBClow.r8stackatmNew.tif
+│   │   │   │   ├── AGBClow.r9stackatm.tif
+│   │   │   │   ├── AGBMean.r10stackatm.tif
+│   │   │   │   ├── AGBMean.r11stackatm.tif
+│   │   │   │   ├── AGBMean.r12stackatm.tif
+│   │   │   │   ├── AGBMean.r13stackatm.tif
+│   │   │   │   ├── AGBMean.r14stackatm.tif
+│   │   │   │   ├── AGBMean.r15stackatm.tif
+│   │   │   │   ├── AGBMean.r16stackatm.tif
+│   │   │   │   ├── AGBMean.r5stackatm.tif
+│   │   │   │   ├── AGBMean.r6stackatm.tif
+│   │   │   │   ├── AGBMean.r7stackatm.tif
+│   │   │   │   ├── AGBMean.r8stackatmNew.tif
+│   │   │   │   ├── AGBMean.r9stackatm.tif
+│   │   │   │   ├── ModelSummary.text
+│   │   │   │   ├── Obsandpredi_msavi2.jpg
+│   │   │   │   └── ObsVersusPredicted.jpg
+│   │   │   ├── Modis_blue_reflectance_UTM50N.tif.aux.xml
+│   │   │   ├── Modis_NIR_reflectance_UTM50N.tif.aux.xml
+│   │   │   ├── Modis_red_reflectance_UTM50N.tif.aux.xml
+│   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84
+│   │   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_core_sampling_stations_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_core_sampling_stations_UTM50N_WGS84.shx
+│   │   │   ├── SAFE_layout_shapefiles
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_GPS_fragment_edges_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_layout_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_planned_fragments_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_planned_fragments_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_planned_fragments_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_planned_fragments_UTM50N_WGS84.shx
+│   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84
+│   │   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_MammalTraps_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_MammalTraps_UTM50N_WGS84.shx
+│   │   │   ├── SAFE_shore_and_country_borders
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_Regional_DCW_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.shp
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_full_UTM50N_WGS84.shx
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.dbf
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.prj
+│   │   │   │   ├── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.shp
+│   │   │   │   └── SAFE_Regional_GSHHS_Shoreline_intmd_UTM50N_WGS84.shx
+│   │   │   ├── Sampling_area_borders_UTM50N_WGS84
+│   │   │   │   ├── Sampling_area_borders_UTM50N_WGS84.dbf
+│   │   │   │   ├── Sampling_area_borders_UTM50N_WGS84.prj
+│   │   │   │   ├── Sampling_area_borders_UTM50N_WGS84.shp
+│   │   │   │   └── Sampling_area_borders_UTM50N_WGS84.shx
+│   │   │   ├── SRTM_Channels_network
+│   │   │   │   ├── SRTM_Channels_network.dbf
+│   │   │   │   ├── SRTM_Channels_network.prj
+│   │   │   │   ├── SRTM_Channels_network.shp
+│   │   │   │   └── SRTM_Channels_network.shx
+│   │   │   ├── SRTM_Flow_Direction.tif
+│   │   │   ├── SRTM_Flow_Direction.tif.aux.xml
+│   │   │   ├── SRTM_Log_Flow_Accum.tif
+│   │   │   ├── SRTM_Log_Flow_Accum.tif.aux.xml
+│   │   │   ├── SRTM_UTM50N_aspect.tif
+│   │   │   ├── SRTM_UTM50N_aspect.tif.aux.xml
+│   │   │   ├── SRTM_UTM50N_contour
+│   │   │   │   ├── SRTM_UTM50N_contour.dbf
+│   │   │   │   ├── SRTM_UTM50N_contour.prj
+│   │   │   │   ├── SRTM_UTM50N_contour.shp
+│   │   │   │   └── SRTM_UTM50N_contour.shx
+│   │   │   ├── SRTM_UTM50N_processed.tif
+│   │   │   ├── SRTM_UTM50N_processed.tif.aux.xml
+│   │   │   ├── SRTM_UTM50N_seamask.tif
+│   │   │   ├── SRTM_UTM50N_seamask.tif.aux.xml
+│   │   │   └── SRTM_UTM50N_slope.tif
+│   │   ├── Large_map.qgs~
+│   │   ├── Map.qpt
+│   │   ├── MyMap.qgs~
+│   │   ├── Practical2.qgs~
+│   │   ├── Projects
+│   │   │   ├── Large_map.qgs
+│   │   │   ├── MyMap.qgs
+│   │   │   └── Practical2.qgs
+│   │   └── Results
+│   │       └── My_map.pdf
+│   └── README
+├── Week6
+│   ├── Code
+│   │   ├── frqx2geno.pl
+│   │   ├── HWE_analysis_pipe.sh
+│   │   ├── kmercountexact.sh
+│   │   ├── Moving_F_myVers.R
+│   │   ├── Moving_F.R
+│   │   ├── Ob_v_Ex_het_myVers.R
+│   │   ├── Ob_v_Ex_het.R
+│   │   ├── Pop_gen_prac.R
+│   │   ├── Practical_4_code.sh
+│   │   ├── Practical_script.sh
+│   │   └── Rplots.pdf
+│   ├── Data
+│   │   ├── Dataset1_Analysis
+│   │   │   ├── 01_LD_Trim_Dataset1_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── results
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.bed
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.bim
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.fam
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.log
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.prune.in
+│   │   │   │   │   └── ME_Dataset1_LDpruned_0.1.prune.out
+│   │   │   │   └── scripts
+│   │   │   │       └── LDprune.pl
+│   │   │   ├── 02_MDS_Dataset1_2015
+│   │   │   │   ├── plink.cluster1
+│   │   │   │   ├── plink.cluster2
+│   │   │   │   ├── plink.cluster3
+│   │   │   │   ├── plink.log
+│   │   │   │   ├── plink.mds
+│   │   │   │   ├── plink.nosex
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── results
+│   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.genome
+│   │   │   │   │   └── ME_Dataset1_LDpruned_0.1_ibs.log
+│   │   │   │   └── scripts
+│   │   │   │       ├── MDS.pl
+│   │   │   │       ├── MDSPlot.R
+│   │   │   │       └── plinkMDS2R.pl
+│   │   │   ├── 03_ADMIXTURE_Dataset1_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── Rakefile~
+│   │   │   │   ├── results
+│   │   │   │   │   ├── Cross_Validation
+│   │   │   │   │   │   ├── CV_error
+│   │   │   │   │   │   │   ├── CVerror.plot.pdf
+│   │   │   │   │   │   │   └── CVerror.Rtable
+│   │   │   │   │   │   ├── log1.out
+│   │   │   │   │   │   ├── log2.out
+│   │   │   │   │   │   ├── log3.out
+│   │   │   │   │   │   ├── log4.out
+│   │   │   │   │   │   ├── log5.out
+│   │   │   │   │   │   ├── log6.out
+│   │   │   │   │   │   ├── log7.out
+│   │   │   │   │   │   ├── log8.out
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.1.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.1.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.2.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.2.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.3.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.3.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.4.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.4.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.5.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.5.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.6.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.6.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.7.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.7.Q
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.8.P
+│   │   │   │   │   │   ├── ME_Dataset1_LDpruned_0.1.8.Q
+│   │   │   │   │   │   └── ME_Dataset1_LDpruned_0.1.CVerror
+│   │   │   │   │   └── plots
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.1.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.2.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.3.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.4.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.5.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.6.Rtable
+│   │   │   │   │       ├── ME_Dataset1_LDpruned_0.1.7.Rtable
+│   │   │   │   │       └── ME_Dataset1_LDpruned_0.1.8.Rtable
+│   │   │   │   └── scripts
+│   │   │   │       ├── admixCV.pl
+│   │   │   │       ├── admixPlot_old.pl
+│   │   │   │       ├── admixPlot.pl
+│   │   │   │       ├── admixture2R.pl
+│   │   │   │       ├── AdPlot.R
+│   │   │   │       ├── errorPlot.R
+│   │   │   │       ├── R_code_backup.txt
+│   │   │   │       └── snpexclude.pl
+│   │   │   └── 04_ADMIX_Datset1_Pretty_Plot_2015
+│   │   │       ├── ordered_popdata.csv
+│   │   │       ├── Rakefile
+│   │   │       ├── results
+│   │   │       │   ├── Dataset1.csv
+│   │   │       │   └── Dataset3_plot.pdf
+│   │   │       └── scripts
+│   │   │           ├── plotcsv.pl
+│   │   │           └── structure_plots.R
+│   │   ├── Dataset2_Analysis
+│   │   │   ├── 01_LD_Trim_Dataset2_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       └── LDprune.pl
+│   │   │   ├── 02_MDS_Dataset2_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       ├── MDS.pl
+│   │   │   │       ├── MDSPlot.R
+│   │   │   │       └── plinkMDS2R.pl
+│   │   │   ├── 03_ADMIXTURE_Dataset2_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── Rakefile~
+│   │   │   │   └── scripts
+│   │   │   │       ├── admixCV.pl
+│   │   │   │       ├── admixPlot_old.pl
+│   │   │   │       ├── admixPlot.pl
+│   │   │   │       ├── admixture2R.pl
+│   │   │   │       ├── AdPlot.R
+│   │   │   │       ├── errorPlot.R
+│   │   │   │       ├── R_code_backup.txt
+│   │   │   │       └── snpexclude.pl
+│   │   │   └── 04_ADMIX_Datset2_Pretty_Plot_2015
+│   │   │       ├── ordered_popdata.csv
+│   │   │       ├── Rakefile
+│   │   │       └── scripts
+│   │   │           ├── plotcsv.pl
+│   │   │           └── structure_plots.R
+│   │   ├── Dataset3_Analysis
+│   │   │   ├── 01_LD_Trim_Dataset3_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       └── LDprune.pl
+│   │   │   ├── 02_MDS_Dataset3_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   └── scripts
+│   │   │   │       ├── MDS.pl
+│   │   │   │       ├── MDSPlot.R
+│   │   │   │       └── plinkMDS2R.pl
+│   │   │   ├── 03_ADMIXTURE_Dataset3_2015
+│   │   │   │   ├── Rakefile
+│   │   │   │   ├── Rakefile~
+│   │   │   │   └── scripts
+│   │   │   │       ├── admixCV.pl
+│   │   │   │       ├── admixPlot_old.pl
+│   │   │   │       ├── admixPlot.pl
+│   │   │   │       ├── admixture2R.pl
+│   │   │   │       ├── AdPlot.R
+│   │   │   │       ├── errorPlot.R
+│   │   │   │       ├── R_code_backup.txt
+│   │   │   │       └── snpexclude.pl
+│   │   │   └── 04_ADMIX_Datset3_Pretty_Plot_2015
+│   │   │       ├── ordered_popdata.csv
+│   │   │       ├── Rakefile
+│   │   │       └── scripts
+│   │   │           ├── plotcsv.pl
+│   │   │           └── structure_plots.R
+│   │   ├── General_Data
+│   │   │   ├── Dataset1
+│   │   │   │   ├── ME_Dataset1.bed
+│   │   │   │   ├── ME_Dataset1.bim
+│   │   │   │   └── ME_Dataset1.fam
+│   │   │   ├── Dataset2
+│   │   │   │   ├── ME_Dataset2.bed
+│   │   │   │   ├── ME_Dataset2.bim
+│   │   │   │   └── ME_Dataset2.fam
+│   │   │   ├── Dataset3
+│   │   │   │   ├── ME_Dataset3.bed
+│   │   │   │   ├── ME_Dataset3.bim
+│   │   │   │   └── ME_Dataset3.fam
+│   │   │   ├── H938_chr15.geno
+│   │   │   ├── ME_Full_Dataset
+│   │   │   │   ├── ME_full_data.bed
+│   │   │   │   ├── ME_full_data.bim
+│   │   │   │   └── ME_full_data.fam
+│   │   │   ├── ME_popinfo.txt
+│   │   │   ├── ME_Sample_Localities.gif
+│   │   │   ├── ME_Sample_Localities.gif.pdf
+│   │   │   ├── mutant_R1.fastq
+│   │   │   ├── mutant_R1_fastqc.zip
+│   │   │   ├── mutant_R2.fastq
+│   │   │   ├── mutant_R2_fastqc.zip
+│   │   │   ├── mutant-trimmed.log
+│   │   │   ├── mutant-trimmed-pair1.fastq.gz
+│   │   │   ├── mutant-trimmed-pair2.fastq.gz
+│   │   │   ├── names.txt
+│   │   │   ├── primate_aligned.fasta
+│   │   │   ├── primate_raw.fasta
+│   │   │   ├── science.txt
+│   │   │   ├── wildtype.fna
+│   │   │   ├── wildtype.gbk
+│   │   │   └── wildtype.gff
+│   │   ├── HWE_analysis_pipe.sh
+│   │   ├── __MACOSX
+│   │   │   └── Updated_Practical_3
+│   │   │       ├── Data
+│   │   │       │   ├── Dataset1
+│   │   │       │   ├── Dataset2
+│   │   │       │   ├── Dataset3
+│   │   │       │   └── ME_Full_Dataset
+│   │   │       ├── Dataset1_Analysis
+│   │   │       │   ├── 01_LD_Trim_Dataset1_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 02_MDS_Dataset1_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 03_ADMIXTURE_Dataset1_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   └── 04_ADMIX_Datset1_Pretty_Plot_2015
+│   │   │       │       └── scripts
+│   │   │       ├── Dataset2_Analysis
+│   │   │       │   ├── 01_LD_Trim_Dataset2_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 02_MDS_Dataset2_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 03_ADMIXTURE_Dataset2_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   └── 04_ADMIX_Datset2_Pretty_Plot_2015
+│   │   │       │       └── scripts
+│   │   │       ├── Dataset3_Analysis
+│   │   │       │   ├── 01_LD_Trim_Dataset3_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 02_MDS_Dataset3_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   ├── 03_ADMIXTURE_Dataset3_2015
+│   │   │       │   │   └── scripts
+│   │   │       │   └── 04_ADMIX_Datset3_Pretty_Plot_2015
+│   │   │       │       └── scripts
+│   │   │       └── scripts
+│   │   └── ME_Dataset1.log
+│   ├── Lecture
+│   │   ├── DemographicHistory.pdf
+│   │   ├── DemographicHistory.tex
+│   │   ├── GeneFlow&Migrations.aux
+│   │   ├── GeneFlow&Migrations.log
+│   │   ├── GeneFlow&Migrations.pdf
+│   │   ├── GeneFlow&Migrations.synctex.gz
+│   │   ├── GeneFlow&Migrations.tex
+│   │   ├── GenomicData&bioinformatics.pdf
+│   │   ├── GenomicData&bioinformatics.tex
+│   │   ├── Genomics&bioinformatics1.pdf
+│   │   ├── Genomics&bioinformatics1.tex
+│   │   ├── NaturalSelection.aux
+│   │   ├── NaturalSelection.log
+│   │   ├── NaturalSelection.pdf
+│   │   ├── NaturalSelection.synctex.gz
+│   │   ├── NaturalSelection.tex
+│   │   ├── PhylogenomicsIntroduction.aux
+│   │   ├── PhylogenomicsIntroduction.idx
+│   │   ├── PhylogenomicsIntroduction.log
+│   │   ├── PhylogenomicsIntroduction.pdf
+│   │   ├── PhylogenomicsIntroduction.synctex.gz
+│   │   ├── PhylogenomicsIntroduction.tex
+│   │   ├── PopulationStructure.pdf
+│   │   └── PopulationStructure.tex
+│   ├── Readme
+│   ├── Results
+│   │   ├── 1_Data_and_databases_2017.docx
+│   │   ├── biglist
+│   │   ├── Dataset1_HWE_Analysis_results
+│   │   │   ├── Dataset1_HWE_Analysis_F.pdf
+│   │   │   ├── Dataset1_HWE_Analysis.frqx
+│   │   │   ├── Dataset1_HWE_Analysis.geno
+│   │   │   ├── Dataset1_HWE_Analysis.hwe
+│   │   │   ├── Dataset1_HWE_Analysis_HWE_outliers.txt
+│   │   │   ├── Dataset1_HWE_Analysis.log
+│   │   │   └── Dataset1_HWE_Analysis_Ob_v_Ex_het.pdf
+│   │   ├── list1
+│   │   ├── list2
+│   │   ├── ME_Dataset1_HWE_outliers.txt
+│   │   ├── ME_Dataset1HW.hwe
+│   │   ├── ME_Dataset1HW.log
+│   │   ├── ME_Dataset1HW.nosex
+│   │   ├── ME_DatasetA_F.pdf
+│   │   ├── ME_DatasetA.frqx
+│   │   ├── ME_DatasetA.geno
+│   │   ├── ME_DatasetA.log
+│   │   ├── ME_DatasetA_ObvEx_het_myVers.pdf
+│   │   ├──  Moving_F .pdf
+│   │   ├── mutant-trimmed.log
+│   │   ├── mutant-trimmed-pair1.fastq.gz
+│   │   ├── mutant-trimmed-pair2.fastq.gz
+│   │   ├──  Ob_vs_Ex_het .pdf
+│   │   ├── _results
+│   │   │   └── _HWE_outliers.txt
+│   │   ├── slist
+│   │   └── trimmed.khist
+│   └── Sandbox
+│       └── backups
+│           └── science.bak
+└── Week7
+    ├── Code
+    │   ├── blackbirds.py
+    │   ├── DrawFW.py
+    │   ├── fmr.R
+    │   ├── LV1.py
+    │   ├── LV2A.py
+    │   ├── LV2.py
+    │   ├── LV3.py
+    │   ├── LV4.py
+    │   ├── LV5.py
+    │   ├── MyFirstJupyterNB.ipynb
+    │   ├── Nets.py
+    │   ├── Nets.R
+    │   ├── profileme.py
+    │   ├── re4.py
+    │   ├── regexs.py
+    │   ├── run_fmr_R.py
+    │   ├── run_LV.py
+    │   ├── TestR.py
+    │   ├── TestR.R
+    │   ├── timeitme.py
+    │   └── using_os.py
+    ├── Data
+    │   ├── blackbirds.txt
+    │   ├── NagyEtAl1999.csv
+    │   ├── QMEE_Net_Mat_edges.csv
+    │   └── QMEE_Net_Mat_nodes.csv
+    ├── README
+    ├── Results
+    │   ├── fmr_plot.pdf
+    │   ├── prey_and_predators_1.pdf
+    │   ├── prey_and_predators_2.pdf
+    │   ├── prey_and_predators_3.pdf
+    │   ├── prey_and_predators_4.pdf
+    │   ├── prey_and_predators_5.pdf
+    │   ├── prey_and_predators_LV3.pdf
+    │   ├── QMEENet_py.svg
+    │   ├── QMEENet.svg
+    │   ├── TestR_errFile.Rout
+    │   └── TestR.Rout
+    └── Sandbox
+        ├── DateMatch.py
+        └── Netss.py
+
+143 directories, 647 files
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 7 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7
+
+The Week7 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK7...
+
+Found the following directories: Data, Sandbox, Code, Results
+
+Found the following files: README
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README
+
+Printing contents of README:
+**********************************************************************
+Readme for week7 work, advanced biological programming in python
+
+
+Code:
+		blackbirds.py - A script that searches through a text file of animal 
+						taxa and returns the Kingdom, phylum and species for 
+						each organism. Performs this by using regular expressions
+						in particular re.findall
+		
+		DrawFW.py - Plot a snapshot of a food web graph/network. Example 
+					of using networkx through python. Generating a 
+					random list of connections with a set connectivity
+					and produce a visualisation of this network
+					
+		fmr.R - An example script in R to practice being run through 
+				subprocesses in python. The script plots log(field metabolic
+				rate) against log(body mass) for the Nagy et al 1999 dataset 
+				to a file fmr.pdf. 
+					
+		LV1.py - The basic Lotka-Volterra model to show the relationship between predator and prey with default arguments.
+				 The script integrates the ODE and returns a graph of the results
+		
+		LV2.py - The modified Lotka-Volterra model for predator prey relationship. This modified script also accepts arguments
+				 in the command line to set the values of the constants and the values of these are annotated on the resulting
+				 graph	
+				 
+		LV2A.py - The same script as LV2.py but with initial conditions choosen specifically so that the predators and prey have
+				 both exist as in a steady state of the population
+				 
+		LV3.py - A discrete time version of the LV model
+		
+		LV4.py - A discrete time version Lotka-Volterra Model 
+				 with random gaussian fluctations in resource 
+				 growth at each step simulated using scipy
+		
+		LV5.py - A discrete time version Lotka-Volterra Model 
+				 with random gaussian fluctations in resource and predators
+				 growth at each step simulated using scipy 
+				 
+		MyFirstJupyterNB.ipynb - A exxample jupyter notebook displaying 
+								 many of the usefu features including: basic 
+								 features, numerical analysis, mathematical 
+								 modelling, and data analysis. Packages explored
+								 include Pandas and sympy
+		
+		Nets.py - A python version of Nets.R , Takes the QMEE CDT data and returns a 
+				  visualisation of the network of connections coloured and sized by
+				  the type of institution and the number of Phd students connected to it
+		
+		Nets.R - Takes the QMEE CDT data and returns a visualisation of the network of 
+				 connections coloured and sized by the type of institution and the number 
+				 of Phd students connected to it
+				 
+		profileme.py - A script with a few useless functions which take a long time to run. This has been designed to practice 
+					   profiling a script and working out where it is best to try and speed up the code
+		
+		regexs.py - A script giving an example of the uses of different regular exprressions
+		
+		re4.py - Further examples of regular expressions based on use in emails
+		
+		run_fmr_R.py - A python script to run the R script fmr.R
+					   Returns the outputs from the script and an 
+					   output if the script ran successfully or not
+					   
+		run_LV.py - This is part of chapter 6's practicle. The script runs and profiles LV1.py 
+					and LV2.py
+					
+		TestR.py - A script that practices subproccessing. This runs TestR.R through python
+				   and then outputs the results and any errors to seperate output files
+		
+		TestR.R - Basic R script printing "Hello this is R!" for use to practice subprocessing
+		
+		timeitme.py - A sript of functions each with two methods of producing the same result. 
+					  These can each be run with the timeit command to show the difference in 
+					  time it takes to run each of them
+		
+		using_os.py - This is a script using subprocesses to crawl through my home directory
+					  and then returns a list of the files whose name begins with C
+					  
+Data:
+		blackbirds.txt - The data file to be used in the blackbirds practical
+		
+		NagyEtAl1999.csv - The data frame used to create a network graph in 
+						   DrawFW.py
+		
+		QMEE_Net_Mat_edges.csv - The data file for edges data to be used in
+								 Nets.R and Nets.py
+								 
+		QMEE_Net_Mat_nodes.csv - The data file for node data to be used in 
+								 Nets.R and Nets.py
+							
+
+Results:
+		All outputted plots: LV1-LV5, Nets.R, Nets.py, and fmr.R
+		
+		Outputted results from running subprocesses in TestR.py
+**********************************************************************
+
+Found following files in results directory: prey_and_predators_1.pdf, QMEENet.svg, QMEENet_py.svg, prey_and_predators_5.pdf, prey_and_predators_4.pdf, fmr_plot.pdf, prey_and_predators_LV3.pdf, TestR.Rout, TestR_errFile.Rout, prey_and_predators_2.pdf, prey_and_predators_3.pdf...
+
+ideally, Results directory should be empty other than, perhaps, a readme.Found 22 code files: MyFirstJupyterNB.ipynb, using_os.py, Nets.py, regexs.py, timeitme.py, LV4.py, DrawFW.py, TestR.R, LV3.py, Nets.R, LV2A.py, LV1.py, fmr.R, re4.py, run_LV.py, TestR.py, blackbirds.py, run_fmr_R.py, profileme.py, LV5.py, LV2.py, MyFirstJupyterNB-checkpoint.ipynb
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file MyFirstJupyterNB.ipynb...
+
+File contents are:
+**********************************************************************
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "# My First Jupyter NB\n",
+    "## Add a sub heading \n",
+    "And now some text\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# My first code\n",
+    "A=2+2\n",
+    "print(A)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "this is python\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = \"this is python\"; print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "this is R!"
+     ]
+    }
+   ],
+   "source": [
+    "a<- \"this is R!\"; cat(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "**My first python graphic**\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAYYAAAD8CAYAAABzTgP2AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz\nAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo\ndHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3XlcVXX+x/HXh10QUARXQHBfQDGv\ntFiNlZZmLlmZtlnWODPlZFNNY/teVlO22WKrTZNmZWmb5t40moqKCyqKS0KooAgi+/L9/cFtfmAo\nyr1w7uV+no/HfXDvuedw3rflvjnb94gxBqWUUuo3XlYHUEop5Vq0GJRSStWgxaCUUqoGLQallFI1\naDEopZSqQYtBKaVUDVoMSimlatBiUEopVYMWg1JKqRp8rA5QH+Hh4SYmJsbqGEop5VbWr19/2BgT\nUdd8blkMMTExJCUlWR1DKaXcioj8cjrz6a4kpZRSNWgxKKWUqkGLQSmlVA1aDEoppWrQYlBKKVWD\nU4pBRN4XkSwR2XqS90VEXhWRNBHZLCJnVXtvgojssj8mOCOPUkqp+nPWFsOHwNBTvD8M6Gp/TALe\nBBCRMOBR4GwgEXhURFo6KZNSSql6cMp1DMaYH0Uk5hSzjAI+MlX3Ef1ZRFqISDtgELDYGJMDICKL\nqSqY2c7IpaxVVlHJrkPHST9aSHFZBSXllZSUVVBcVklJeQWVBtqGBhDZshlRLQNpFxqAj7fu3VTK\nao11gVsHIL3a6wz7tJNN/x0RmUTV1gbR0dENk1LVW3FZBSmZx9iWmUdK5jG2Zuax8+BxSisqT/t3\neHsJbUMCiAprxoCYMAZ1j6BvZAstC6UaWWMVg9QyzZxi+u8nGjMTmAlgs9lqnUc1rrKKSn5KO8zX\nyZn8sO0Qx0vKAWgR6Evv9iHcMjCGXu1D6BTenGZ+3gT4euHv442/rxcBPt4AHMwrJuNoIelHC8k4\nWkTG0SL2HC5gxvI0XluWRmgzX87vGs4fukUwqFsErUMCrPzISnmExiqGDCCq2utIINM+fdAJ01c0\nUiZVD5WVhqRfjrJg0698t+UgOQWlhAT4MDy+HRf3bE1ch1DahwYgUlvn/150q0CiWwX+bnpeYRk/\npR1mRWoWK3dm8+3mAwCc0ymMiQNjuaRnG7y9Tm8dSqkz01jFsACYLCJzqDrQnGeMOSAii4Bnqh1w\nvhS4v5EyqTNQVlHJF+szmLEijfScIgJ8vRjSqy0j+7bnwm7h+Nu3AJwlNNCX4X3aMbxPO4wxbD+Q\nz7Idh5i9Np1J/1pPdFggN58Xw9gBUTT3d8shv5RyWVJ1PNjBXyIym6q//MOBQ1SdaeQLYIx5S6r+\nfHydqgPLhcAtxpgk+7ITgQfsv+ppY8wHda3PZrMZHUSvcZRVVDJvQwavLUsj42gRfSNDmXh+LIN7\ntiHIgi/k8opKfth2iPd/2kvSL0cJ9vdh7IAobhkYQ2TL3295KKX+n4isN8bY6pzPGcXQ2LQYGl5Z\nRSVfbviV15bvIj2nqhDuGtyNQd0jTns3UUNLTs/lg//u5dvNB/DyEiZd0InbL+pMoJ9uQShVGy0G\nVW8rd2bzyPyt/HKkkD6Rodw1uCsXdW/tMoVwoszcIp5fuIOvkjNpHxrAA8N7Mjy+ncvmVcoqWgzq\njOUWlvLkN9v5YkMGnSOCeHB4T5cuhBOt25fDo/NT2HbgGOd0CuOxkb3p0TbE6lhKuQwtBnVGvt9y\ngIfnp5BbWMpfBnVm8sVdnH5AuTFUVBpmr93PP39IJb+4nJvO7ch9l/WgmZ/7fRalnO10i0F3xnq4\nrGPFPDI/hYUpB4nrEMKsiQPo3T7U6lj15u0l3HBOR4bHt+PFxal88N99/DftMK9fdxbd2gRbHU8p\nt6CXlHqwhVsPMPillSxLzeIfQ3vw1e0D3boUqmsZ5MdTo+OZNTGRnIJSRrz2E5+s2Y87biEr1di0\nGDxQRaXhuYU7+PPHG4gND2LhlAv4y6DOTXLoiT90i+C7KRcwICaMB77cwuRPNpJXVGZ1LKVcWtP7\nJlCndLSglJs/WMubK3YzPjGKuX8+l04Rza2O1aBaBwfw0cRE7hvanYUpBxn+6n/YsP+o1bGUclla\nDB4kJTOPEa//xJo9OTw7Jp5nx/RxywPM9eHlJdw+qAtz/3QuxsDYt1YzZ+1+q2Mp5ZK0GDzEVxt/\n5ao3V1FeYfj0T+cwPtEzR6jt37El3025gPO6hDN13hb+uShVjzsodQIthibOGMO073dw16fJ9Ils\nwdd/PZ9+0Z59L6TQZr68N8HGuAFRvL48jbs+TaakvMLqWEq5DD1dtQkrr6jkgS+3MDcpgxvOiebR\nEb3xbYIHmOvD19uLZ8fEExUWyAuLUjmYV8zMG22EBvpaHU0py+m3RBNVXFbBHZ9sYG5SBlMu6cqT\no+K0FE4gItxxURdeGZfAxv25XPXWKtJzCq2OpZTl9JuiCTpeUs7ED9exKOUQj47oxd+GdHObYS2s\nMCqhAx/dmkjWsWKufGMVW3/NszqSUpbSYmhicgpKue6dn1mzN4fp1/blloGxVkdyC+d0asW828/D\n38eL699do+WgPJoWQxOSmVvENW+tIvVgPjNv7M+V/SKtjuRWurQOZs6kc2ju76PloDyaU4pBRIaK\nSKqIpInI1Freny4iyfbHThHJrfZeRbX3Fjgjjyc6kFfEtTNXk3WshI8mJnJJzzZWR3JLUWGBWg7K\n4zlcDCLiDcwAhgG9gPEi0qv6PMaYvxljEowxCcBrwLxqbxf99p4xZqSjeTzR4eMlXP/uGo4WlPHx\nbWdzdqdWVkdya1oOytM5Y4shEUgzxuwxxpQCc4BRp5h/PDDbCetVVN1D4YZ315CZW8QHtwygb1QL\nqyM1CVoOypM5oxg6AOnVXmfYp/2OiHQEYoFl1SYHiEiSiPwsIqOdkMdjHC8pZ8IH69iTXcA7N9kY\nEBNmdaQmpXo5XPfOz2zJ0HJQnsEZxVDbeZAnG2NgHPC5Mab6ZabR9htHXAe8LCKda12JyCR7gSRl\nZ2c7lrgJKCqtYOKH69j6ax6vX9ePC7pGWB2pSfqtHIIDfJnwwVr2Hi6wOpJSDc4ZxZABRFV7HQlk\nnmTecZywG8kYk2n/uQdYAfSrbUFjzExjjM0YY4uI8OwvwZLyCv788XrW7cvhpbF9ubR3W6sjNWlR\nYYF8fNvZANz0/hqy80ssTqRUw3JGMawDuopIrIj4UfXl/7uzi0SkO9ASWF1tWksR8bc/DwcGAtuc\nkKnJqqg03DUnmZU7s3n2ynhGJdS61045WWx4EO/fPIDD+aXc8uFajpeUWx1JqQbjcDEYY8qBycAi\nYDsw1xiTIiJPiEj1s4zGA3NMzaEsewJJIrIJWA5MM8ZoMZzCU99u4/utB3loeE/GeegIqVZJiGrB\nG9efxfYD+fzl4/WUlldaHUmpBiHuOOSwzWYzSUlJVsdodLNW7ePRBSlMHBjLIyN61b2AahBz16Vz\n3xebGdOvAy+O7avDjSi3ISLr7cd0T0lHV3UTy3Yc4vGvUxjcsw0PDu9pdRyPNnZAFAePFfPS4p20\nDglg6rAeVkdSyqm0GNxASmYekz/ZSK/2Ibw6PgFvL/0L1Wp/vbgLB48V89bK3bQN8edmHZNKNSFa\nDC7uQF4REz9cR4tmvrw3YQCBfvqvzBWICE+OiiM7v4QnvtlGbERz/tDNs8+WU02HDqLnwo6XlHPr\nh0kUlFTw3s0DaBMSYHUkVY23l/DytQl0axPM5E82sCf7uNWRlHIKLQYXVVFpuHP2RlIP5TPj+rPo\n2S7E6kiqFkH+Prxzkw1fby9u+yiJY8VlVkdSymFaDC7qhUWpLNuRxeMje+suChcXFRbIG9efxf4j\nhdw1J5mKSvc700+p6rQYXNB3Ww7w1srdXH92NDec09HqOOo0nNOpFY+O7M2yHVn884dUq+Mo5RA9\nkulidh3K597PNtEvugWPjuhtdRx1Bm48pyPbDxzjzRW76dE2WK9KV25LtxhcyLHiMv70r/UE+vnw\n5vX98fPRfz3u5rERvUmMCeO+zzfraKzKbek3j4uorDTcM3cT+3MKeeP6s2gbqmcguSM/Hy/euOEs\nwpv7M+lfSRw5rgPuKfejxeAi3liRxuJth3hweE8SY/W+Cu4svLk/b9/YnyMFpdz1aTKVejBauRkt\nBhewPDWLFxfvZHRCe24+L8bqOMoJ4jqE8tiI3vxn12FmLE+zOo5SZ0SLwWL7jxQyZfZGerQN4dkx\nfXRAtiZkfGIUoxPaM33JTlalHbY6jlKnTYvBQqXllUyevQGAt2/oTzM/b4sTKWcSEZ6+Mp7Y8CDu\nnJNM1rFiqyMpdVq0GCz0/MIdbM7I4/mr+xDdKtDqOKoBBPn78OYN/TleUsZfZ2+kvELv4aBcnxaD\nRZbtOMS7P+3lpnM7MjSundVxVAPq1iaYp0bHs2ZvDi8v2WV1HKXq5JRiEJGhIpIqImkiMrWW928W\nkWwRSbY/bqv23gQR2WV/THBGHld3IK+Ie+Zuome7EB64XO+t4Amu7h/JWFskry9PY0VqltVxlDol\nh4tBRLyBGcAwoBcwXkRqu73Yp8aYBPvjXfuyYcCjwNlAIvCoiLR0NJMrq6g0TJmTTEl5Ja9f148A\nXz2u4CkeHxlHj7bB/O3TZA7kFVkdR6mTcsYWQyKQZozZY4wpBeYAo05z2cuAxcaYHGPMUWAxMNQJ\nmVzWq0t3sXZvDk+OiqNzRHOr46hG1MzPmxnXn0VJeSV3f7pJB9tTLssZxdABSK/2OsM+7URXichm\nEflcRKLOcNkmYfXuI7y2bBdjzurAVf0jrY6jLNA5ojmPjejN6j1HeOc/e6yOo1StnFEMtZ14f+Kf\nQl8DMcaYPsASYNYZLFs1o8gkEUkSkaTs7Ox6h7XKkeMl3PXpRmLCg3hyVJzVcZSFrrFFMiyuLf9c\nlKrjKSmX5IxiyACiqr2OBDKrz2CMOWKM+W3QmHeA/qe7bLXfMdMYYzPG2CIi3Ov+BMYY/vHFZo4W\nlvHa+H4E+eugtp5MRHh2TDzhzf2ZMmcjhaXlVkdSqgZnFMM6oKuIxIqIHzAOWFB9BhGpfj7mSGC7\n/fki4FIRaWk/6HypfVqTMnttOku2ZzF1aA96tw+1Oo5yAS0C/Xjp2r7sPVLAk99sszqOUjU4XAzG\nmHJgMlVf6NuBucaYFBF5QkRG2me7U0RSRGQTcCdws33ZHOBJqsplHfCEfVqTsfdw1f/453cJ13GQ\nVA3ndQ7nTxd2ZvbadBZuPWh1HKX+R4xxvzMjbDabSUpKsjpGncorKrn6rdXsPVzAorsu1KG01e+U\nlldy1ZurSD9ayMIp+t+Ialgist4YY6trPr3yuQHNWL6b5PRcnhodp//Dq1r5+Xjx8rgESsoquecz\nHaJbuQYthgaSnJ7Lq8t2MTqhPSP6trc6jnJhnSOa88iIXvw37Qjv/bTX6jhKaTE0hMLScv72aTJt\ngv15XE9NVadh3IAohvRqwws/pLLrUL7VcZSH02JoAE9/u519Rwp4cWwCoc18rY6j3ICI8MyV8QT5\neXPPZ5so01FYlYW0GJxs+Y4s/r1mP7edH8u5nVtZHUe5kYhgf56+Mp7NGXm8uWK31XGUB9NicKKj\nBaXc98VmerQN5t7LulsdR7mhy+PbMbJve15duoutv+pV0coaWgxO9NjXKRwtKOXFsX3x99FRU1X9\nPDGqNy2D/Lhn7iZKyiusjqM8kBaDkyxKOcj85EwmX9xFr25WDmkR6MdzV8WTeiif6Yv1xj6q8Wkx\nOEFOQSkPfrmFXu1CuOOiLlbHUU3AxT3acK0tipk/7mb9L01qMADlBrQYnODRBSnkFpbxz2v64uut\n/0iVczx0RU/ahTbjnrmbdKA91aj0W8xBC7ce4OtNmdx5SVd6tQ+xOo5qQoIDfHnh6j7sO1LI8wtT\nrY6jPIgWgwOOHC/hwS+3EtchhL8M6mx1HNUEndclnAnnduTDVftYu1d3KanGocXggEcWpHCsWHch\nqYZ139AeRLZsxj++2ExxmZ6lpBqefpvV03dbDvDt5gPceXFXerTVXUiq4QT5+/DcVX3Ye7iA6Yt3\nWh1HeQAthno4cryEh7/aSnyHUP6su5BUIxjYJZzxiVG88589bErPtTqOauK0GOrhiW+2cay4jBeu\n6aO7kFSjuf/ynrQODuDvn+uFb6phOeVbTUSGikiqiKSJyNRa3r9bRLaJyGYRWSoiHau9VyEiyfbH\nghOXdTVLtx9ifnImtw/qoruQVKMKCfDlmTFx7Dx0nBnLdSwl1XAcLgYR8QZmAMOAXsB4Eel1wmwb\nAZsxpg/wOfB8tfeKjDEJ9sdIXFh+cRkPfrmVbm2ac/tFugtJNb6Le7RhTL8OvLE8jW2Zx6yOo5oo\nZ2wxJAJpxpg9xphSYA4wqvoMxpjlxphC+8ufgUgnrLfRTft+B4fyi3nuqj46FpKyzCMjetEi0I+/\nf67Dc6uG4Yxi6ACkV3udYZ92MrcC31d7HSAiSSLys4iMPtlCIjLJPl9Sdna2Y4nr4ec9R/j3mv1M\nHBhLv+iWjb5+pX7TItCPp0b3JiXzGDN/3GN1HNUEOaMYpJZptd64VkRuAGzAC9UmR9tvTn0d8LKI\n1LqPxhgz0xhjM8bYIiIiHM18RorLKpj6xWaiwwK559JujbpupWozNK4dw+Pb8cqSXaRlHbc6jmpi\nnFEMGUBUtdeRQOaJM4nIYOBBYKQxpuS36caYTPvPPcAKoJ8TMjnV9CU72XekkGlj4gn087E6jlIA\nPDayN838vHlg3hYqK2v9W0ypenFGMawDuopIrIj4AeOAGmcXiUg/4G2qSiGr2vSWIuJvfx4ODAS2\nOSGT02zOyOWdH/cwbkAU53UJtzqOUv8TEezPg8N7snZfDrPX7bc6jmpCHC4GY0w5MBlYBGwH5hpj\nUkTkCRH57SyjF4DmwGcnnJbaE0gSkU3AcmCaMcZliqGsopL7Pt9MeHN/7r+8p9VxlPqda/pHcl7n\nVkz7bgcH84qtjqOaCDHG/TZBbTabSUpKavD1zFiexguLUnn7xv5c1rttg69Pqfr45UgBl07/kUHd\nI3j7RpvVcZQLE5H19mO6p6SX7Z7E3sMFvLJ0F8Pi2mopKJfWsVUQdw/pxqKUQyzcesDqOKoJ0GKo\nhTGGB+Ztwd/Hi8dH9rY6jlJ1uvX8WHq3D+Hh+SnkFZVZHUe5OS2GWnyWlMHqPUe4f1hPWocEWB1H\nqTr5eHvx3FV9yCkoZdr3262Oo9ycFsMJsvNLePq77STGhDFuQFTdCyjlIuI6hHLb+bHMXpvO6t1H\nrI6j3JgWwwme+GYbRaUVPDMmHi+v2q7dU8p13TW4G9FhgTzw5Ra9qY+qNy2GapbvyOLrTZlMvrgL\nXVo3tzqOUmesmZ83z46JZ+/hAl5flmZ1HOWmtBjsCkrKeeirrXRt3Zw//0FHTlXua2CXcMac1YG3\nVu4m9WC+1XGUG9JisHvxh51k5hUx7ap4/Hz0H4tybw8N70VwgA/3z9usw2WoM6bfgMCm9Fw+XLWX\nG87uSP+OYVbHUcphYUF+PHxFLzbsz+Xfa3W4DHVmPL4YyioqmTpvCxHB/tw3tLvVcZRymiv7dWBg\nl1Y8/70Ol6HOjMcXw/s/7WX7gWM8PjKO4ABfq+Mo5TQiwtOj4ymtqOSxBSlWx1FuxKOLIT2nkOlL\ndjKkVxuGxumwF6rpiQkPYsrgrixMOcgPKQetjqPchMcWgzGGh77aireIDnuhmrQ/XtCJHm2DeWR+\nCvnFOlyGqpvHFsOCTZms3JnNvZd1p32LZlbHUarB+Hp78cyYeA7lF/PiDzutjqPcgEcWQ25hKU9+\ns42+kaHcdG6M1XGUanBnRbfkpnM6Mmv1PjbuP2p1HOXinFIMIjJURFJFJE1Eptbyvr+IfGp/f42I\nxFR773779FQRucwZeeoy7fsdHC0s45kx8XjrsBfKQ9x7WXfaBAdw/7wtlFVUWh1HuTCHi0FEvIEZ\nwDCgFzBeRHqdMNutwFFjTBdgOvCcfdleVN0KtDcwFHjD/vsazNq9OcxZl85t58fSu31oQ65KKZcS\nHODLYyN7s+NgPu/9tNfqOMqFOWOLIRFIM8bsMcaUAnOAUSfMMwqYZX/+OXCJiIh9+hxjTIkxZi+Q\nZv99DaKkvIL7520msmUzpgzu2lCrUcplDY1ry5BebXh5yU7ScwqtjqNclDOKoQOQXu11hn1arfPY\n7xGdB7Q6zWWd5q0Ve9idXcBTo+MI9PNpqNUo5dIeH9kbbxEe+mor7nhrX9XwnFEMte2kP/G/tpPN\nczrLVv0CkUkikiQiSdnZ2WcYscqRghJG9m3PoO6t67W8Uk1B+xbNuOfS7qzcmc3Xm/VWoOr3nFEM\nGUD1O9pEApknm0dEfIBQIOc0lwXAGDPTGGMzxtgiIiLqFfSJUXFMvzahXssq1ZRMOC+GPpGhPPF1\nCnmFem2DqskZxbAO6CoisSLiR9XB5AUnzLMAmGB/fjWwzFRtwy4AxtnPWooFugJrnZDppPQsJKWq\n/j945sp4jhaWMW2h3gpU1eRwMdiPGUwGFgHbgbnGmBQReUJERtpnew9oJSJpwN3AVPuyKcBcYBuw\nELjDGKO3nVKqEcR1CGXiwBhmr01n7d4cq+MoFyLuePDJZrOZpKQkq2Mo5fYKS8sZ8tKPNPPz5ts7\nz8ffp0HPFlcWE5H1xhhbXfN55JXPSqkqgX4+PDU6jrSs47y9co/VcZSL0GJQysNd1KM1w/u04/Vl\naezOPm51HOUCtBiUUjw6ohf+vl48MG+LXtugtBiUUtA6OIAHLu/Jmr05fJaUYXUcZTEtBqUUANfa\nokiMCePp77aTnV9idRxlIS0GpRQAXl7CM2PiKCqt4MlvtlkdR1lIi0Ep9T9dWgdz+0WdWbApk+Wp\nWVbHURbRYlBK1fCXQZ3pHBHEQ19upbC03Oo4ygJaDEqpGvx9vHl2TB9+zS1i+mK9Fagn0mJQSv1O\nYmwY4xOjee+nvWz9Nc/qOKqRaTEopWo1dWgPwoL8mTpvM+V6K1CPosWglKpVaKAvj4/szdZfj+mt\nQD2MFoNS6qQuj6+6FehLi3ey73CB1XFUI9FiUEqdlIjw5Kg4/Ly9eOBLHS7DU2gxKKVOqW1oAFMv\n78Gq3Ud0uAwPocWglKrT+AHRJMaG8dS328jKL7Y6jmpgDhWDiISJyGIR2WX/2bKWeRJEZLWIpIjI\nZhG5ttp7H4rIXhFJtj/0hsxKuSAvL+HZMfEUl1fy2IIUq+OoBuboFsNUYKkxpiuw1P76RIXATcaY\n3sBQ4GURaVHt/b8bYxLsj2QH8yilGkjniOZMuaQr3205yKKUg1bHUQ3I0WIYBcyyP58FjD5xBmPM\nTmPMLvvzTCALiHBwvUopC0y6sBM92gbzyPytHCsuszqOaiCOFkMbY8wBAPvP1qeaWUQSAT9gd7XJ\nT9t3MU0XEX8H8yilGpCvtxfPX92H7PwSnv1uh9VxVAOpsxhEZImIbK3lMepMViQi7YB/AbcYY367\njPJ+oAcwAAgD/nGK5SeJSJKIJGVnZ5/JqpVSTtQnsgW3nh/L7LX7WbX7sNVxVAMQR85LFpFUYJAx\n5oD9i3+FMaZ7LfOFACuAZ40xn53kdw0C7jXGXFHXem02m0lKSqp3bqWUY4pKKxj2yo9UGlh41wUE\n+vlYHUmdBhFZb4yx1TWfo7uSFgAT7M8nAPNrCeIHfAl8dGIp2MsEERGqjk9sdTCPUqoRNPPz5rmr\n+rA/p5DnF6ZaHUc5maPFMA0YIiK7gCH214iITUTetc8zFrgQuLmW01L/LSJbgC1AOPCUg3mUUo3k\n7E6tmHBuR2at3se6fTlWx1FO5NCuJKvoriSlXENBSTlDX/kRHy8vvp9yAQG+3lZHUqfQWLuSlFIe\nLMjfh+fG9GHv4QJe0pv6NBlaDEoph5zXJZzrzo7m3f/sYeP+o1bHUU6gxaCUctj9w3rQNiSAv3++\nmeKyCqvjKAdpMSilHBYc4MuzV/UhLes4ry7dZXUc5SAtBqWUU/yhWwRjbZG8/eMeNqXnWh1HOUCL\nQSnlNA8O70XrYH/unpusu5TcmBaDUsppQpv58sLVfdmdXcALi/TCN3elxaCUcqrzu4Zz07kdee+n\nvazefcTqOKoetBiUUk43dVgPYsODuPezTeTr8NxuR4tBKeV0gX4+vDi2Lwfyinjym21Wx1FnSItB\nKdUgzopuyZ//0Jm5SRks2XbI6jjqDGgxKKUazJTBXenRNpip87aQU1BqdRx1mrQYlFINxt/Hm+nX\nJpBXVMpDX23BHQft9ERaDEqpBtWzXQh/G9KN77Yc5KvkX62Oo06DFoNSqsH96cLODIhpycNfpbD/\nSKHVcVQdtBiUUg3O20uYfm0CInDnnI2UVVTWvZCyjEPFICJhIrJYRHbZf7Y8yXwV1e7etqDa9FgR\nWWNf/lP7bUCVUk1QZMtAnh0TT3J6Lq8s0YH2XJmjWwxTgaXGmK7AUvvr2hQZYxLsj5HVpj8HTLcv\nfxS41cE8SikXdkWf9lzTP5IZK9L4eY9eFe2qHC2GUcAs+/NZwOjTXVBEBLgY+Lw+yyul3NNjI3sT\n0yqIv32aTG6hnsLqihwthjbGmAMA9p+tTzJfgIgkicjPIvLbl38rINcYU25/nQF0ONmKRGSS/Xck\nZWdnOxhbKWWVIH8fXh3Xj8PHS5j6hZ7C6orqLAYRWSIiW2t5jDqD9UTbb0B9HfCyiHQGpJb5Tvpf\niDFmpjHGZoyxRUREnMGqlVKuJj4ylHsv7c7ClIPMWZdudRx1Ap+6ZjDGDD7ZeyJySETaGWMOiEg7\nIOskvyPT/nOPiKwA+gFfAC1ExMe+1RAJZNbjMyil3NAfL+jEj7uyefzrFAbEtKRL62CrIyk7R3cl\nLQAm2J9PAOafOIOItBQRf/vzcGAgsM1UbT8uB64+1fJKqabJy0t4aWwCgX4+TP5kI0WlemMfV+Fo\nMUwDhojILmCI/TUiYhORd+3z9ASSRGQTVUUwzRjz23CL/wDuFpE0qo45vOdgHqWUG2kTEsBLY/uS\neiifh77aqscbXESdu5JOxRhzBLiklulJwG3256uA+JMsvwdIdCSDUsq9Deremr9e3JVXl+4iMbYl\n1w6ItjqSx9Mrn5VSlptySVer68rZAAALZklEQVTO7xLOw/NTSMnMszqOx9NiUEpZzttLeGVcAmGB\nfvzl4w3kFeld36ykxaCUcgmtmvvz+nX9yMwt4t7PNunxBgtpMSilXIYtJoypw3qweNsh3vnPHqvj\neCwtBqWUS7n1/FiGxbXluYWprN2bY3Ucj6TFoJRyKSLC81f3IToskDs+2cCBvCKrI3kcLQallMsJ\nDvDl7Rv7U1RawR8/StKL3xqZFoNSyiV1axPMK+MSSMk8pgejG5kWg1LKZV3Ssw1Th/bg2y0HeHVp\nmtVxPIZDVz4rpVRDm3RhJ1IP5TN9yU66tmnO5fHtrI7U5OkWg1LKpYkIz1wZz1nRLbh7bjJbf9Ur\noxuaFoNSyuUF+Hrz9o02wgL9+ONHSWTlF1sdqUnTYlBKuYWIYH/emWAjt7CMSR+t1zOVGpAWg1LK\nbfRuH8r0axPYlJHL5E82UF5RaXWkJkmLQSnlVobGteWJUXEs3ZHF/fP0ntENQc9KUkq5nRvP6cjh\n/BJeWbqLVs39mTqsh9WRmhSHthhEJExEFovILvvPlrXMc5GIJFd7FIvIaPt7H4rI3mrvJTiSRynl\nOe4a3JXrz47mrZW7eVcH3HMqR3clTQWWGmO6Akvtr2swxiw3xiQYYxKAi4FC4Idqs/z9t/eNMckO\n5lFKeQgR4YlRcVwe35anvt3OlxszrI7UZDhaDKOAWfbns4DRdcx/NfC9MabQwfUqpRTeXsL0axM4\nt1Mr/v7ZZpanZlkdqUlwtBjaGGMOANh/tq5j/nHA7BOmPS0im0Vkuoj4n2xBEZkkIkkikpSdne1Y\naqVUk+Hv483Mm/rTvW0wt3+8QYfqdoI6i0FElojI1loeo85kRSLSDogHFlWbfD/QAxgAhAH/ONny\nxpiZxhibMcYWERFxJqtWSjVxwQG+fHhLIu1bBDDh/bWs2n3Y6khurc5iMMYMNsbE1fKYDxyyf+H/\n9sV/qu24scCXxpj/3czVGHPAVCkBPgASHfs4SilPFRHsz5xJ5xIV1oxbPljHf3bpnoX6cnRX0gJg\ngv35BGD+KeYdzwm7kaqVilB1fGKrg3mUUh4sItif2X88h9jwIG6dlaTHHOrJ0WKYBgwRkV3AEPtr\nRMQmIu/+NpOIxABRwMoTlv+3iGwBtgDhwFMO5lFKebhWzavKoVub5vzpo/Us3nbI6khuR9zxqkGb\nzWaSkpKsjqGUcmF5RWXc9P5aUn7N4/Xr+jE0TofrFpH1xhhbXfPpkBhKqSYptJkv/7o1kb5RLbjj\nk418sV6vczhdWgxKqSYrJMCXWRMTOTs2jHs+28SLP6RSWel+e0kamxaDUqpJa+7vw6yJiVxri+K1\nZWn8dc5Gist0yO5T0UH0lFJNnq+3F9OuiqdTRBDTFu7g16NFvHOTjYjgk15T69F0i0Ep5RFEhD/9\noTNv3dCf1IP5jJ7xX1IP5lsdyyVpMSilPMplvdvy2Z/PpbyykqveXMUSPZ31d7QYlFIeJ65DKF/d\nMZCOrQK57aMkHpm/VY87VKPFoJTySO1Cm/HFX87j1vNj+Wj1L4x47SdSMvOsjuUStBiUUh4rwNeb\nh6/oxUcTE8krKuPKGat458c9Hn9KqxaDUsrjXdgtgoV3Xcig7hE8/d12bnx/DQfziq2OZRktBqWU\nAsKC/Hj7xv5MGxPPhl9yGfLSSt5auZuScs879qDFoJRSdiLCuMRovptyAQNiw5j2/Q4Gv7SSbzcf\nwB3HlasvLQallDpBbHgQ7988gH/dmkiQnw93fLKBa95aTXJ6rtXRGoUWg1JKncQFXSP49s4LeHZM\nPPuOFDB6xn+5c/ZGtmQ07bOXdNhtpZQ6DcdLynljeRof/HcfRWUV9I1qwQ1nRzOib3sCfL2tjnda\nGmXYbRG5RkRSRKRSRE66MhEZKiKpIpImIlOrTY8VkTUisktEPhURP0fyKKVUQ2nu78N9Q3uw5sFL\neGxELwpKyvn755s5+5mlPPXNNvYeLrA6otM4tMUgIj2BSuBt4F5jzO/+jBcRb2AnVXd4ywDWAeON\nMdtEZC4wzxgzR0TeAjYZY96sa726xaCUspoxhp/35PDxz7+wKOUg5ZWGrq2bc17nVpzbuRXndGpF\ni0DH/9atrDTszj7Oxv25bEw/ysNX9CLQr37jn57uFoNDo6saY7bbV3aq2RKBNGPMHvu8c4BRIrId\nuBi4zj7fLOAxoM5iUEopq4kI59pLIOtYMV8l/8pPaUeYm5TBrNW/IAK92oVwXudWdGndnNYhAbQO\n9qdNSABhgX54ef3/96YxhsLSCo4Vl5FfXE7G0UKS9+eyMT2X5P255JeUAxAS4MOE82Lo0TakQT9b\nYwy73QFIr/Y6AzgbaAXkGmPKq03v0Ah5lFLKqVqHBDDpws5MurAzpeWVbMrIZfXuI6zafZhZq36h\ntKKyxvw+XkJEsD8+3sKxonKOl5RTccLV1l4CPdqGMDKhPf2iW9IvugWxrYJqFEpDqbMYRGQJ0LaW\ntx40xsw/jXXU9inMKaafLMckYBJAdHT0aaxWKaUan5+PFwNiwhgQE8adl3SlpLyCrGMlZOUX23+W\ncOhYMYeOlVBpDCEBPgQH+BIc4ENIs6qfrYMDiOsQUu9dRo6qc63GmMEOriMDiKr2OhLIBA4DLUTE\nx77V8Nv0k+WYCcyEqmMMDmZSSqlG4e/jTVRYIFFhgVZHOW2NcR3DOqCr/QwkP2AcsMBUHfVeDlxt\nn28CcDpbIEoppRqQo6erXikiGcC5wLcissg+vb2IfAdg3xqYDCwCtgNzjTEp9l/xD+BuEUmj6pjD\ne47kUUop5Ti9wE0ppTxEo1zgppRSqunRYlBKKVWDFoNSSqkatBiUUkrVoMWglFKqBrc8K0lEsoFf\n6rl4OFUX13ka/dyexVM/N3juZz+dz93RGBNR1y9yy2JwhIgknc7pWk2Nfm7P4qmfGzz3szvzc+uu\nJKWUUjVoMSillKrBE4thptUBLKKf27N46ucGz/3sTvvcHneMQSml1Kl54haDUkqpU/CoYhCRoSKS\nKiJpIjLV6jyNQUTeF5EsEdlqdZbGJCJRIrJcRLaLSIqITLE6U2MQkQARWSsim+yf+3GrMzUmEfEW\nkY0i8o3VWRqLiOwTkS0ikiwiThld1GN2JYmIN7ATGELVzYPWAeONMdssDdbARORC4DjwkTEmzuo8\njUVE2gHtjDEbRCQYWA+M9oB/3wIEGWOOi4gv8BMwxRjzs8XRGoWI3A3YgBBjzBVW52kMIrIPsBlj\nnHbthidtMSQCacaYPcaYUmAOMMriTA3OGPMjkGN1jsZmjDlgjNlgf55P1b1Amvw9xU2V4/aXvvaH\nR/z1JyKRwHDgXauzuDtPKoYOQHq11xl4wBeFAhGJAfoBa6xN0jjsu1OSgSxgsTHGIz438DJwH1Bp\ndZBGZoAfRGS9iExyxi/0pGKQWqZ5xF9SnkxEmgNfAHcZY45ZnacxGGMqjDEJVN1HPVFEmvwuRBG5\nAsgyxqy3OosFBhpjzgKGAXfYdx87xJOKIQOIqvY6Esi0KItqBPZ97F8A/zbGzLM6T2MzxuQCK4Ch\nFkdpDAOBkfb97XOAi0XkY2sjNQ5jTKb9ZxbwJVW7zR3iScWwDugqIrEi4geMAxZYnEk1EPtB2PeA\n7caYl6zO01hEJEJEWtifNwMGAzusTdXwjDH3G2MijTExVP2/vcwYc4PFsRqciATZT65ARIKASwGH\nz0D0mGIwxpQDk4FFVB2InGuMSbE2VcMTkdnAaqC7iGSIyK1WZ2okA4EbqfrLMdn+uNzqUI2gHbBc\nRDZT9cfQYmOMx5y66YHaAD+JyCZgLfCtMWaho7/UY05XVUopdXo8ZotBKaXU6dFiUEopVYMWg1JK\nqRq0GJRSStWgxaCUUqoGLQallFI1aDEopZSqQYtBKaVUDf8HdxN1kXORwIcAAAAASUVORK5CYII=\n",
+      "text/plain": [
+       "<matplotlib.figure.Figure at 0x7feeac1af9e8>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import matplotlib.pyplot as p\n",
+    "import scipy as sc\n",
+    "\n",
+    "x = sc.arange(0,5,0.1); y = sc.sin(x)\n",
+    "p.plot(x,y); p.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**My first R graphic**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "Loading required package: ggplot2\n"
+     ]
+    },
+    {
+     "data": {},
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAaQAAAFoCAMAAAAvuH/IAAADAFBMVEUAAAABAQECAgIDAwME\nBAQFBQUGBgYHBwcICAgJCQkKCgoLCwsMDAwNDQ0ODg4PDw8QEBARERESEhITExMUFBQVFRUW\nFhYXFxcYGBgZGRkaGhobGxscHBwdHR0eHh4fHx8gICAhISEiIiIjIyMkJCQlJSUmJiYnJyco\nKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6\nOjo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tM\nTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1e\nXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5vb29w\ncHBxcXFycnJzc3N0dHR1dXV2dnZ3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGC\ngoKDg4OEhISFhYWGhoaHh4eIiIiJiYmKioqLi4uMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKTk5OU\nlJSVlZWWlpaXl5eYmJiZmZmampqbm5ucnJydnZ2enp6fn5+goKChoaGioqKjo6OkpKSlpaWm\npqanp6eoqKipqamqqqqrq6usrKytra2urq6vr6+wsLCxsbGysrKzs7O0tLS1tbW2tra3t7e4\nuLi5ubm6urq7u7u8vLy9vb2+vr6/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fIyMjJycnK\nysrLy8vMzMzNzc3Ozs7Pz8/Q0NDR0dHS0tLT09PU1NTV1dXW1tbX19fY2NjZ2dna2trb29vc\n3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OTl5eXm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u\n7u7v7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7////i\nsF19AAAACXBIWXMAABJ0AAASdAHeZh94AAAY1klEQVR4nO2deWAUVbaHT2cDkkAgIK48UZ8y\nuIwiOjMqOjJPcW2QVRRCGEZ9AqNPZsBtWNSAoqKiiBvOKOooLuDyHAdHHCWAiEDYjBGDEBCz\n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",
+      "text/plain": [
+       "plot without title"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "require(ggplot2)\n",
+    "library(repr) # to resize plot within jupyter - this package is part of IRkernal\n",
+    "options(repr.plot.width=3.5,repr.plot.height=3)\n",
+    "\n",
+    "x<-seq(0,5,0.1); y<-sin(x)\n",
+    "qplot(x,y,geom =\"line\") #large figure"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "%matplotlib inline\n",
+    "from sympy import * # for symbolic analysis\n",
+    "import scipy as sc # for numerical analysis\n",
+    "import matplotlib.pyplot as plt # for plotting\n",
+    "init_printing() # To get nice latex-formatted output"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "sympy.core.symbol.Symbol"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x = var('x')\n",
+    "type(x) # check it's class"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a, b, c = var(\"a,b,c\") # Define multiple variables all at once"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Can give variables constraints"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAACoAAAAPBAMAAABgjEDtAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMA782r3SJ2ZjIQmUS7\nVIlAnjihAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAv0lEQVQYGWNg/GQs72z0hQEV8Acw5BcwNKIK\nMsxiAIkyo4mGg0XZJqAKR4BFOUCi0Q2c3QFwWaAJ3Iq5j0LXH+A9n8DAuvwxWAooysC4dn4B0wEG\n/gSGLRO4JUEaQKJMDgwMPGBROQYGMaAgRNQAKsrxq7zcHC66ACrK/hckBARgExbA1H4DiyFEmQ8w\nxCcwODEwTIOpZQGqZRdguHiSob+AYSUDA/caeZkV3Of/XGBgeJc2RWQCp1XeBKghaBQAM0c287zN\nvm0AAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$\\mathrm{True}$$"
+      ],
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x= var('x',real=True)\n",
+    "x = var('x', positive=True)\n",
+    "# Checking\n",
+    "x.is_imaginary\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAACoAAAAPBAMAAABgjEDtAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMA782r3SJ2ZjIQmUS7\nVIlAnjihAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAv0lEQVQYGWNg/GQs72z0hQEV8Acw5BcwNKIK\nMsxiAIkyo4mGg0XZJqAKR4BFOUCi0Q2c3QFwWaAJ3Iq5j0LXH+A9n8DAuvwxWAooysC4dn4B0wEG\n/gSGLRO4JUEaQKJMDgwMPGBROQYGMaAgRNQAKsrxq7zcHC66ACrK/hckBARgExbA1H4DiyFEmQ8w\nxCcwODEwTIOpZQGqZRdguHiSob+AYSUDA/caeZkV3Of/XGBgeJc2RWQCp1XeBKghaBQAM0c287zN\nvm0AAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$\\mathrm{True}$$"
+      ],
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x>0\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Can define symbolic equations to manipulate"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAbBAMAAAAt2dQtAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAIma7zZnddlTvRIkQ\nqzLsm4+cAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABYUlEQVQoFY2SMUjEUAyG/95JW2mtVcHBqYPg\nqoKb4AkdRFDkVpdu6lYHcRD1JnV01sXJRdAbvMmlwsFNDs46OLqIukqhJi+tpXi0lyEv+d9HXsIL\nUGWdhagKgeWONCoh3XW+q6Er7acSAsx4AEgPB4A6xGgeuf5Wc0mvbZCb6A8o9Zn8DW6B5RKoCzgr\nZ4tSLedO85AiK8RwknxB53dzK0L2udxM5gBHRQircrtHR+9w6iCUNIWMhIzG4vHJ5gG7XdvSGyrL\nKj28786MkTIt6ja1F1mxmbYmlZyW5R7x/YlAF1QJQ7Mquff9Hd9f47iOVz4+2QEEAaNpR3njHwj4\nIoXoOYrf2LNl0zWh/v5aVGrcjI5hRJKmkB1DbVHaOA1511rCuDBZJSPAJSubIlPBp/1e05Msg+oe\nXlhZF7n0W7RAILUuErJ/zEOK6IPF5gpyMelmadnS/RXQvAz/d6r1JfUXHhFDT+L/2ZAAAAAASUVO\nRK5CYII=\n",
+      "text/latex": [
+       "$$\\left(x + \\pi\\right)^{2}$$"
+      ],
+      "text/plain": [
+       "       2\n",
+       "(x + π) "
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "MyFun = (pi + x)**2 ;MyFun"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\\left(x + \\pi\\right)^{2}\n"
+     ]
+    }
+   ],
+   "source": [
+    "latex(MyFun)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\\left(x + \\pi\\right)^{2}\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(latex(MyFun))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Numerical evaluation\n",
+    "Can use the evalf function or N"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "CAS (computer algebra systems) features are used to produce pen on paper maths style manipulations if expression. Use sympy for this"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068\n",
+      "3.1415926535897932384626433832795028841971693993751\n",
+      "(x + 3.1416)**2\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(pi.evalf(n=100)) # pi to 100 dp\n",
+    "print(N(pi,50)) # pi to 50 dp\n",
+    "print(N(MyFun,5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAKAAAAAPBAMAAACRq9klAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAIpm7MhCriUTv3c12\nVGZoascqAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC7klEQVQ4Ea2UTWhUVxiGnzuTOz+ZmWTMRqwL\nb2MbFREjNqCCJGRhoZvclQtpyRCo+JsMURwU0UvBhbqIUiKxRRxc6KILZ2PrQnAMlFJoyVBKoRu9\nbhRRoqLRmDG5vufcaTbdeuC+95z7fueZ7zs/g9O9dYD/Wu7Xtk3qt3ktWVnZCV//th661n4BTuVI\nA9Inj7birXPHH2zg/jEe8NVIpVJmN+l5KEzamGwUldVp743F8XgQ4pFquCVOB3RRWMK9zUbZ//pY\nh6vRW0jAYZ5HUVTiW7jM7p45xUDu2D3z+t0AJflFOquFEKeW8sleYKbBAkmPrbgjYz7W4ZdDRbgP\nq/kUUvADjA2Qj4EaqzlPBTSSmWK4lu7FrWarpF5zNnCbTGi+2oyPdSiZ0RHYQxm0GHf9/wHTOQGt\noJIzr/x0mJszQC3NEtsNwAKtEwMn+jilj5m6sbjpL2c4Oz0ADw3QCu4NFbBkYmk3Rewp0/xyOlBP\nGcbO6LPPVGr0ONTHpB5htaitkpO+M49bF9AKzonPlWt0y4RNlGHlNd9thlzR0ACt08eaAE43NbZZ\n6qdLy0B920EaAa1oeDzgn3PvAvWu6yE95UY+GzTZAFtOskph380pcF+YGLr1tDJUb3PxbwO0omF2\nsqPEzKQOhqeRToS/AM8DC2w5JF7yiPw7LVzNhOQ9I/EuH1TuZ8oCukZwiiQXs0XaFmFaUSugv/GT\ngKEFWidVMwf5Igw14vPLX2ZeC/ijMvxm796xS38aqXfOCTgs0igFTzhV29/Yv5yhdbI1EnOm1lTI\ncEmxumb5ZaAHSoBsbyx6t79UHmxhEO7xvU5EcUhrKFtraJ2ENqFmMkwWGdJ8PqmMH4hLHq7pbnXI\notMAJR0hD+qZW3TUnRuVniqzFN6TKrutXY4djydFzvs806E1wLtRtEBif3PU7LazbsTXVva/CWP5\nrnsb7Fq3npyuaZVM99oAxnsGoOfqz6F16Dqmo9U2oj8HVjUE/NjtA/9e98ZPxvCDAAAAAElFTkSu\nQmCC\n",
+      "text/latex": [
+       "$$21.5443823618587$$"
+      ],
+      "text/plain": [
+       "21.5443823618587"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Evaluate it for x = 1.5\n",
+    "N(MyFun.subs(x,1.5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAANwAAAAbBAMAAADlmfy+AAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAIma7zZnddlTvRIkQ\nMqvFy5UvAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAD/klEQVRIDb1VXYgbVRT+JpO/zUyyI7WFUnGn\nviyLYKNVUFkwymKLijuioWh/yIOCILh5sCwI0iAIgg/p1iJtWXAeVCgiDS2xSGh3HuzCIjR50Zc+\nbCxsa0XptoZ13aaM3z13JlDoYzcH5s53fuZ8c849cwcYnjSfCYZHBssplIZIl3byt4ZJ5xsbQ6QD\nsv2h0qWrQ6Vrks1wuWy27FQECY/LlvtSWecvKLtR3t2BPdv0YbTO1XSkqNgT/FrDjtazwKWzDP1t\npdVqiF+jS63foWPs/RcdFBz6vscPwIs6yb2r/QreUpbLsDaQAv7AVmRvc7PnoVV8Hd6B4aHuYi8W\nHewKw7ArbkH2MWx3JAZLrjEHuwTk934+qSsccGWrGpoediv0F3ASnwIP40gNa7h8iLMlKl697iCz\njtFK4iisEt4ACtotqHAUBU9icANYAc4DI2G4irQqcyAx3ZnI+hVws3MOWMRp3+4BGdKJii6fyZ1C\nu2SyqD4aAFuq3IJGS7BWJQZ8agFYiii2DagUiOmei6zTAenOTOKs8rGZKp9Wuzqi7o52kVunkqtq\nt6B2EZm7Qmf/AxzpIOnr+MO8Gfv3zWstputdORz5MRMUwsdduhf53opOq1fHD9Jmf4C2h9y/hCYv\n5RY0wuo2IDHHWZ0Py1Me4Clep53kqihxdXbPxQltyd1heC8AdrzHRfKJOokxjuuPBzDWQJ4x0gBN\nx1awk8nbkBh2ctpFosQQyvt8xWNIFbUWVWeHAd4OxJTm1vw5c4rY4qLyRSrMCo0/+WOe0NnqhYVO\n0B58oTpsVpCsZhdqyFaoUZgj1YccL9bU1MvHp6a6tK4Bu3zegTLwBDL/BYQnA8kXqyl1vo/MR83M\nlKgJnaDE7JW7NKiY8U8WOshH7SPdSBHtDn2UeO/eJZ2rDBkPmAOWaw8BL9Qkn6j8dVkbhgNznaOS\nZSHpoopWeyeIW9yXGJXkZjCgYzPbDdSVlRLT8WPR1X0G4xG+WMFlezWd6lXB5Syk+qN90plFJMjS\n7vJxoRMEJLsSo7K+zmmtKCCj0q7h6awjWky3zL1ThryHjMNyTOdLYIYfNhOLypMmXWJb0rf4madK\nrN9juNAplJjDsiMxmJC/aoIhSnhKJ6uJDy2txXSFhn2CnzC2tZrX8E2AcTyGLMdd5ROV59eEk3BR\nr3LYljpAfUCnUOY1+yV1xk04+Cj42eUmNjTBd5zM6xce/fheOjQPdcChnA7DNeRXmj5y5Td9pG70\nrmoVWy8eAL4tPw/8Mvs3H95eY07lFoRm2YeOscrv0J3scKHc/xDTvge4xoeX/IQGeW1nAB8s4BGt\n5ckYbOZd/YC0bInBZt7NQdcMdzN5otw7o/v/8/BPvI4UbFQAAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$\\left(a + 6.28318530717959\\right)^{2}$$"
+      ],
+      "text/plain": [
+       "                      2\n",
+       "(a + 6.28318530717959) "
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "N(MyFun.subs(x,a+pi))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Assign to a new function and evaluate over a range of values"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "MyFun_new = MyFun.subs(x,a+pi)\n",
+    "x_vec = sc.arange(0,10,0.1)\n",
+    "MyFun_vec =sc.array([N(((x+pi)**2).subs(x,xx)) for xx in x_vec]) # using a list comprehension"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[9.86960440108936 10.5079229318073 11.1662414625253 11.8445599932432\n",
+      " 12.5428785239612 13.2611970546792 13.9995155853971 14.7578341161151\n",
+      " 15.5361526468330 16.3344711775510 17.1527897082689 17.9911082389869\n",
+      " 18.8494267697049 19.7277453004228 20.6260638311408 21.5443823618587\n",
+      " 22.4827008925767 23.4410194232947 24.4193379540126 25.4176564847306\n",
+      " 26.4359750154485 27.4742935461665 28.5326120768845 29.6109306076024\n",
+      " 30.7092491383204 31.8275676690383 32.9658861997563 34.1242047304742\n",
+      " 35.3025232611922 36.5008417919102 37.7191603226281 38.9574788533461\n",
+      " 40.2157973840640 41.4941159147820 42.7924344455000 44.1107529762179\n",
+      " 45.4490715069359 46.8073900376538 48.1857085683718 49.5840270990898\n",
+      " 51.0023456298077 52.4406641605257 53.8989826912436 55.3773012219616\n",
+      " 56.8756197526795 58.3939382833975 59.9322568141154 61.4905753448334\n",
+      " 63.0688938755514 64.6672124062693 66.2855309369873 67.9238494677052\n",
+      " 69.5821679984232 71.2604865291412 72.9588050598591 74.6771235905771\n",
+      " 76.4154421212950 78.1737606520130 79.9520791827310 81.7503977134489\n",
+      " 83.5687162441669 85.4070347748848 87.2653533056028 89.1436718363208\n",
+      " 91.0419903670387 92.9603088977567 94.8986274284746 96.8569459591926\n",
+      " 98.8352644899106 100.833583020629 102.851901551346 104.890220082064\n",
+      " 106.948538612782 109.026857143500 111.125175674218 113.243494204936\n",
+      " 115.381812735654 117.540131266372 119.718449797090 121.916768327808\n",
+      " 124.135086858526 126.373405389244 128.631723919962 130.910042450680\n",
+      " 133.208360981398 135.526679512116 137.864998042834 140.223316573552\n",
+      " 142.601635104270 144.999953634988 147.418272165706 149.856590696424\n",
+      " 152.314909227142 154.793227757860 157.291546288578 159.809864819295\n",
+      " 162.348183350013 164.906501880731 167.484820411449 170.083138942167]\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "[<matplotlib.lines.Line2D at 0x7f15ff8e6ac8>]"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAXoAAAD8CAYAAAB5Pm/hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz\nAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo\ndHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3Xl4VdW9//H3F0JIGANhTEKYZ5kj\nolSLouJQpFawToCIoq1T64jWlt7e1msHB7i3ahEQHAqCothWUQERFRnCPARICFNCBsIQxpBp/f7I\n8f5SbhTISbLP8Hk9j0/OWWfvc77bkE9W1l57L3POISIioauW1wWIiEj1UtCLiIQ4Bb2ISIhT0IuI\nhDgFvYhIiFPQi4iEOAW9iEiIU9CLiIQ4Bb2ISIiL8LoAgGbNmrl27dp5XYaISFBZs2ZNnnOu+dm2\nC4igb9euHcnJyV6XISISVMxsz7lsp6EbEZEQp6AXEQlxCnoRkRCnoBcRCXEKehGREKegFxEJcQp6\nEZEQp6AXEfGAc47Ji1JJyTpa7Z8VEBdMiYiEmxc/28GUJWkUFJfQvXWjav0s9ehFRGrYK0t3MmVJ\nGjcnJfD41V2r/fMU9CIiNWjm17v448Jt3NAnjv/6SW9q1bJq/0wFvYhIDZm9ai+//cdWhvVsyfM3\n96F2DYQ8KOhFRGrE/LUZPP3+JoZ0bc6UW/tRp3bNxa+CXkSkmv1z434em7eBSzrG8uodA6gbUbtG\nP19BLyJSjT7Zks0v5qwnqW1TXhuTRFSdmg15UNCLiFSbJdtyeODva7kgvjHT70yiXqQ3M9oV9CIi\n1WDZjgPc99ZaurVqxKy7BtIwqo5ntZw16M1shpnlmtnmM9ofNLPtZrbFzP5Urv0pM0vzvTasOooW\nEQlky3fmMeHNZDo2b8Cb4wfSONq7kIdzuzJ2JvA/wBvfNpjZ5cAIoLdz7rSZtfC19wBuAXoCccAi\nM+vinCup6sJFRALRyvSDjJ+ZTGLTerw1fiAx9SK9LunsPXrn3DLg0BnNPwOec86d9m2T62sfAcxx\nzp12zu0C0oCBVViviEjASt59iHEzVxMXE8Xbdw8itkFdr0sCKj9G3wW41MxWmtkXZnahrz0e2Fdu\nuwxfm4hISFu79zB3vr6aVo2imH3PIJo3DIyQh8rf1CwCaAIMAi4E5ppZB6Ciy7xcRW9gZhOACQCJ\n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\n3P8DdIICc71MlPUAAAAASUVORK5CYII=\n",
+      "text/plain": [
+       "<matplotlib.figure.Figure at 0x7f15ff8e66d8>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "print(MyFun_vec)\n",
+    "fig, ax = plt.subplots()\n",
+    "ax.plot(x_vec, MyFun_vec)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A quicker evaluation method, lamdify"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "MyFun_lamb = lambdify([x],MyFun, 'numpy') # first arg is python list of variables\n",
+    "# second arg is the function"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Measure time difference"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "21.1 ms ± 383 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%timeit\n",
+    "MyFun_vec= sc.array([N(((x+pi)**2).subs(x,xx))for xx in x_vec])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.72 µs ± 34.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%timeit\n",
+    "MyFun_vec=MyFun_lamb(x_vec)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Algebraic Manipulations\n",
+    "One of the main uses of CAS "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAMEAAAAUBAMAAADGn0QzAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAIma7zZnddlTvRIkQ\nqzLsm4+cAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACtklEQVQ4EY2Vv2tTURTHv+/l10veS42VOuiS\nFnWO/gE24sNBUILFSQqvoKiIGIfSwUrjootDQRfFIZPi1ICKQ4U+QSwihdZF3Lo4G6SoQzCec38k\n75QX6h1uzj3nez/f3PN+AU4VI8akyY+PqMOt6IpTHaVQiAOjqihrgFNLU0zMnAS2dCUV4ay+amnE\nqbT98J4BQV2VsuafCl2wibU2PuhcKmIC3k+FcBvJnV5TrzZmexS8VYujSQEe6FU5RnEZvpJLhFUs\ntfBLIfLiH1oHFNjhk6LNpTkUI5T/IljmmkRYh5ftYEchDor90iHbpqITCYU5Q7bHDjjLNYmwDuAu\ngRDzJFm/e+iObo908BtULNAULGy90C0b7keejvmGHSRiqPjYAQhxgvZ33Kv5OmshHdw6pTJV4DOO\nNS9TTMOcgaIVAhzhlEQMFIevxIBbxzXyif2eVyHpbgcvolS+BbzDWnyPYhpDh5u0us8piRgq/KcE\njEBzgGyNlX4Ynnkchpscqys91qWo2AZinOYkXofh9TA8p+Jcg35+cJhACAWexCAElYF9TZ5pyC4N\nHIDfup44A3d/4JBA2DPsB6Zb7EBHJOE2zzSkQymiFHcJY3Tf6GG75DVAjOeclAjr0I/ZgRB0mbx4\nCYVYAaSDW6ckX+mHhS4WKaZhHb4Dt4dXOoGwikfArQrcOt9vK61pjPPu3WfIdSjlN1D6k+k6VYpp\nGAfnxupsBFzilERYxRQ8ai0h6JwbC+sXqiwdOuS+7Xyhx2WbUnTO4Ovi/BSXaRiHbL/fj4DznJII\nqyhdnGkrhHzkB13ineZhnVOxnWyX1NqJ+EcirIMSMEK+toKKLug57c33PilIffMJBSOOJ7eI2Ly9\nM8JVKMzbew9E6udDcQzaqQlqcmHQeyCcanJPMp40C3OfJUs6/q+v6D8sXKvke7pdVgAAAABJRU5E\nrkJggg==\n",
+      "text/latex": [
+       "$$\\left(x + 1\\right) \\left(x + 2\\right) \\left(x + 3\\right)$$"
+      ],
+      "text/plain": [
+       "(x + 1)⋅(x + 2)⋅(x + 3)"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "(x+1)*(x+2)*(x+3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAKsAAAAWBAMAAABNknGBAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAEHarIkSJZt3NVLsy\nme8Q6PJIAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACJElEQVQ4EZWSMWgUQRSG/9277G7udnNLAkKa\ncxMhXVBEtJGwjdgeKayEnCtYeXiddhE7uyCInlqcYGUVa4luZZvAIcFCuZRa3YlBLwjn7M683Rk3\ns9Et3rx533v/vH0zAP+igS+84tLZ0bNithzxut62vJd9K6xsyfv/8L22PdKlO6H7Q8dOjOu7dVrV\nwxPLdQnNWEeA2ljPyon5qIQ7QQksR4Uh3FqJqaJDzj+tVnQ7z6se5X7iLbY8un97T0VsKgcskpq/\nCWA8xieKNuPqT+7XAr7uoL4t6DVcV9nCgA07NSIjWaiwvoe3FHZCM2mAfYLO5G/Kffb6jcIAM7nD\n1HCQWJLdCPOYG90UO0HrwwzOTafiTVNlqew7Xjh/5spKkGnQoY0X0UfgeCZ1ayxfWI94MZ05+bDa\nYhNu2w+crYLs6SeY62uYJHsK94KHiqwx6eIbYPnWuBYWZcfwDjRMkr2BO/4rVXbq44sPA7N04+yM\nXu/p117vHNC4D/tQwyRZH89T0bwQv4BNNgU0An4ct2JEbC42e3LHMkkW+E7FNFs2k80uC+7GRJJV\n0MqQdathsqz7m4pJdi3ttuafhekTy2RdNtuhhkmyL80Rlngxye6y2QIb/fe4mqtSt7iIZl/Hsnc7\nc1QfVZM/Zh/JVtoGewkLy/P7AijU+nxZy7y1ySUkxji/tHo3Lctl0RnEIiQtdKgUytwylnWbZSuO\nESpbZVPGoMA/vluPpCTgHFcAAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$x^{3} + 6 x^{2} + 11 x + 6$$"
+      ],
+      "text/plain": [
+       " 3      2           \n",
+       "x  + 6⋅x  + 11⋅x + 6"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "expand((x+1)*(x+2)*(x+3))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Expand trig functions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAFgAAAAUBAMAAAD7IecQAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAMnZUZs0Qu91E7yKJ\nmaurDqYVAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABlklEQVQoFX2TTyiDYRzHv2vz2HrnQDmp7S03\nTHIhDtZKOTiMekXCe9FK4UKKaHFw3VFykBKScjIX5eK42kUuyqzl4oItGjK/5/2z53m38dTzPt/f\n9/m8z/v7PfsNqBhKuMKwQ8+5qVwHtgMkhRQqdkz62Yxd38KfFFJS06RnpdiUnrRsuVUrytPqtwPL\nA7xWZqZhw753itm+YSqN5h49L8uKCxv2x3k0AVdrJJr8QfNZU6dKRoi7V6k2na9luC4b6gJSiAFx\nUP7bqvJF20s0faeY4aiAF8cYbQ5iV4eKDWAVKND2Fs25MO44KuABHXRhvfB+tIPDy8AbbZ/QfNCx\nSYtf08YPNS1D8haM4CDYTSnN4RUBH4G9EkHDLnAKPrq8IC7gKUowpUGHuF+ccAENdHk76AZyEkwF\nsjzqo/2Ok4u8DiqwT8caz8FKI0XQKIYy1w44h3WK77EXGU4ESk+B0mPPZ4Z/CljoaMkmHPB8KEzx\niOFJj9o/twEocYkzpLORmNwp1Y1EBfw1qlu0dvMb79c45r+/1S+PUV/GSCefNgAAAABJRU5ErkJg\ngg==\n",
+      "text/latex": [
+       "$$\\sin{\\left (a + b \\right )}$$"
+      ],
+      "text/plain": [
+       "sin(a + b)"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sin(a+b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAP8AAAAUBAMAAACwpfa4AAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAMnZUZs0Qu91E7yKJ\nmaurDqYVAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEL0lEQVRIDXWWX2gcVRTGv+nuzOxmku5aETRC\nM0R9qCayiKDoQ5aCINTiKqzgv3Z9KAVtu0uwCC3aRR8EK7rgixQhVUtUSmWEYkqhugYLljayTRUf\nDLiGIohIE6sp0TbxO3dm7twskwt35rvnd+7cb+89s7tAbzsZBrJBLwjHIV6P6jleWcltOrBGRBQx\ntj5KsNeI9B9JzFDEuz/lOI0O+kniFJwDTWBj+seYihJjbF1PZtrxlF1JzFCCd3CcRofaSeKzgN0F\nnEoSMhSpaml4e5zX78fKvAu+yq7pfSbVOtsBCiUOp3XIEELDloIPx8w5GivzTpxfYkDTdAO5AJio\nMe9Fc3KshYYtwt5NcQBeU8untUqE4H52IKaGgS+KAlQ7xet3ouyWGq+9CA0bsXXH1srUCm45sele\nn8ENHV7OzNxdA2aosPfCJTjTIy1suv8uDgXb86OliDISGSD2DnWtZy4Oz8u0UfYdw5foVp7nzM2U\nsGf4nFosot7c7KTCu4GmlNWbvvcfmVvmHh/HTspH2L2PMRjcGmDcaSAX4fpTDjOFSgsNKMyqy43j\n64DRl7nqP7V6gGyFo9Ml67h1GK6vFlMURwJ7AYKP1ODjNeAA8DdzcyWeWxk/UT7IblcwVnwbGLpt\nEhsiPFYD3xqh0kIDecFuF+5RFMqMvgFkllBoI9PkqIrMYq4Na1EtpqhzDAMNJjWRu3YPxMB+4C/m\n9rWAX2p4nXKIvd4BLFZ9of3ueBDhH+HQgFCcrVbfqlbltRTs0kAFBZ/Dz4CBCupcdIF7cYORoRJw\nXS0W0iXkmEjsnF3tiIFXEgOfwFmUKewTTMos00Bjz055jPh7HnlaUgYYiWpAsEsDDW3A7mCipAzk\n5ZONceY1tZgy0NdAvagMfInssmGAR8DPl1nglPfZ9Q78XMPjfAQxT2qAL6JQaaEBT7CbGOAR8Ci4\nlfmmsQM31GLqCLg5Y5xNzAdcNgywCJ2r3MmHwzJjDaB0gjvxno+NZagaXZYi6SnCjGA3McAiLLR4\nzlJlUgPI9HWQX1aLqSKsl7A/o2r0oRoOyv5HRyCvzZN4tNsG5jjVO4b+YLCI5zKTcIPwrbqMV0mE\nSgt3QGHuf3wEM/wZKLt81kCbOafLOG99CLutFlOvsO1n3+lX+IOtj7U2r/62efXXB/7tqj3BvpHb\n51vAE5yKfbPn4c1938p/e+c5DmVH946WqRTlPTQg2Lqy8sKVlZsPfc4oD8iZ/YHCLvLi/DkS4MyF\n3yGLRXT+m6+2RJgRo+mvYuM7MQVrGhowMpTUX7aneomMNUUK3h7P6PdjZd5jrOlLJtVa/9xM65Ah\nNE37rZKTVm2XMSORMU6nSd7BUDqVJGSoiCIN6z8kcZIxjzLG6TTJnQpl7DcBSkVU1XUPAk6GkfX+\ndIV4Paqf5pWV3KYDa0RE5S/Z/+i1KXyz9uD7AAAAAElFTkSuQmCC\n",
+      "text/latex": [
+       "$$\\sin{\\left (a \\right )} \\cos{\\left (b \\right )} + \\sin{\\left (b \\right )} \\cos{\\left (a \\right )}$$"
+      ],
+      "text/plain": [
+       "sin(a)⋅cos(b) + sin(b)⋅cos(a)"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "expand(sin(a+b), trig=True)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Factorize too"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAMEAAAAUBAMAAADGn0QzAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAIma7zZnddlTvRIkQ\nqzLsm4+cAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACtklEQVQ4EY2Vv2tTURTHv+/l10veS42VOuiS\nFnWO/gE24sNBUILFSQqvoKiIGIfSwUrjootDQRfFIZPi1ICKQ4U+QSwihdZF3Lo4G6SoQzCec38k\n75QX6h1uzj3nez/f3PN+AU4VI8akyY+PqMOt6IpTHaVQiAOjqihrgFNLU0zMnAS2dCUV4ay+amnE\nqbT98J4BQV2VsuafCl2wibU2PuhcKmIC3k+FcBvJnV5TrzZmexS8VYujSQEe6FU5RnEZvpJLhFUs\ntfBLIfLiH1oHFNjhk6LNpTkUI5T/IljmmkRYh5ftYEchDor90iHbpqITCYU5Q7bHDjjLNYmwDuAu\ngRDzJFm/e+iObo908BtULNAULGy90C0b7keejvmGHSRiqPjYAQhxgvZ33Kv5OmshHdw6pTJV4DOO\nNS9TTMOcgaIVAhzhlEQMFIevxIBbxzXyif2eVyHpbgcvolS+BbzDWnyPYhpDh5u0us8piRgq/KcE\njEBzgGyNlX4Ynnkchpscqys91qWo2AZinOYkXofh9TA8p+Jcg35+cJhACAWexCAElYF9TZ5pyC4N\nHIDfup44A3d/4JBA2DPsB6Zb7EBHJOE2zzSkQymiFHcJY3Tf6GG75DVAjOeclAjr0I/ZgRB0mbx4\nCYVYAaSDW6ckX+mHhS4WKaZhHb4Dt4dXOoGwikfArQrcOt9vK61pjPPu3WfIdSjlN1D6k+k6VYpp\nGAfnxupsBFzilERYxRQ8ai0h6JwbC+sXqiwdOuS+7Xyhx2WbUnTO4Ovi/BSXaRiHbL/fj4DznJII\nqyhdnGkrhHzkB13ineZhnVOxnWyX1NqJ+EcirIMSMEK+toKKLug57c33PilIffMJBSOOJ7eI2Ly9\nM8JVKMzbew9E6udDcQzaqQlqcmHQeyCcanJPMp40C3OfJUs6/q+v6D8sXKvke7pdVgAAAABJRU5E\nrkJggg==\n",
+      "text/latex": [
+       "$$\\left(x + 1\\right) \\left(x + 2\\right) \\left(x + 3\\right)$$"
+      ],
+      "text/plain": [
+       "(x + 1)⋅(x + 2)⋅(x + 3)"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "factor(x**3 + 6*x**2 + 11*x + 6)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Biological examples\n",
+    "one population exponential growth\n",
+    "Model: $$\\label{eq:exp_growth} \\frac{\\text{d}N}{\\text{d}t} = r_m N $$\n",
+    "$r_m$ is the intrinsic, constant rate of population growth (units of 1/time) and $N$ is population size\n",
+    "\n",
+    "First set up the variables and define N"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAKwAAAArBAMAAAAXqn6LAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAEM3dMkSJq3a7VO+Z\nImZO0DghAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC20lEQVRIDa1WTWjUQBT+0m3C7nZ/QkVUPLis\nFQQRFgQ9aXtURLqgVOhlU089eNje1oOwIAgLHooXT7oBvXgQRbwUFBcPetP1JEKxQU+CaDxU6KLU\n9zKJSdZMaJM8mMyb977v481mZ/KANHbueRq2nDuSp1Jk1J8pyHKq1pDnUmQmBinIMur68rwpyyWP\nqy/Q15PTZcyDFl7Jcini73ScTEGXUdegbMpyyePKLxTt5HQZUxmhUHskyyaPH8WXtpGU/omJlWEE\nfd/NC53mWFyOdoC97SaKs2s6yqvO+voYPbzcObpPchM6jSGwZ4jpsM74aqdo9eEfQCP2NxqPye26\nSkXPcdfOJEUHQexre38Di+ScpkFnSXnCUbJIWSlacPxnCbPAElBuUIzP0hE3FykrRQMLKwvLQdkf\nFgZAfgD12lYHuBovK0EDxm3zmC+7iGoDBlCwaN82xT+7uchqpWhMmqdwyaXStITSptoEciZQqlHg\nPg22SNkI9PQJthklfG0MUN7SdGCKpQ2Sm6cBrV4//LReb7MftGi0gwhfGwbQX6c4yx6iIWRp9qqt\nbntGQUOGFlutvD17K9+bA1QTaL2G+BFaUICLtGDzZMVKPFVThqa6DDr6LWtqJU975P3n+DItWMAV\nPIh/ZXI0sEFbfX8D1WaJ9HOkWLHpoQ2AN0oX4NLZoqqVo91ddnCeX/6Bl2dIgaqG2gA+fidnhgZb\nhGwMWnDwDD1sTLoLZ+LDS+acNnYiZDns2jhahMs2OviqeSCe+aoh+3fVKEMR4Of/jd04WmDVNo7j\nA10FvhWETPTFOILi1ucSYtG+KO1+1VndDcY8nxq78L89Fu2xxBzzGaHGzjnYAUIMOoCKd6mxyxnx\nkN1nubG73L/T3T0zjiEaO/oeZWuisaPvUbYmGrvMezunsQtf0hnULRo71YaegZgvIRo7rVac82NZ\neE5jV2rvz0IroOE0duV7ViAUcP8CN5vKz9yuwhYAAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$- r_{m} N{\\left (t \\right )} + \\frac{d}{d t} N{\\left (t \\right )}$$"
+      ],
+      "text/plain": [
+       "           d       \n",
+       "-rₘ⋅N(t) + ──(N(t))\n",
+       "           dt      "
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "r_m, N, t = var(\"r_m N t\", real = True)\n",
+    "N = Function('N')\n",
+    "dN_dt = Derivative(N(t),t) - r_m*N(t); dN_dt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note written \\ref{eq: exp_growth} as LHS=RHS. Solve usign dsolve"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAIQAAAAYBAMAAADJzkisAAAAMFBMVEX///8AAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAdrtEVN3vEM0iiZlm\nqzLvZ7CWAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACTklEQVQ4EaVUTWgTQRh9cTfdbratawXxoNCr\nB2mQ6rVR8GJFcxGtKAkevXStFLQiLdiDIGjw4MEK2Yu0IGhEFBWqES9CKjYeBFFh7x4sjRd/ir5v\ndpPtpG0q5oNv5n3vfXmZmZ1doM3oDNo0ACa8ti0O/qfD2/mdhfCn0ydeaB53pOqKRE1pKl7XkumI\nmpK5908aZu6MB7tP0R/VqA9W75fPtl/n7HN9dYgfCvWT6PSY/P+xAi405BhsK8N8Um7U3W4dGnlB\nxgE6pQgqzKOEDV1UFaPHOb0sRBXQEbD7cGXgPhILF8mmzv8CBgiGmU8BK89Zjxse630xVyTcP9mR\nOQTH9Ykd5IAZwM6yOMm8wtTC+S7l15jbQ9gdjOERjGpA7OBdGSUgUYLxfqkK3It7Q1QUc8iKGeNb\nnqk5iSFkMwpyD5uz8IFNZcBcJPdG8bNXJa4JfuAqBj2TPLlh3FbVZWxFtRAKM3BqRhpIZrgiNmHV\nhcsFZIGeuSxwK2Ppl0mUEuyllMdjFhufxDemFiNUAQ8mLT682qEqrcEH+qfJiMUEc7UFj5t7DJTF\nsuCmMDLA4HOSspFBWMBe1XH3mMRpwepGOHThKn4qUR9kD8kaOTnOWRypH+eKrqLPgo9dLM7y0a2Q\nFExy7FrkkCoBc5YLyJK0MH8DQ15osR1W+FDjjtGRUywWmEYWuDlPcD1WI3Rp96c0oawi8VBa1gu5\n4Ax1S0PYNIpF66iE8hqvWfQ7M9/agOdZUB1rvexKsB8vuxt4RJ+cXRu0tZT/+cOnufwF7h18LWiU\n7RsAAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$N{\\left (t \\right )} = C_{1} e^{r_{m} t}$$"
+      ],
+      "text/plain": [
+       "           rₘ⋅t\n",
+       "N(t) = C₁⋅ℯ    "
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "MyEq_sol = dsolve(dN_dt) ; MyEq_sol"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Use fixed points to solve constants"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Data manipulation and analysis\n",
+    "## Using Pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'0.20.3'"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import scipy as sc # also needed for this chapter\n",
+    "pd.__version__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Species</th>\n",
+       "      <th>Infraorder</th>\n",
+       "      <th>Family</th>\n",
+       "      <th>Distribution</th>\n",
+       "      <th>Body mass male (Kg)</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Daubentonia_madagascariensis</td>\n",
+       "      <td>Chiromyiformes</td>\n",
+       "      <td>Daubentoniidae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>2.700</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Allocebus_trichotis</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Cheirogaleidae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>0.100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Avahi_laniger</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Indridae</td>\n",
+       "      <td>America</td>\n",
+       "      <td>1.030</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>Avahi_occidentalis</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Indridae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>0.814</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>Avahi_unicolor</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Indridae</td>\n",
+       "      <td>America</td>\n",
+       "      <td>0.830</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>5</th>\n",
+       "      <td>Cheirogaleus_adipicaudatus</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Cheirogaleidae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>0.200</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>6</th>\n",
+       "      <td>Cheirogaleus_crossleyi</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Cheirogaleidae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>0.400</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>7</th>\n",
+       "      <td>Cheirogaleus_major</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Cheirogaleidae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>0.450</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>8</th>\n",
+       "      <td>Cheirogaleus_medius</td>\n",
+       "      <td>Lemuriformes</td>\n",
+       "      <td>Cheirogaleidae</td>\n",
+       "      <td>Madagascar</td>\n",
+       "      <td>0.217</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                        Species       Infraorder          Family Distribution  \\\n",
+       "0  Daubentonia_madagascariensis  Chiromyiformes   Daubentoniidae   Madagascar   \n",
+       "1           Allocebus_trichotis     Lemuriformes  Cheirogaleidae   Madagascar   \n",
+       "2                 Avahi_laniger     Lemuriformes        Indridae      America   \n",
+       "3            Avahi_occidentalis     Lemuriformes        Indridae   Madagascar   \n",
+       "4                Avahi_unicolor     Lemuriformes        Indridae      America   \n",
+       "5    Cheirogaleus_adipicaudatus     Lemuriformes  Cheirogaleidae   Madagascar   \n",
+       "6        Cheirogaleus_crossleyi     Lemuriformes  Cheirogaleidae   Madagascar   \n",
+       "7            Cheirogaleus_major     Lemuriformes  Cheirogaleidae   Madagascar   \n",
+       "8           Cheirogaleus_medius     Lemuriformes  Cheirogaleidae   Madagascar   \n",
+       "\n",
+       "   Body mass male (Kg)  \n",
+       "0                2.700  \n",
+       "1                0.100  \n",
+       "2                1.030  \n",
+       "3                0.814  \n",
+       "4                0.830  \n",
+       "5                0.200  \n",
+       "6                0.400  \n",
+       "7                0.450  \n",
+       "8                0.217  "
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Importing data\n",
+    "MyDF = pd.read_csv('../../Week2/Data/testcsv.csv', sep=',')\n",
+    "MyDF"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>col1</th>\n",
+       "      <th>col2</th>\n",
+       "      <th>col3</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Var1</td>\n",
+       "      <td>Grass</td>\n",
+       "      <td>1.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Var2</td>\n",
+       "      <td>Rabbit</td>\n",
+       "      <td>2.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Var3</td>\n",
+       "      <td>Fox</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>Var4</td>\n",
+       "      <td>Wolf</td>\n",
+       "      <td>4.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   col1    col2  col3\n",
+       "0  Var1   Grass   1.0\n",
+       "1  Var2  Rabbit   2.0\n",
+       "2  Var3     Fox   NaN\n",
+       "3  Var4    Wolf   4.0"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Creating a dataframe\n",
+    "MyDF= pd.DataFrame({\n",
+    "    'col1': ['Var1', 'Var2', 'Var3', 'Var4'],\n",
+    "    'col2': ['Grass', 'Rabbit', 'Fox', 'Wolf'],\n",
+    "    'col3': [1, 2, sc.nan, 4]\n",
+    "})\n",
+    "\n",
+    "MyDF"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Explore data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "   col1    col2  col3\n",
+      "0  Var1   Grass   1.0\n",
+      "1  Var2  Rabbit   2.0\n",
+      "2  Var3     Fox   NaN\n",
+      "3  Var4    Wolf   4.0\n",
+      "   col1    col2  col3\n",
+      "0  Var1   Grass   1.0\n",
+      "1  Var2  Rabbit   2.0\n",
+      "2  Var3     Fox   NaN\n",
+      "3  Var4    Wolf   4.0\n",
+      "(4, 3)\n",
+      "4\n",
+      "Index(['col1', 'col2', 'col3'], dtype='object')\n",
+      "col1     object\n",
+      "col2     object\n",
+      "col3    float64\n",
+      "dtype: object\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(MyDF.head())\n",
+    "print(MyDF.tail())\n",
+    "print(MyDF.shape)\n",
+    "print(len(MyDF))\n",
+    "print(MyDF.columns) # Column names\n",
+    "print(MyDF.dtypes) # Columns and types\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([['Var1', 'Grass', 1.0],\n",
+       "       ['Var2', 'Rabbit', 2.0],\n",
+       "       ['Var3', 'Fox', nan],\n",
+       "       ['Var4', 'Wolf', 4.0]], dtype=object)"
+      ]
+     },
+     "execution_count": 59,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "MyDF.values # Converts from to 2D table\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>col3</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>count</th>\n",
+       "      <td>3.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>mean</th>\n",
+       "      <td>2.333333</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>std</th>\n",
+       "      <td>1.527525</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>min</th>\n",
+       "      <td>1.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>25%</th>\n",
+       "      <td>1.500000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>50%</th>\n",
+       "      <td>2.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>75%</th>\n",
+       "      <td>3.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>max</th>\n",
+       "      <td>4.000000</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "           col3\n",
+       "count  3.000000\n",
+       "mean   2.333333\n",
+       "std    1.527525\n",
+       "min    1.000000\n",
+       "25%    1.500000\n",
+       "50%    2.000000\n",
+       "75%    3.000000\n",
+       "max    4.000000"
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "MyDF.describe()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.3"
+  },
+  "latex_envs": {
+   "LaTeX_envs_menu_present": true,
+   "autocomplete": true,
+   "bibliofile": "biblio.bib",
+   "cite_by": "apalike",
+   "current_citInitial": 1,
+   "eqLabelWithNumbers": true,
+   "eqNumInitial": 1,
+   "hotkeys": {
+    "equation": "Ctrl-E",
+    "itemize": "Ctrl-I"
+   },
+   "labels_anchors": false,
+   "latex_user_defs": false,
+   "report_style_numbering": false,
+   "user_envs_cfg": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+**********************************************************************
+
+Testing MyFirstJupyterNB.ipynb...
+
+======================================================================
+Inspecting script file using_os.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python3
+""" Author - Oliver Tarrant
+This is a script using subprocesses to crawl through my home directory
+and then returns a list of the files whose name begins with C
+"""
+
+# Use the subprocess.os module to get a list of files and  directories 
+# in your ubuntu home directory 
+
+# Hint: look in subprocess.os and/or subprocess.os.path and/or 
+# subprocess.os.walk for helpful functions
+
+import subprocess
+
+#################################
+#~Get a list of files and 
+#~directories in your home/ that start with an uppercase 'C'
+
+# Type your code here:
+
+# Get the user's home directory.
+home = subprocess.os.path.expanduser("~")
+
+# Create a list to store the results.
+FilesDirsStartingWithC = []
+
+# Use a for loop to walk through the home directory.
+
+for (dir, subdir, files) in subprocess.os.walk(home):
+	for name in dir:
+		if name[0].startswith("C"):
+			FilesDirsStartingWithC.append(name)
+	for name in subdir:
+		if name[0].startswith("C"):
+			FilesDirsStartingWithC.append(name)	
+	for name in files:	
+		if name[0].startswith("C"):
+			FilesDirsStartingWithC.append(name)
+  
+#################################
+# Get files and directories in your home/ that start with either an 
+# upper or lower case 'C'
+
+# Type your code here:
+FilesDirsStartingWithC_c=FilesDirsStartingWithC
+for (dir, subdir, files) in subprocess.os.walk(home):
+	for name in dir:
+		if name[0].startswith("c"):
+			FilesDirsStartingWithC_c.append(name)
+	for name in subdir:
+		if name[0].startswith("c"):
+			FilesDirsStartingWithC.append(name)
+	for name in files:	
+		if name[0].startswith("c"):
+			FilesDirsStartingWithC_c.append(name)
+#################################
+# Get only directories in your home/ that start with either an upper or 
+#~lower case 'C' 
+
+# Type your code here:
+
+DirsStartingWithC_c=[]
+for (dir, subdir, files) in subprocess.os.walk(home):
+	for name in dir:
+		if name[0].startswith("C"):
+			DirsStartingWithC_c.append(name)
+	for name in dir:	
+		if name[0].startswith("c"):
+			DirsStartingWithC_c.append(name)
+	for name in subdir:
+		if name[0].startswith("C"):
+			DirsStartingWithC_c.append(name)
+	for name in subdir:
+		if name[0].startswith("c"):
+			DirsStartingWithC_c.append(name)
+
+print('The files and directories begining with "C" are:')
+print(set(FilesDirsStartingWithC))
+print('The files and directories starting with "C" or "c" are:')
+print(set(FilesDirsStartingWithC_c))
+print('The directories starting with "C" or "c" are:')
+print(set(DirsStartingWithC_c))
+**********************************************************************
+
+Testing using_os.py...
+
+using_os.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+The files and directories begining with "C" are:
+set(['Carbone et al._2005_The American naturalist.pdf', 'cache_3f8a9768eafa868f93212e49d77148054a64edef.cache', 'cae9bca1d5b62c96adb095fbe009f95ba80092', 'clipres.vcproj', 'Chlamydomonas_intermedia_,_Seaburg_et_al._(1981)_,_-77.5_,_162.5', 'Clima-Temmin08.xls', 'cache_bce0aa2566f6a417ae32cae27536cb50b51fc66a.cache', 'Crovella_et_al_1993_Highly_repeated_DNA_sequences_in_wildcat_and_domestic_cat.pdf', 'Chardonnet_2002_Driving_forces_African_lion_stat
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 7.05135s
+
+======================================================================
+Inspecting script file Nets.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python3
+""" Author: Oliver Tarrant
+
+A python version of Nets.R , Takes the QMEE CDT data and returns a 
+visualisation of the network of connections coloured and sized by
+the type of institution and the number of Phd students connected to it
+"""
+
+import networkx as nx
+import scipy as sc
+import csv
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+import matplotlib.cm as cmx
+import matplotlib.lines as lines
+edgs = csv.reader(open('../Data/QMEE_Net_Mat_edges.csv', 'rt'), delimiter=",")
+edgs = list(edgs)
+nods = csv.reader(open('../Data/QMEE_Net_Mat_nodes.csv','rt'), delimiter = ",")
+nods = list(nods)
+edges=sc.array(edgs[1:]).astype("float") # remove headers from the array
+places=list(sc.array(edgs[0]))
+G=nx.from_numpy_matrix(edges) # defines network from array
+
+
+#relable the nodes
+#first need dictionary of old nodes to new
+k = list(range(len(G.nodes))) #define keys
+v = list(places) # define the new node names
+mapping=dict(zip(k,v)) # generate the dictionary
+G=nx.relabel_nodes(G,mapping) #apply the relabling
+
+
+###### add type to nodes######
+Types = list()
+for i in range(1,len(nods)):
+	Type = nods[i][1]
+	Types.append(Type)
+#Create a dictionary from nodes to Types
+TypeMap=dict(zip(v,Types))
+for nod in G.nodes:        #Assign the types to the nodes
+	G.node[nod]['Type']=TypeMap[nod]
+
+####Set color_map for types#####
+color_map={'University':'green','Hosting Partner' : 'red','Non-Hosting Partners':'blue'} #set colours
+for n in G.nodes():
+	T = nx.get_node_attributes(G,'Type')
+	G.node[n]['color']=color_map[T[n]] # assign colours to the nodes
+	
+##### add Pis to nodes ######
+Pis = list()
+for i in range(1,len(nods)):
+	P = nods[i][2]
+	Pis.append(P)
+#Create a dictionary from nodes to Pis
+PisMap=dict(zip(v,Pis))
+for nod in G.nodes:        #Assign the types to the nodes
+	G.node[nod]['Pis']=float(PisMap[nod])*25
+
+plt.close('all') #check all plots are closed
+###set layout of graph
+pos=nx.spring_layout(G)
+
+
+nx.draw(G, pos=pos,with_labels=True, node_color=[G.node[node]['color'] for node in G], node_size=[G.node[node]['Pis']*1.5 for node in G] ) # draws the graph
+nx.draw_networkx_edges(G, pos=pos,width=[(G.edges[edge]['weight']+1)/10 for edge in G.edges], arrows=True)
+# plot includes colouring by type and sized by Pis value
+
+
+### Create a legend
+linelst=[] #create blank list of points for the legend
+Types=list(color_map) #Create a list of types to be added to the legend
+for i in range(0,len(color_map)):
+	line = lines.Line2D(range(1), range(1),color='black', marker ='o', markerfacecolor=color_map[Types[i]])
+	linelst.append(line) # define the items in the legend
+	
+plt.legend((linelst),(Types),numpoints=1, loc=2) # plot the legend
+plt.savefig('../Results/QMEENet_py.svg')
+
+
+
+
+
+
+
+**********************************************************************
+
+Testing Nets.py...
+
+Nets.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+Traceback (most recent call last):
+  File "Nets.py", line 27, in <module>
+    k = list(range(len(G.nodes))) #define keys
+TypeError: object of type 'instancemethod' has no len()
+
+======================================================================
+Inspecting script file regexs.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python3
+
+""" Author : Oliver Tarrant
+A script giving an example of the uses of different regular exprressions
+"""
+
+import re
+
+my_string = "a given string"
+
+# find a space in the string
+match = re.search(r'\s', my_string)
+
+print(match)
+# this should print something like
+# <_sre.SRE_Match object at 0x93ecdd30>
+
+# now we can see what has matched
+match.group()
+
+match = re.search(r's\w*', my_string)
+
+# this should return "string"
+match.group()
+
+# NOW AN EXAMPLE OF NO MATCH:
+# find a digit in the string
+match = re.search(r'\d', my_string)
+
+# this should print "None"
+print(match)
+
+# Further example
+
+my_string = 'an example'
+match = re.search(r'\w*\s', my_string)
+
+if match:
+	print('found a match', match.group())
+else:
+	print('did not find a match')
+
+# some more examples 
+
+# some basic examples
+match = re.search(r'\d', "it takes 2 to tango")
+print(match.group()) #print 2
+
+match = re.search(r'\s\w*\s', 'once upon a time')
+match.group() # ' upon '
+
+match = re.search(r'\s\w{1,3}\s', 'once upon a time')  # match space, alphanumeric (atleast 1 but not more than 3 times) then space
+match.group() # ' a '
+
+match = re.search(r'\s\w*$', 'once upon a time') # match space, alphanumeric  (n=0 to any times), end of line
+match.group() # ' time'
+
+match = re.search('\w*\s\d.*\d', 'take 2 grams of H20') 
+# match 0+ alphanumeric then space then numeric then 0+ any character then numeric
+match.group() # 'take 2 grams of H2'
+
+match = re.search(r'^\w*.*\s', 'once upon a time') # match beginign of line, 0+ alphanumeric, 0+ any, space
+match.group() # 'once upon a '
+## Note that *, =, and {} are all "greedy":
+## They repeat the previous regex token as many times as possible
+## As a result, they may match more text than you want
+
+## To make non-greedy, use ?:
+match = re.search(r'^\w*.*?\s', 'once upon a time')
+match.group() # 'once '
+
+## To further illustrate greediness, let's try match an HTML tag:
+match = re.search(r'<.+>', 'This is a <EM>first</EM> test') #match <, any charater 1+ times, >
+match.group() # '<EM>first</EM>'
+## But we didn't want this: we wanted just <EM>
+## It's because + is greedy!
+
+## Instead we can make + "lazy"!
+match = re.search(r'<.+?>', 'This is a <EM>first</EM> test')
+match.group() # '<EM>'
+
+## Ok, moving on from the greed and laziness
+match = re.search(r'\d*\.?\d*','1432.75+60.22i') # note "\" before "."
+# match 0+numeric, \.? matches a "." once, then 0+ numerics
+match.group() # '1432.75'
+
+match = re.search(r'\d*\.?\d*','1432+60.22i')
+match.group() # '1432'
+
+match = re.search(r'[AGTC]+', 'the sequence ATTCGT') # match any charcters listed (A,T,C,G)
+match.group() # 'ATTCGT'
+
+re.search(r'\s+[A-Z]{1}\w+\s\w+', 'The bird-shit frog''s name is Theloderna asper').group()
+# match 1+ spaces, any capital letter once, 1+ alphanumeric, space, 1+ alphanumeric 
+# ' Theloderma asper'
+## NOTE THAT I DIRECTLY RETURNED THE RESULT BY APPENDING .gorup()
+**********************************************************************
+
+Testing regexs.py...
+
+regexs.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+<_sre.SRE_Match object at 0x7f68e7782648>
+None
+('found a match', 'an ')
+2
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00882s
+
+======================================================================
+Inspecting script file timeitme.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python
+"""A test sript for timing different functions usign timeit"""
+##########################################################
+# range vs. xrange
+##########################################################
+import time
+import timeit
+
+def a_not_useful_function():
+	""" Counts from 0 to 100000 using range"""
+	y = 0
+	for i in range(100000):
+		y = y + i
+	return 0
+	
+def a_less_useless_function():
+	""" Counts from 0 to 100000 using x range"""
+	y = 0
+	for i in xrange(100000):
+		y = y + i
+	return 0
+	
+# one approach is to time it like this:
+start = time.time()
+a_not_useful_function()
+print "a_less_useless_function takes %f s to run." % (time.time() - start)
+
+start = time.time()
+a_less_useless_function()
+print "a_less_useless_function takes %f s to run." % (time.time() - start)
+
+# But you'll notice that if you run it multiple times, the time taken changes a
+# bit. So instead, you can also run:
+#	%timeit a_not_useful_function()
+#	%timeit a_less_useless_function()
+# in iPython.
+##############################################################################
+# for loops vs. list comprehensions.
+##############################################################################
+
+
+my_list = range(1000)
+
+def my_squares_loop(x):
+	"""Creates a list of squares in range 1000"""
+	out = []
+	for i in x:
+		out.append(i ** 2)
+	return out
+	
+# %timeit my_squares_loop(my_list)
+# %timeit my_squares_lc(my_list)
+
+
+
+###################################################################
+# for loops vs. join method.
+###################################################################
+
+import string
+my_letters = list(string.ascii_lowercase)
+
+def my_join_loop(l):
+	"""Joins the letters in an input string"""
+	out = ''
+	for letter in l:
+		out += letter
+	return out
+	
+	
+def my_join_method(l):
+	"""Joins the letters in an input string"""
+	out = ''.join(l)
+	return out
+	
+	
+# %timeit(my_join_loop(my_letters))
+# %timeit(my_join_method(my_letters))
+
+
+#################################################
+# Oh dear.
+#################################################
+
+
+def getting_silly_pi():
+	"""counts cumulatively from 0 to 100000 using +"""
+	y = 0
+	for i in xrange(100000):
+		y = y + i
+	return 0
+	
+def getting_silly_pii():
+	"""Counts cumulatively from 0 to 100000 using +="""
+	y = 0
+	for i in xrange(100000):
+		y += i
+	return 0
+	
+# %timeit(getting_silly_pi())
+# %timeit(getting_silly_pii())
+
+
+
+**********************************************************************
+
+Testing timeitme.py...
+
+timeitme.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+a_less_useless_function takes 0.003330 s to run.
+a_less_useless_function takes 0.002359 s to run.
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.01616s
+
+======================================================================
+Inspecting script file LV4.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python2
+""" Author - Oliver Tarrant 
+A discrete time version Lotka-Volterra Model 
+with random gaussian fluctations in resource 
+growth at each step simulated using scipy """
+
+import scipy as sc 
+import scipy.stats as scs
+import scipy.integrate as integrate
+import pylab as p #Contains matplotlib for plotting
+import sys
+
+
+def dR_dt(x,y, t=0):
+    """ Returns the growth rate of predator and prey populations at any 
+    given time step """
+    # the model
+    R = x
+    C = y
+    eps = float(scs.norm.rvs(0,1,1)) # generates a random variable from a standard gaussian distr 
+    dR = R*(1 + (r+eps)*(1-(R/K))) - a*C*R
+    dC = C - z*C + e*a*R*C
+    
+    return sc.array([[dR, dC ]])
+
+if len(sys.argv) >= 5: # Allows uses to input arguments else uses defaults
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = float(sys.argv[4])
+elif len(sys.argv) == 4:
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = 0.75
+elif len(sys.argv) == 3:	
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = 1.5
+	e = 0.75
+elif len(sys.argv) == 2:	
+	r = float(sys.argv[1])
+	a = 0.1
+	z = 1.5
+	e = 0.75
+else:
+# Define parameters:
+	r = 1. # Resource growth rate
+	a = 0.1 # Consumer search rate (determines consumption rate) 
+	z = 1.5 # Consumer mortality rate
+	e = 0.75 # Consumer production efficiency
+
+# Now define time -- integrate from 0 to 15, using 1000 points:
+t = sc.linspace(0, 15,  15)
+K = 100
+x0 = 10
+y0 = 5
+z0 = sc.array([x0, y0]) # initials conditions: 10 prey and 5 predators per unit area
+pops = sc.array([[x0,y0]])
+x = z0[0]
+y = z0[1]
+n= len(t) # get length of t
+
+for i in t[1:n]: # initial conditions already included in pops
+	
+	new = dR_dt(x,y,i) # 2*1 array
+	if new[0,0] < 0: # doesn't allow density to drop below 0
+		new[0,0] = 0
+	if new[0,1] < 0:
+		new[0,1] = 0
+	pops = sc.concatenate((pops,new),axis=0) 
+	x = float(new[0,0])  # rounds values so doesn't exceed memory
+	y = float(new[0,1])
+
+
+
+prey, predators = pops.T # Transposes to form correct format 
+
+final_prey = prey[-1]
+final_predator = predators[-1]
+f1 = p.figure() #Open empty figure object
+p.plot(t, prey, 'g-', label='Resource density') # Plot
+p.plot(t, predators  , 'b-', label='Consumer density')
+p.annotate( 'Constants: r = %r , a = %r , z = %r , e = %r , K = %r' %(r,a,z,e,K), xy=(20,5), color = "red") 
+p.annotate('Final prey = %.5s , Final predators = %.5s' %(final_prey,final_predator), xy=(25,2), color = "purple")
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population')
+p.title('Consumer-Resource population dynamics')
+p.show()
+f1.savefig('../Results/prey_and_predators_4.pdf') #Save figure
+**********************************************************************
+
+Testing LV4.py...
+
+LV4.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 2.81729s
+
+======================================================================
+Inspecting script file DrawFW.py...
+
+File contents are:
+**********************************************************************
+#! /usr/bin/python2
+
+""" Author: Oliver Tarrant
+	Plot a snapshot of a food web graph/network.
+	
+	Needs: Adjacency list of who eats whom (consumer name/id in 1st 
+	column, resource name/id in 2nd column), and list of species 
+	names/ids and properties such as biomass (node abundance) or 
+	average body mass.
+	
+""" 
+
+import networkx as nx
+import scipy as sc
+import matplotlib.pyplot as plt
+import matplotlib.animation as ani # for animation
+
+def GenRdmAdjList(N = 2, C = 0.5):
+	"""Generate random adjacency list given N nodes with connectance 
+		probability C
+	"""
+	Ids = range(N)
+	Alst = []
+	for i in Ids:
+		if sc.random.uniform(0,1,1) < C:
+			Lnk = sc.random.choice(Ids,2).tolist() #generates a random sample of 2 elements from Ids and turns them to a list
+			if Lnk[0] != Lnk[1]: # avoid self loops
+				Alst.append(Lnk)
+	return Alst
+	
+## Assign body mass range
+SizRan = ([-10,10]) # use log scale
+
+## Assign number of species (MaxN) and connectance (C)
+MaxN = 30
+C = 0.75
+
+## Generate adjacency list:
+AdjL = sc.array(GenRdmAdjList(MaxN,C))
+
+## Generate species (node) data:
+Sps = sc.unique(AdjL) # get species ids
+Sizs = sc.random.uniform(SizRan[0], SizRan[1], MaxN) # Generate body sizes (log10 scale)
+
+
+##### The Plotting #####
+plt.close('all')
+
+## Plot usign networkx:
+
+## Calculate coordinates for circular configuration:
+## (See networkx.layout for inbuilt functions to compute other types of node
+# coords)
+pos = nx.circular_layout(Sps)
+
+G = nx.Graph()
+G.add_nodes_from(Sps)
+G.add_edges_from(tuple(AdjL))
+NodSizs = 10**-32 + (Sizs - min(Sizs))/(max(Sizs)-min(Sizs)) # node sizes in proportion to body sizes
+nx.draw(G, pos, nod_size = NodSizs*1000)
+plt.show()
+**********************************************************************
+
+Testing DrawFW.py...
+
+DrawFW.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 2.27767s
+
+======================================================================
+Inspecting script file TestR.R...
+
+File contents are:
+**********************************************************************
+## R script to test running R in subprocess
+print("Hello this is R!")
+**********************************************************************
+
+Testing TestR.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+[1] "Hello this is R!"
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.05728s
+
+======================================================================
+Inspecting script file LV3.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python2
+"""Author - Oliver Tarrant  
+A discrete time version Lotka-Volterra Model simulated using scipy """
+
+import scipy as sc 
+import scipy.integrate as integrate
+import pylab as p #Contains matplotlib for plotting
+import sys
+
+
+# import matplotlip.pylab as p #Some people might need to do this
+
+def dR_dt(x,y, t=0):
+    """ Returns the growth rate of predator and prey populations at any 
+    given time step """
+    # the model
+    R = x
+    C = y
+    dR = R*(1 + r*(1-(R/K))) - a*C*R
+    dC = C - z*C + e*a*R*C
+    
+    return sc.array([[dR, dC ]])
+
+if len(sys.argv) >= 5: # Allows uses to input arguments else uses defaults
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = float(sys.argv[4])
+elif len(sys.argv) == 4:
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = 0.75
+elif len(sys.argv) == 3:	
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = 1.5
+	e = 0.75
+elif len(sys.argv) == 2:	
+	r = float(sys.argv[1])
+	a = 0.1
+	z = 1.5
+	e = 0.75
+else:
+# Define parameters:
+	r = 1. # Resource growth rate
+	a = 0.1 # Consumer search rate (determines consumption rate) 
+	z = 1.5 # Consumer mortality rate
+	e = 0.75 # Consumer production efficiency
+
+# Now define time -- integrate from 0 to 15, using 1000 points:
+t = sc.linspace(0, 15,  15)
+K = 100
+x0 = 10
+y0 = 5
+z0 = sc.array([x0, y0]) # initials conditions: 10 prey and 5 predators per unit area
+pops = sc.array([[x0,y0]])
+x = z0[0]
+y = z0[1]
+n= len(t) # get length of t
+
+for i in t[1:n]: # initial conditions already included in pops
+	
+	new = dR_dt(x,y,i) # 2*1 array
+	if new[0,0] < 0: # doesn't allow density to drop below 0
+		new[0,0] = 0
+	if new[0,1] < 0:
+		new[0,1] = 0
+	pops = sc.concatenate((pops,new),axis=0) 
+	x = round(new[0,0],7)  # rounds values so doesn't exceed memory
+	y = round(new[0,1],7)
+
+
+
+prey, predators = pops.T # Transposes to form correct format 
+
+final_prey = prey[-1]
+final_predator = predators[-1]
+f1 = p.figure() #Open empty figure object
+p.plot(t, prey, 'g-', label='Resource density') # Plot
+p.plot(t, predators  , 'b-', label='Consumer density')
+p.annotate( 'Constants: r = %r , a = %r , z = %r , e = %r , K = %r' %(r,a,z,e,K), xy=(20,5), color = "red") 
+p.annotate('Final prey = %.5s , Final predators = %.5s' %(final_prey,final_predator), xy=(25,2), color = "purple")
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population')
+p.title('Consumer-Resource population dynamics')
+p.show()
+f1.savefig('../Results/prey_and_predators_3.pdf') #Save figure
+**********************************************************************
+
+Testing LV3.py...
+
+LV3.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 1.99210s
+
+======================================================================
+Inspecting script file Nets.R...
+
+File contents are:
+**********************************************************************
+library(igraph) # Load the igraph package
+
+rm(list = ls())
+
+# 	ICL	UoR	CEH	ZSL	CEFAS	Nonacademic/CASE
+# ICL	0	0	10	9	5	70
+# UoR		0	12	0	2	76
+# CEH		0	0	0	6
+# ZSL		0 	0	28
+# CEFAS	0	0
+# Nonacademic/CASE	0
+
+links <- read.csv("../Data/QMEE_Net_Mat_edges.csv", header=T, as.is=T)
+nodes <- read.csv("../Data/QMEE_Net_Mat_nodes.csv", header=T, row.names = 1)
+
+#Create graph object
+net <- graph.adjacency(as.matrix(links), mode = "directed", weighted=TRUE, diag=F)
+        
+#Test plot
+# plot(net, edge.arrow.size=1, edge.curved=.1,
+ #     vertex.color="orange", vertex.frame.color="#555555",
+  #    vertex.label=V(net)$Type, vertex.label.color="black",
+   #   vertex.label.cex=.7) 
+
+# Generate colors based on partner type:
+colrs <- c("green", "red", "blue")
+V(net)$Type <- nodes$Type
+V(net)$color <- colrs[V(net)$Type]
+
+# Set node size based on Number of PIs:
+V(net)$Pis <- nodes$Pis
+V(net)$size <- V(net)$Pis*0.9
+
+#V(net)$size <- 50
+
+# Set edge width based on weight (PhD Students):
+E(net)$width <- E(net)$weight
+
+#change arrow size and edge color:
+E(net)$arrow.size <- 1
+E(net)$edge.color <- "gray80"
+
+E(net)$width <- 1+E(net)$weight/10
+
+graphics.off()
+
+svg("../Results/QMEENet.svg",width=7,height=7)
+
+plot(net, edge.curved=0, vertex.label.color="black") 
+
+ legend(x=-1.5, y=-1.1, c("Hosting Partner","Non-hosting Partner","University"), pch=21,
+        col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
+
+dev.off()
+**********************************************************************
+
+Testing Nets.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+null device 
+          1 
+
+**********************************************************************
+
+Encountered error:
+Loading required package: methods
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+======================================================================
+Inspecting script file LV2A.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python2
+""" Author - Oliver Tarrant
+ The typical Lotka-Volterra Model simulated using scipy """
+
+import scipy as sc 
+import scipy.integrate as integrate
+import pylab as p #Contains matplotlib for plotting
+import sys
+
+# import matplotlip.pylab as p #Some people might need to do this
+
+def dR_dt(pops, t=0):
+    """ Returns the growth rate of predator and prey populations at any 
+    given time step """
+    
+    R = pops[0]
+    C = pops[1]
+    dRdt = r*R*(1 - (R/K)) - a*C*R
+    dydt = -z*C + e*a*R*C
+    
+    return sc.array([dRdt, dydt])
+
+# Define parameters:
+r = 1. # Resource growth rate
+a = 0.1 # Consumer search rate (determines consumption rate) 
+z = 1.5 # Consumer mortality rate
+e = 0.75 # Consumer production efficiency
+
+# Now define time -- integrate from 0 to 15, using 1000 points:
+t = sc.linspace(0, 100,  50000)
+K = 100
+x0 = 10
+y0 = 5 
+z0 = sc.array([x0, y0]) # initials conditions: 10 prey and 5 predators per unit area
+
+pops, infodict = integrate.odeint(dR_dt, z0, t, full_output=True) #runs dR_dt as an integration with i.c z0 and over time interval t
+									# infodict just checks integration was successful
+infodict['message']     # >>> 'Integration successful.'
+
+prey, predators = pops.T # Transposes to form correct format 
+final_prey = prey[-1]
+final_predator = predators[-1]
+f1 = p.figure() #Open empty figure object
+p.plot(t, prey, 'g-', label='Resource density') # Plot
+p.plot(t, predators  , 'b-', label='Consumer density')
+p.annotate( 'Constants: r = %r , a = %r , z = %r , e = %r , K = %r' %(r,a,z,e,K), xy=(20,5), color = "red") 
+p.annotate('Final prey = %.5s , Final predators = %.5s' %(final_prey,final_predator), xy=(25,2), color = "purple")
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population')
+p.title('Consumer-Resource population dynamics')
+p.show()
+f1.savefig('../Results/prey_and_predators_2A.pdf') #Save figure
+**********************************************************************
+
+Testing LV2A.py...
+
+LV2A.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 2.11292s
+
+======================================================================
+Inspecting script file LV1.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python2
+""" Author - Oliver Tarrant 
+The typical Lotka-Volterra Model simulated using scipy """
+
+import scipy as sc 
+import scipy.integrate as integrate
+import pylab as p #Contains matplotlib for plotting
+
+# import matplotlip.pylab as p #Some people might need to do this
+
+def dR_dt(pops, t=0):
+    """ Returns the growth rate of predator and prey populations at any 
+    given time step """
+    
+    R = pops[0]
+    C = pops[1]
+    dRdt = r*R - a*R*C 
+    dydt = -z*C + e*a*R*C
+    
+    return sc.array([dRdt, dydt])
+
+# Define parameters:
+r = 1. # Resource growth rate
+a = 0.1 # Consumer search rate (determines consumption rate) 
+z = 1.5 # Consumer mortality rate
+e = 0.75 # Consumer production efficiency
+
+# Now define time -- integrate from 0 to 15, using 1000 points:
+t = sc.linspace(0, 15,  1000)
+
+x0 = 10
+y0 = 5 
+z0 = sc.array([x0, y0]) # initials conditions: 10 prey and 5 predators per unit area
+
+pops, infodict = integrate.odeint(dR_dt, z0, t, full_output=True) #runs dR_dt as an integration with i.c z0 and over time interval t
+									# infodict just checks integration was successful
+infodict['message']     # >>> 'Integration successful.'
+
+prey, predators = pops.T # Transposes to form correct format 
+
+f1 = p.figure() #Open empty figure object
+p.plot(t, prey, 'g-', label='Resource density') # Plot
+p.plot(t, predators  , 'b-', label='Consumer density')
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population')
+p.title('Consumer-Resource population dynamics')
+p.show()
+f1.savefig('../Results/prey_and_predators_1.pdf') #Save figure
+**********************************************************************
+
+Testing LV1.py...
+
+LV1.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00424s
+
+======================================================================
+Inspecting script file fmr.R...
+
+File contents are:
+**********************************************************************
+# Plots log(field metabolic rate) against log(body mass) for the Nagy et al 
+# 1999 dataset to a file fmr.pdf.
+# Writes the list of species names to species.csv
+
+cat("Reading CSV\n")
+
+nagy <- read.csv('../Data/NagyEtAl1999.csv', stringsAsFactors = FALSE)
+
+cat("Creating graph\n")
+pdf('../Results/fmr_plot.pdf', 11, 8.5)
+col <- c(Aves='purple3', Mammalia='red3', Reptilia='green3')
+plot(log10(nagy$M.g), log10(nagy$FMR.kJ.day.1), pch=19, col=col[nagy$Class], 
+     xlab=~log[10](M), ylab=~log[10](FMR))
+for(class in unique(nagy$Class)){
+    model <- lm(log10(FMR.kJ.day.1) ~ log10(M.g), data=nagy[nagy$Class==class,])
+    abline(model, col=col[class])
+}
+dev.off()
+
+cat("Finished in R!\n")
+**********************************************************************
+
+Testing fmr.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Reading CSV
+Creating graph
+null device 
+          1 
+Finished in R!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.10763s
+
+======================================================================
+Inspecting script file re4.py...
+
+File contents are:
+**********************************************************************
+# usr/bin/python
+import re
+
+"""" 
+Playing around with extracting email addresses or their subsets.
+
+From Wikipedia: 
+The format of email addresses is local-part@domain 
+the local-part may be up to 64 characters 
+the domain name may have a maximum of 253 characters
+
+The local-part of the email address may use any of these 
+ASCII characters:
+- Uppercase and lowercase English letters
+- Digits 0 to 9
+- Characters !#$%&'*+-/=?^_`{|}~
+- Character . provided that it is not the first or last 
+  character, and provided also that it does not appear 
+  two or more times consecutively
+
+The domain name is formed by letters, digits,
+hypens and dots.
+"""
+
+valid1 = "niceandsimple@example.com"
+valid2 = "very.common@example.com"
+validbutterrible = "!#$%&'*+-/=?^_`{}|~@example.org"
+
+invalid1 = "Abc.example.com"
+invalid2 = "Abc.@example.com"
+
+#matching the simplest one:
+emailpattern1 = r'^[a-zA-Z0-9\._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$'
+print re.search(emailpattern1, valid1).group()
+
+#matching the nasty one:
+emailpattern = r'[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!\#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?'
+print re.search(emailpattern, validbutterrible).group()
+
+MyStr = 'Samraat Pawar, s.pawar@imperial.ac.uk, Systems biology and ecological theory'
+# without groups
+match = re.search(r"[\w\s]*,\s[\w\.@]*,\s[\w\s&]*",MyStr)
+
+
+match.group()
+# 'Samraat Pawar, s.pawar@imperial.ac.uk, Systems biology and ecological theory'
+match.group(0)
+# 'Samraat Pawar, s.pawar@imperial.ac.uk, Systems biology and ecological theory'
+# now add groups using ( )
+match = re.search(r"([\w\s]*),\s([\w\.@]*),\s([\w\s&]*)",MyStr)
+
+match.group(0)
+# 'Samraat Pawar, s.pawar@imperial.ac.uk, Systems biology and ecological theory'
+match.group(1)
+# 'Samraat Pawar'
+match.group(2)
+# 's.pawar@imperial.ac.uk'
+match.group(3)
+# 'Systems biology and ecological theory'
+**********************************************************************
+
+Testing re4.py...
+
+re4.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+niceandsimple@example.com
+!#$%&'*+-/=?^_`{}|~@example.org
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00910s
+
+======================================================================
+Inspecting script file run_LV.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python
+"""Author - Oliver Tarrant 
+A script to run  and profile the LV*.py files"""
+import os
+import cProfile
+
+
+os.system("python -m cProfile LV1.py") # runs a profiles each script with arguments if given
+os.system("python -m cProfile LV2.py 1.2 0.12 1.4 0.9")
+os.system("python -m cProfile LV3.py 1.2 0.12 1.4 0.9")
+os.system("python -m cProfile LV4.py 1.2 0.12 1.4 0.9")
+os.system("python -m cProfile LV5.py 1.2 0.12 1.4 0.9")
+**********************************************************************
+
+Testing run_LV.py...
+
+run_LV.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00416s
+
+======================================================================
+Inspecting script file TestR.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python3
+""" Author - Oliver Tarrant
+A script to practice subprocessing by running an R script through
+python
+"""
+import subprocess
+
+subprocess.Popen("/usr/lib/R/bin/Rscript --verbose TestR.R > \
+../Results/TestR.Rout 2> ../Results/TestR_errFile.Rout",\
+ shell=True).wait()
+ 
+# Run through R studio and save results to TestR.Rout, if errors then 
+# send results to the error file TestR_errFile.Rout
+# The verbose command ensures all the output is printed
+**********************************************************************
+
+Testing TestR.py...
+
+TestR.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.06933s
+
+======================================================================
+Inspecting script file blackbirds.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python3
+""" Author - Oliver Tarrant
+	A script that searches through a text file of animal taxa and returns
+	the Kingdom, phylum and species for each organism
+"""
+import re
+
+# Read the file
+f = open('../Data/blackbirds.txt', 'r')
+text = f.read()
+f.close()
+
+# remove \t\n and put a space in:
+text = text.replace('\t',' ')
+text = text.replace('\n',' ')
+
+# note that there are "strange characters" (these are accents and
+# non-ascii symbols) because we don't care for them, first transform
+# to ASCII:
+text = text.encode('ascii', 'ignore').decode()
+
+# Now extend this script so that it captures the Kingdom, 
+# Phylum and Species name for each species and prints it out to screen neatly.
+
+Kingdoms = re.findall(r'Kingdom\s[\w]*\s',text) # Creates a list of the kingdoms
+
+
+Phylums = re.findall(r'Phylum\s[\w]*\s',text) # Creates a list of the Phylums	
+
+# strip trailing spaces
+for i in range(len((Kingdoms))):
+	Kingdoms[i]=Kingdoms[i].strip(" ")
+	Phylums[i]=Phylums[i].strip(" ")
+
+Species = re.findall(r'Species\s[^\)]*\)',text) # Creates a list of Species
+
+l = list(zip(Kingdoms,Phylums,Species)) # Converts the lists to tuples
+
+# Print all results each on a new line
+for i in range(len(l)):
+	print(l[i])
+**********************************************************************
+
+Testing blackbirds.py...
+
+blackbirds.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+Traceback (most recent call last):
+  File "blackbirds.py", line 20, in <module>
+    text = text.encode('ascii', 'ignore').decode()
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 48: ordinal not in range(128)
+
+======================================================================
+Inspecting script file run_fmr_R.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python3
+""" Author - Oliver Tarrant
+A python script to run the R script fmr.R
+Returns the outputs from the script and an output if the script ran 
+successfully or not
+"""
+
+import subprocess
+#Run the subprocess
+Task=subprocess.Popen("/usr/lib/R/bin/Rscript --verbose fmr.R",shell=True).wait()
+# Check if subprocess ran successfully
+if Task==0:
+	print("Script ran successfully")
+else: 
+	print("Script did not ran successfully")
+**********************************************************************
+
+Testing run_fmr_R.py...
+
+run_fmr_R.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Reading CSV
+Creating graph
+null device 
+          1 
+Finished in R!
+Script ran successfully
+
+**********************************************************************
+
+Encountered error:
+running
+  '/usr/lib/R/bin/R --slave --no-restore --file=fmr.R'
+
+
+======================================================================
+Inspecting script file profileme.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python
+"""Author - Oliver Tarrant
+A script to practice profiling on"""
+def a_useless_function(x):
+	"""counts from 0 to 100000000"""
+	y = 0
+	# eight zeros!
+	for i in xrange(100000000):
+		y = y + i
+	return 0
+	
+def a_less_useless_function(x):
+	"""Counts from 0 to 100000"""
+	y = 0
+	# five zeros!
+	for i in xrange(100000):
+		y = y + i
+	return 0
+	
+def some_function(x):
+	"""Perfoms a_useless_function and a_less_useless_function"""
+	print x
+	a_useless_function(x)
+	a_less_useless_function(x)
+	return 0
+	
+	
+some_function(1000)
+**********************************************************************
+
+Testing profileme.py...
+
+profileme.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+1000
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 2.36659s
+
+======================================================================
+Inspecting script file LV5.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python2
+""" Author - Oliver Tarrant  
+A discrete time version Lotka-Volterra Model 
+with random gaussian fluctations in resource and predators
+growth at each step simulated using scipy """
+
+import scipy as sc 
+import scipy.stats as scs
+import scipy.integrate as integrate
+import pylab as p #Contains matplotlib for plotting
+import sys
+
+
+def dR_dt(x,y, t=0):
+    """ Returns the growth rate of predator and prey populations at any 
+    given time step """
+    # the model
+    R = x
+    C = y
+    eps = scs.norm.rvs(0,1,2) # generates a random variable from a standard gaussian distr 
+    dR = R*(1 + (r+eps[0])*(1-(R/K))) - a*C*R
+    dC = C - z*C + C*eps[1] + e*a*R*C
+    
+    return sc.array([[dR, dC ]])
+
+if len(sys.argv) >= 5: # Allows uses to input arguments else uses defaults
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = float(sys.argv[4])
+elif len(sys.argv) == 4:
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = 0.75
+elif len(sys.argv) == 3:	
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = 1.5
+	e = 0.75
+elif len(sys.argv) == 2:	
+	r = float(sys.argv[1])
+	a = 0.1
+	z = 1.5
+	e = 0.75
+else:
+# Define parameters:
+	r = 1. # Resource growth rate
+	a = 0.1 # Consumer search rate (determines consumption rate) 
+	z = 1.5 # Consumer mortality rate
+	e = 0.75 # Consumer production efficiency
+
+# Now define time -- integrate from 0 to 15, using 1000 points:
+t = sc.linspace(0, 15,  15)
+K = 100
+x0 = 10
+y0 = 5
+z0 = sc.array([x0, y0]) # initials conditions: 10 prey and 5 predators per unit area
+pops = sc.array([[x0,y0]])
+x = z0[0]
+y = z0[1]
+n= len(t) # get length of t
+
+for i in t[1:n]: # initial conditions already included in pops
+	
+	new = dR_dt(x,y,i) # 2*1 array
+	if new[0,0] < 0: # doesn't allow density to drop below 0
+		new[0,0] = 0
+	if new[0,1] < 0:
+		new[0,1] = 0
+	pops = sc.concatenate((pops,new),axis=0) 
+	x = float(new[0,0])  # rounds values so doesn't exceed memory
+	y = float(new[0,1])
+
+
+
+prey, predators = pops.T # Transposes to form correct format 
+
+final_prey = prey[-1]
+final_predator = predators[-1]
+f1 = p.figure() #Open empty figure object
+p.plot(t, prey, 'g-', label='Resource density') # Plot
+p.plot(t, predators  , 'b-', label='Consumer density')
+p.annotate( 'Constants: r = %r , a = %r , z = %r , e = %r , K = %r' %(r,a,z,e,K), xy=(20,5), color = "red") 
+p.annotate('Final prey = %.5s , Final predators = %.5s' %(final_prey,final_predator), xy=(25,2), color = "purple")
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population')
+p.title('Consumer-Resource population dynamics')
+p.show()
+f1.savefig('../Results/prey_and_predators_5.pdf') #Save figure
+**********************************************************************
+
+Testing LV5.py...
+
+LV5.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00480s
+
+======================================================================
+Inspecting script file LV2.py...
+
+File contents are:
+**********************************************************************
+#! usr/bin/python2
+""" Author - Oliver Tarrant 
+The typical Lotka-Volterra Model simulated using scipy """
+
+import scipy as sc 
+import scipy.integrate as integrate
+import pylab as p #Contains matplotlib for plotting
+import sys
+
+# import matplotlip.pylab as p #Some people might need to do this
+
+def dR_dt(pops, t=0):
+    """ Returns the growth rate of predator and prey populations at any 
+    given time step """
+    
+    R = pops[0]
+    C = pops[1]
+    dRdt = r*R*(1 - (R/K)) - a*C*R
+    dydt = -z*C + e*a*R*C
+    
+    return sc.array([dRdt, dydt])
+
+if len(sys.argv) >= 5:
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = float(sys.argv[4])
+elif len(sys.argv) == 4:
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = float(sys.argv[3])
+	e = 0.75
+elif len(sys.argv) == 3:	
+	r = float(sys.argv[1])
+	a = float(sys.argv[2])
+	z = 1.5
+	e = 0.75
+elif len(sys.argv) == 2:	
+	r = float(sys.argv[1])
+	a = 0.1
+	z = 1.5
+	e = 0.75
+else:
+# Define parameters:
+	r = 1. # Resource growth rate
+	a = 0.1 # Consumer search rate (determines consumption rate) 
+	z = 1.5 # Consumer mortality rate
+	e = 0.75 # Consumer production efficiency
+
+# Now define time -- integrate from 0 to 15, using 1000 points:
+t = sc.linspace(0, 50,  5000)
+K = 250
+x0 = 10
+y0 = 5 
+z0 = sc.array([x0, y0]) # initials conditions: 10 prey and 5 predators per unit area
+
+pops, infodict = integrate.odeint(dR_dt, z0, t, full_output=True) #runs dR_dt as an integration with i.c z0 and over time interval t
+									# infodict just checks integration was successful
+infodict['message']     # >>> 'Integration successful.'
+
+prey, predators = pops.T # Transposes to form correct format 
+f1 = p.figure() #Open empty figure object
+p.plot(t, prey, 'g-', label='Resource density') # Plot
+p.plot(t, predators  , 'b-', label='Consumer density')
+p.annotate( 'r = %r , a = %r , z = %r , e = %r , K = %r' %(r,a,z,e,K), xy=(18,1), color = "red") 
+p.grid()
+p.legend(loc='best')
+p.xlabel('Time')
+p.ylabel('Population')
+p.title('Consumer-Resource population dynamics')
+p.show()
+f1.savefig('../Results/prey_and_predators_2.pdf') #Save figure
+**********************************************************************
+
+Testing LV2.py...
+
+LV2.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00570s
+
+======================================================================
+Inspecting script file MyFirstJupyterNB-checkpoint.ipynb...
+
+File contents are:
+**********************************************************************
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "# My First Jupyter NB\n",
+    "## Add a sub heading \n",
+    "And now some text\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# My first code\n",
+    "A=2+2\n",
+    "print(A)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "this is python\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = \"this is python\"; print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "this is R!"
+     ]
+    }
+   ],
+   "source": [
+    "a<- \"this is R!\"; cat(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "**My first python graphic**\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<matplotlib.figure.Figure at 0x7feeac1af9e8>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import matplotlib.pyplot as p\n",
+    "import scipy as sc\n",
+    "\n",
+    "x = sc.arange(0,5,0.1); y = sc.sin(x)\n",
+    "p.plot(x,y); p.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**My first R graphic**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "Loading required package: ggplot2\n"
+     ]
+    },
+    {
+     "data": {},
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAaQAAAFoCAMAAAAvuH/IAAADAFBMVEUAAAABAQECAgIDAwME\nBAQFBQUGBgYHBwcICAgJCQkKCgoLCwsMDAwNDQ0ODg4PDw8QEBARERESEhITExMUFBQVFRUW\nFhYXFxcYGBgZGRkaGhobGxscHBwdHR0eHh4fHx8gICAhISEiIiIjIyMkJCQlJSUmJiYnJyco\nKCgpKSkqKiorKyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6\nOjo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVGRkZHR0dISEhJSUlKSkpLS0tM\nTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1e\nXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5vb29w\ncHBxcXFycnJzc3N0dHR1dXV2dnZ3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGC\ngoKDg4OEhISFhYWGhoaHh4eIiIiJiYmKioqLi4uMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKTk5OU\nlJSVlZWWlpaXl5eYmJiZmZmampqbm5ucnJydnZ2enp6fn5+goKChoaGioqKjo6OkpKSlpaWm\npqanp6eoqKipqamqqqqrq6usrKytra2urq6vr6+wsLCxsbGysrKzs7O0tLS1tbW2tra3t7e4\nuLi5ubm6urq7u7u8vLy9vb2+vr6/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fIyMjJycnK\nysrLy8vMzMzNzc3Ozs7Pz8/Q0NDR0dHS0tLT09PU1NTV1dXW1tbX19fY2NjZ2dna2trb29vc\n3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OTl5eXm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u\n7u7v7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7////i\nsF19AAAACXBIWXMAABJ0AAASdAHeZh94AAAY1klEQVR4nO2deWAUVbaHT2cDkkAgIK48UZ8y\nuIwiOjMqOjJPcW2QVRRCGEZ9AqNPZsBtWNSAoqKiiBvOKOooLuDyHAdHHCWAiEDYjBGDEBCz\n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",
+      "text/plain": [
+       "plot without title"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "require(ggplot2)\n",
+    "library(repr) # to resize plot within jupyter - this package is part of IRkernal\n",
+    "options(repr.plot.width=3.5,repr.plot.height=3)\n",
+    "\n",
+    "x<-seq(0,5,0.1); y<-sin(x)\n",
+    "qplot(x,y,geom =\"line\") #large figure"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "%matplotlib inline\n",
+    "from sympy import * # for symbolic analysis\n",
+    "import scipy as sc # for numerical analysis\n",
+    "import matplotlib.pyplot as plt # for plotting\n",
+    "init_printing() # To get nice latex-formatted output"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "sympy.core.symbol.Symbol"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x = var('x')\n",
+    "type(x) # check it's class"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "a, b, c = var(\"a,b,c\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "CAS (computer algebra systems) features are used to produce pen on paper maths style manipulations if expression. Use sympy for this"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.3"
+  },
+  "latex_envs": {
+   "LaTeX_envs_menu_present": true,
+   "autocomplete": true,
+   "bibliofile": "biblio.bib",
+   "cite_by": "apalike",
+   "current_citInitial": 1,
+   "eqLabelWithNumbers": true,
+   "eqNumInitial": 1,
+   "hotkeys": {
+    "equation": "Ctrl-E",
+    "itemize": "Ctrl-I"
+   },
+   "labels_anchors": false,
+   "latex_user_defs": false,
+   "report_style_numbering": false,
+   "user_envs_cfg": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+**********************************************************************
+
+Testing MyFirstJupyterNB-checkpoint.ipynb...
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 4 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Marks for the Week = 100
+
+NOTE THAT THESE ARE NOT THE FINAL MARKS FOR THE WEEK, BUT AN UPPER BOUND ON THE MARKS!

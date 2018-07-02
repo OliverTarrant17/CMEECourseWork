@@ -1,0 +1,65 @@
+
+Call:
+model.avg.default(object = beta.top.models)
+
+Component models: 
+        df logLik    AICc Delta Weight
+1234     6 235.54 -458.41  0.00   0.23
+12347    7 236.44 -457.99  0.42   0.18
+12345    7 236.23 -457.56  0.85   0.15
+123457   8 237.21 -457.26  1.16   0.13
+123467   8 236.94 -456.72  1.69   0.10
+12346    7 235.70 -456.51  1.91   0.09
+1234567  9 237.94 -456.41  2.00   0.08
+123456   8 236.36 -455.56  2.85   0.05
+
+Term codes: 
+exp(msavi_atm)           rad2           rad4     tex_dis_b2     tex_dis_b3 
+             1              2              3              4              5 
+    tex_dis_b4     tex_dis_b5 
+             6              7 
+
+Model-averaged coefficients: 
+               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)     19.4477     4.3576   4.463 8.10e-06 ***
+exp(msavi_atm)  -5.0153     1.5251   3.288 0.001007 ** 
+rad2            -2.3888     0.3923   6.089  < 2e-16 ***
+rad4             1.0840     0.3032   3.576 0.000349 ***
+tex_dis_b2       2.6486     0.6767   3.914 9.07e-05 ***
+(phi)           12.1551     1.6852   7.213  < 2e-16 ***
+tex_dis_b5      -0.2603     0.2046   1.272 0.203356    
+tex_dis_b3      -0.6815     0.5708   1.194 0.232435    
+tex_dis_b4       0.2876     0.6244   0.461 0.645097    
+
+Full model-averaged coefficients (with shrinkage): 
+               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)    19.44772    4.35763   4.463 8.10e-06 ***
+exp(msavi_atm) -5.01533    1.52512   3.288 0.001007 ** 
+rad2           -2.38878    0.39230   6.089  < 2e-16 ***
+rad4            1.08402    0.30316   3.576 0.000349 ***
+tex_dis_b2      2.64859    0.67667   3.914 9.07e-05 ***
+(phi)          12.15512    1.68523   7.213  < 2e-16 ***
+tex_dis_b5     -0.12684    0.19320   0.657 0.511502    
+tex_dis_b3     -0.27918    0.49576   0.563 0.573335    
+tex_dis_b4      0.09203    0.37783   0.244 0.807551    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Relative variable importance: 
+                     exp(msavi_atm) rad2 rad4 tex_dis_b2 tex_dis_b5 tex_dis_b3
+Importance:          1.00           1.00 1.00 1.00       0.49       0.41      
+N containing models:    8              8    8    8          4          4      
+                     tex_dis_b4
+Importance:          0.32      
+N containing models:    4      
+                    2.5 %     97.5 %
+(Intercept)    10.9069290 27.9885171
+exp(msavi_atm) -8.0045166 -2.0261532
+rad2           -3.1576691 -1.6198903
+rad4            0.4898261  1.6782065
+tex_dis_b2      1.3223335  3.9748491
+(phi)           8.8521285 15.4581207
+tex_dis_b5     -0.6613016  0.1407542
+tex_dis_b3     -1.8002008  0.4371144
+tex_dis_b4     -0.9361560  1.5112992
+[1] 0.6118013

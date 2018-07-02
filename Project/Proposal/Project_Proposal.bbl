@@ -1,0 +1,150 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Colella2007}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Colella~S}{C.~S.}%
+     {Taylor JM Mirza G Butler H Clouston P Bassett AS Seller A Holmes CC
+  Ragoussis~J}{T.~J. M. G. B. H. C. P. B. A. S. A. H. C. R.~J.}%
+     {}{}%
+     {Yau~C}{Y.~C.}}%
+  }
+  \strng{namehash}{CSYCTJMGBHCPBASAHCRJ1}
+  \strng{fullhash}{CSYCTJMGBHCPBASAHCRJ1}
+  \field{labelyear}{2007}
+  \field{sortinit}{C}
+  \field{title}{QuantiSNP: an Objective Bayes Hidden-Markov Model to detect and
+  accurately map copy number variation using SNP genotyping data}
+  \field{journaltitle}{Nucleic acids research}
+  \field{year}{2007}
+\endentry
+
+\entry{Jason2015}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Jason~A.Reuter}{J.~A.}%
+     {Michael~P.Snyder}{M.~P.}%
+     {}{}%
+     {Damek~Spacek}{D.~S.}}%
+  }
+  \strng{namehash}{JADSMP1}
+  \strng{fullhash}{JADSMP1}
+  \field{labelyear}{2015}
+  \field{sortinit}{J}
+  \field{title}{High-Throughput Sequecning Technologies}
+  \field{journaltitle}{Mol Cell}
+  \field{year}{2015}
+\endentry
+
+\entry{Kai2007}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kai~Wang}{K.~W.}%
+     {Dexter Hadley Rui Liu Joseph Glessner Struan F.A. Grant Hakon Hakonarson
+  Maja~Bucan}{D.~H. R. L. J. G. S. F. G. H. H. M.~B.}%
+     {}{}%
+     {Mingyao~Li}{M.~L.}}%
+  }
+  \strng{namehash}{KWMLDHRLJGSFGHHMB1}
+  \strng{fullhash}{KWMLDHRLJGSFGHHMB1}
+  \field{labelyear}{2007}
+  \field{sortinit}{K}
+  \field{title}{PennCNV: An integrated hidden Markov model designed for
+  high-resolution copy number variation detection in whole-genome SNP
+  genotyping data}
+  \field{journaltitle}{Genome Research}
+  \field{year}{2007}
+\endentry
+
+\entry{Fisher2012}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Matthew C.~Fisher}{M.~C.~F.}%
+     {Cheryl J. Briggs John S. Brownstein Lawrence C. Madoff Sarah L. McCraw
+  Sarah J.~Gurr}{C.~J. B. J. S. B. L. C. M. S. L. M. S. J.~G.}%
+     {}{}%
+     {Daniel. A.~Henk}{D.~A.~H.}}%
+  }
+  \strng{namehash}{MCFDAHCJBJSBLCMSLMSJG1}
+  \strng{fullhash}{MCFDAHCJBJSBLCMSLMSJG1}
+  \field{labelyear}{2012}
+  \field{sortinit}{M}
+  \field{title}{Emerging fungal threats to animal, plant and ecosystem health}
+  \field{journaltitle}{Nature}
+  \field{year}{2012}
+\endentry
+
+\entry{Min2013}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Min~Zhao}{M.~Z.}%
+     {Quan Wang Peilin Jia Zhongming~Zhao}{Q.~W. P. J. Z.~Z.}%
+     {}{}%
+     {Qingguo~Wang}{Q.~W.}}%
+  }
+  \strng{namehash}{MZQWQWPJZZ1}
+  \strng{fullhash}{MZQWQWPJZZ1}
+  \field{labelyear}{2013}
+  \field{sortinit}{M}
+  \field{title}{Computational tools for copy number variation (CNV) detection
+  using next-generation sequencing data: features and perspectives}
+  \field{journaltitle}{BMC Bioinformatics}
+  \field{year}{2013}
+\endentry
+
+\entry{Nielsen2011}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ramus~Nielsen}{R.~N.}%
+     {Andres Albrechtsen Yun~S.Song}{A.~A. Y.~S.}%
+     {}{}%
+     {Joshua~S.Paul}{J.~S.}}%
+  }
+  \strng{namehash}{RNJSAAYS1}
+  \strng{fullhash}{RNJSAAYS1}
+  \field{labelyear}{2011}
+  \field{sortinit}{R}
+  \field{title}{Genotype and SNP calling from next-generation sequencing data}
+  \field{journaltitle}{nature reviews}
+  \field{year}{2011}
+\endentry
+
+\entry{Ferrer2011}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rhys A.~Farrer}{R.~A.~F.}%
+     {Trenton W. J. Garner Francois Balloux Douglas C. Woodhams Matthew
+  C.~Fisher}{T.~W. J. G. F. B. D. C. W. M. C.~F.}%
+     {}{}%
+     {Daniel A.~Henk}{D.~A.~H.}}%
+  }
+  \strng{namehash}{RAFDAHTWJGFBDCWMCF1}
+  \strng{fullhash}{RAFDAHTWJGFBDCWMCF1}
+  \field{labelyear}{2011}
+  \field{sortinit}{R}
+  \field{title}{Chromosomal Copy Number Variation, Selection and Uneven Rates
+  of Recombination Reveal Cryptic Genome Diversity Linked to Pathogenicity}
+  \field{journaltitle}{Plos genetics}
+  \field{year}{2011}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
