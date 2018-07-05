@@ -239,51 +239,40 @@ for g1 in list_of_inputs: #output files names
 
                             if 1 in ploidy:
                                 haploid = generics.calcGenoLogLike1_MajorMinor(myReads,mySite,major,minor)
-                                haploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,haploid,HWE_Prob_hap)))
-                                p.append(haploid_sum)
-
+                                haploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,haploid,HWE_Prob_hap))
+                                
                             if 2 in ploidy:
                                 diploid = generics.calcGenoLogLike2_MajorMinor(myReads,mySite,major,minor)
-                                diploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,diploid,HWE_Prob_dip)))
-                                p.append(diploid_sum)
-
+                                diploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,diploid,HWE_Prob_dip))
+                                
                             if 3 in ploidy:
                                 triploid = generics.calcGenoLogLike3_MajorMinor(myReads,mySite,major,minor)
-                                triploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,triploid,HWE_Prob_tri)))
-                                p.append(triploid_sum)
+                                triploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,triploid,HWE_Prob_tri))
+                                
 
                             if 4 in ploidy:
                                 tetraploid = generics.calcGenoLogLike4_MajorMinor(myReads,mySite,major,minor)
-                                tetraploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,tetraploid,HWE_Prob_tetra)))
-                                p.append(tetraploid_sum)
+                                tetraploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,tetraploid,HWE_Prob_tetra))
+                               
 
                             if 5 in ploidy:
                                 pentaploid = generics.calcGenoLogLike5_MajorMinor(myReads,mySite,major,minor)
-                                pentaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,pentaploid,HWE_Prob_pent)))
-                                p.append(pentaploid_sum)
+                                pentaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,pentaploid,HWE_Prob_pent))
+                                
 
                             if 6 in ploidy:
                                 hexaploid = generics.calcGenoLogLike6_MajorMinor(myReads,mySite,major,minor)
-                                hexaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,hexaploid,HWE_Prob_hex)))
-                                p.append(hexaploid_sum)
+                                hexaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,hexaploid,HWE_Prob_hex))
+                                
 
                             if 7 in ploidy:
                                 heptaploid = generics.calcGenoLogLike7_MajorMinor(myReads,mySite,major,minor)
-                                heptaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,heptaploid,HWE_Prob_hept)))
-                                p.append(heptaploid_sum)
+                                heptaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,heptaploid,HWE_Prob_hept))
+                            
 
                             if 8 in ploidy:
                                 octaploid = generics.calcGenoLogLike8_MajorMinor(myReads,mySite,major,minor)
-                                octaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(x)*y,octaploid,HWE_Prob_oct)))
-                                p.append(octaploid_sum)
-
-
-
-                            Overall_Prob_HWE[0]+=p # Add probabilities to overall counter
-                            NUMSITES[0]+=sampleDepth # count the number of reads for each sample
-
-                            Overall_Prob_HWE[n]+=p # Add probabilities and depths to sample-wise counter
-                            NUMSITES[n]+=sampleDepth 
+                                octaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,octaploid,HWE_Prob_oct))
 
 
 

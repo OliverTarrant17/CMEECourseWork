@@ -10,7 +10,6 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument("input",help="file containing the list of basenames for gzipped mpileup files for use in analysis to be used")
-parser.add_argument("-i","--Inbreeding",help="Inbreeding coefficients for samples e.g 0.1x3,0.2 = 0.1,0.1,0.1,0.2 ")
 args = parser.parse_args()
 
 ploidy=[1,2,3,4,5,6,7,8]
@@ -49,16 +48,6 @@ for g in list_of_inputs:
         Data=first_line.decode().strip('\n')# Convert bytes into string
         l = Data.split('\t')
     NSAMS=int((len(l)-3)/3)
-    if args.Inbreeding:
-        inbreed = args.Inbreeding
-    else:
-        inbreed = "0x{}".format(str(NSAMS))
-    #parse inbreeding coeffients
-    F=[]
-    temp=inbreed.split(',')
-    for t in temp:
-        vals=t.split('x')
-        F+=list(np.repeat(float(vals[0]),int(vals[1])))
     Original_sample_number=NSAMS
 
     ExpectedPloidy=[[] for i in range(NSAMS+1)]
@@ -89,69 +78,57 @@ for g in list_of_inputs:
             sampleDepth=int(l[4])
             n=int(l[2]) # sample number
             total_bases+=int(l[4])
+
+            p=[]
+            if 1 in ploidy:
+                haploid = l[9:11]
+                haploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),haploid)))
+                p.append(haploid_sum)
+            if 2 in ploidy:
+                diploid = l[11:14]
+                diploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),diploid)))
+                p.append(diploid_sum)
+            if 3 in ploidy:
+                triploid = l[14:18]
+                triploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),triploid)))
+                p.append(triploid_sum)
+            if 4 in ploidy:
+                tetraploid = l[18:23]
+                tetraploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),tetraploid)))
+                p.append(tetraploid_sum)
+            if 5 in ploidy:
+                pentaploid = l[23:29]
+                pentaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),pentaploid)))
+                p.append(pentaploid_sum)
+            if 6 in ploidy:
+                hexaploid = l[29:36]
+                hexaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),hexaploid)))
+                p.append(hexaploid_sum)
+            if 7 in ploidy:
+                heptaploid = l[36:44]
+                heptaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),heptaploid)))
+                p.append(heptaploid_sum)
+            if 8 in ploidy:
+                octaploid = l[44:53]
+                octaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),octaploid)))
+                p.append(octaploid_sum)
+            Overall_Prob_HWE[0]+=p # Add probabilities to overall counter
+            NUMSITES[0]+=sampleDepth # count the number of reads for each sa
+            Overall_Prob_HWE[n]+=p # Add probabilities and depths to sample-wise counter
+            NUMSITES[n]+=sampleDepth 
+    # After going through all samples record information for chunks and 
             if n == 1:
                 base_number+=1
                 no_bases+=1
-            if int(l[7])+int(l[8])>0:
-                P=int(l[7])/(int(l[7])+int(l[8]))
-                Q=int(l[8])/(int(l[7])+int(l[8]))
-                #establish prior probabilities
-                HWE_Prob_hap = [P,Q]
-                HWE_Prob_dip = [(1-F[n-1])*(P**2)+F[n-1]*P,(1-F[n-1])*2*P*Q,(1-F[n-1])*(Q**2)+F[n-1]*Q]
-                HWE_Prob_tri = [(1-F[n-1])*(P**3)+F[n-1]*P,(1-F[n-1])*3*(P**2)*Q,(1-F[n-1])*3*P*(Q**2),(1-F[n-1])*(Q**3)+F[n-1]*Q]
-                HWE_Prob_tetra = [(1-F[n-1])*(P**4)+F[n-1]*P,(1-F[n-1])*4*(P**3)*Q,(1-F[n-1])*6*(P**2)*(Q**2),(1-F[n-1])*4*P*(Q**3),(1-F[n-1])*(Q**4)+F[n-1]*Q]
-                HWE_Prob_pent = [(1-F[n-1])*(P**5)+F[n-1]*P,(1-F[n-1])*5*(P**4)*Q,(1-F[n-1])*10*(P**3)*(Q**2),(1-F[n-1])*10*(P**2)*(Q**3),(1-F[n-1])*5*P*(Q**4),(1-F[n-1])*(Q**5)+F[n-1]*Q]
-                HWE_Prob_hex = [(1-F[n-1])*(P**6)+F[n-1]*P,(1-F[n-1])*6*(P**5)*Q,(1-F[n-1])*15*(P**4)*(Q**2),(1-F[n-1])*20*(P**3)*(Q**3),(1-F[n-1])*15*(P**2)*(Q**4),(1-F[n-1])*6*P*(Q**5),(1-F[n-1])*(Q**6)+F[n-1]*Q]
-                HWE_Prob_hept = [(1-F[n-1])*(P**7)+F[n-1]*P,(1-F[n-1])*7*(P**6)*Q,(1-F[n-1])*21*(P**5)*(Q**2),(1-F[n-1])*35*(P**4)*(Q**3),(1-F[n-1])*35*(P**3)*(Q**4),(1-F[n-1])*21*(P**2)*(Q**5),(1-F[n-1])*7*P*(Q**6),(1-F[n-1])*(Q**7)+F[n-1]*Q]
-                HWE_Prob_oct = [(1-F[n-1])*(P**8)+F[n-1]*P,(1-F[n-1])*8*(P**7)*Q,(1-F[n-1])*28*(P**6)*(Q**2),(1-F[n-1])*56*(P**5)*(Q**3),(1-F[n-1])*70*(P**4)*(Q**4),(1-F[n-1])*56*(P**3)*(Q**5),(1-F[n-1])*28*(P**2)*(Q**6),(1-F[n-1])*8*P*(Q**7),(1-F[n-1])*(Q**8)+F[n-1]*Q]
-
-                p=[]
-                if 1 in ploidy:
-                    haploid = l[9:11]
-                    haploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,haploid,HWE_Prob_hap)))
-                    p.append(haploid_sum)
-                if 2 in ploidy:
-                    diploid = l[11:13]
-                    diploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,diploid,HWE_Prob_dip)))
-                    p.append(diploid_sum)
-                if 3 in ploidy:
-                    triploid = l[13:18]
-                    triploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,triploid,HWE_Prob_tri)))
-                    p.append(triploid_sum)
-                if 4 in ploidy:
-                    tetraploid = l[18:23]
-                    tetraploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,tetraploid,HWE_Prob_tetra)))
-                    p.append(tetraploid_sum)
-                if 5 in ploidy:
-                    pentaploid = l[23:29]
-                    pentaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,pentaploid,HWE_Prob_pent)))
-                    p.append(pentaploid_sum)
-                if 6 in ploidy:
-                    hexaploid = l[29:36]
-                    hexaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,hexaploid,HWE_Prob_hept)))
-                    p.append(hexaploid_sum)
-                if 7 in ploidy:
-                    heptaploid = l[36:44]
-                    heptaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,heptaploid,HWE_Prob_hept)))
-                    p.append(heptaploid_sum)
-                if 8 in ploidy:
-                    octaploid = l[44:53]
-                    octaploid_sum = generics.log_or_zero(sum(map(lambda x,y: generics.exp_or_zero(float(x))*y,octaploid,HWE_Prob_oct)))
-                    p.append(octaploid_sum)
-                Overall_Prob_HWE[0]+=p # Add probabilities to overall counter
-                NUMSITES[0]+=sampleDepth # count the number of reads for each sa
-                Overall_Prob_HWE[n]+=p # Add probabilities and depths to sample-wise counter
-                NUMSITES[n]+=sampleDepth 
-    # After going through all samples record information for chunks and 
-                if base_number%win==1:
-                    list_of_window2.append(Overall_Prob_HWE) # make a list of single base probabilities for each sample at every 5th SNP 
-                if base_number%win==0: #calculate most likely ploidy for each 50 biallelic bases chunks of supercontig
+            if base_number%win==1 and n == NSAMS:
+                list_of_window2.append(Overall_Prob_HWE) # make a list of single base probabilities for each sample at every 50th SNP 
+            if base_number%win==0 and n == NSAMS: #calculate most likely ploidy for each 50 biallelic bases chunks of supercontig
+                for i in range(NSAMS+1):
                     list_of_window.append(Overall_Prob_HWE)
-                    for i in range(NSAMS+1):
-                        max_index=list(Overall_Prob_HWE[i]).index(max(list(Overall_Prob_HWE[i])))
-                        ExpectedPloidy[i].append(max_index+1)      # Make a list of most likely ploidy in each window for each sample                          
-                        Overall_Prob[i]+=Overall_Prob_HWE[i] # Keep a track of the overall probability of each ploidy at each sample
-                    Overall_Prob_HWE=np.zeros((NSAMS+1,len(ploidy)),float) # reset the probability holder for the next window
+                    max_index=list(Overall_Prob_HWE[i]).index(max(list(Overall_Prob_HWE[i])))
+                    ExpectedPloidy[i].append(max_index+1)      # Make a list of most likely ploidy in each window for each sample                         
+                    Overall_Prob[i]+=Overall_Prob_HWE[i] # Keep a track of the overall probability of each ploidy at each sample
+                Overall_Prob_HWE=np.zeros((NSAMS+1,len(ploidy)),float) # reset the probability holder for the next window
                #end likelihood calc
             # end for sample
         #end if not filtered for global depth
@@ -227,7 +204,7 @@ for g in list_of_inputs:
     #infer baseline ploidy
     if base_number>(win*10): 
         Overall_inferred=[]
-        for i in range(NSAMS):
+        for i in range(1,NSAMS+1):
             Overall_inferred=Overall_inferred+ExpectedPloidy[i]
         ploidy_freqs=generics.dist(Overall_inferred)
         Baseline_Ploidy=ploidy_freqs.index(max(ploidy_freqs))+1
