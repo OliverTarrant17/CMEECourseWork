@@ -82,35 +82,35 @@ for g in list_of_inputs:
             p=[]
             if 1 in ploidy:
                 haploid = l[9:11]
-                haploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),haploid)))
+                haploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),haploid)))
                 p.append(haploid_sum)
             if 2 in ploidy:
                 diploid = l[11:14]
-                diploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),diploid)))
+                diploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),diploid)))
                 p.append(diploid_sum)
             if 3 in ploidy:
                 triploid = l[14:18]
-                triploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),triploid)))
+                triploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),triploid)))
                 p.append(triploid_sum)
             if 4 in ploidy:
                 tetraploid = l[18:23]
-                tetraploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),tetraploid)))
+                tetraploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),tetraploid)))
                 p.append(tetraploid_sum)
             if 5 in ploidy:
                 pentaploid = l[23:29]
-                pentaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),pentaploid)))
+                pentaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),pentaploid)))
                 p.append(pentaploid_sum)
             if 6 in ploidy:
                 hexaploid = l[29:36]
-                hexaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),hexaploid)))
+                hexaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),hexaploid)))
                 p.append(hexaploid_sum)
             if 7 in ploidy:
                 heptaploid = l[36:44]
-                heptaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),heptaploid)))
+                heptaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),heptaploid)))
                 p.append(heptaploid_sum)
             if 8 in ploidy:
                 octaploid = l[44:53]
-                octaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),octaploid)))
+                octaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),octaploid)))
                 p.append(octaploid_sum)
             Overall_Prob_HWE[0]+=p # Add probabilities to overall counter
             NUMSITES[0]+=sampleDepth # count the number of reads for each sa
@@ -298,11 +298,16 @@ for g in list_of_inputs:
     ploidies=ploidies.strip("\t")+"\n"
     aneuploidy=aneuploidy.strip("\t")+"\n"
     content2=ploidies+aneuploidy
+    for i in range(Original_sample_number):
+        i=i+1
+        exp_ploids='\t'.join(map(str,ExpectedPloidy[i]))
+        content2+=exp_ploids+"\n"
     print("Samples without aneuploidy and ploidy level")
     print(samples_included)
     print(Inferred_Ploidy)
     print("Samples with aneuploidy")
     print(samples_removed)
+    
     with open(directory+'/'+output_2,'wt') as f: 
         f.write(content2)
         ploidies=""

@@ -239,40 +239,40 @@ for g1 in list_of_inputs: #output files names
 
                             if 1 in ploidy:
                                 haploid = generics.calcGenoLogLike1_MajorMinor(myReads,mySite,major,minor)
-                                haploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,haploid,HWE_Prob_hap))
+                                haploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),haploid,HWE_Prob_hap))
                                 
                             if 2 in ploidy:
                                 diploid = generics.calcGenoLogLike2_MajorMinor(myReads,mySite,major,minor)
-                                diploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,diploid,HWE_Prob_dip))
+                                diploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),diploid,HWE_Prob_dip))
                                 
                             if 3 in ploidy:
                                 triploid = generics.calcGenoLogLike3_MajorMinor(myReads,mySite,major,minor)
-                                triploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,triploid,HWE_Prob_tri))
+                                triploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),triploid,HWE_Prob_tri))
                                 
 
                             if 4 in ploidy:
                                 tetraploid = generics.calcGenoLogLike4_MajorMinor(myReads,mySite,major,minor)
-                                tetraploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,tetraploid,HWE_Prob_tetra))
+                                tetraploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),tetraploid,HWE_Prob_tetra))
                                
 
                             if 5 in ploidy:
                                 pentaploid = generics.calcGenoLogLike5_MajorMinor(myReads,mySite,major,minor)
-                                pentaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,pentaploid,HWE_Prob_pent))
+                                pentaploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),pentaploid,HWE_Prob_pent))
                                 
 
                             if 6 in ploidy:
                                 hexaploid = generics.calcGenoLogLike6_MajorMinor(myReads,mySite,major,minor)
-                                hexaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,hexaploid,HWE_Prob_hex))
+                                hexaploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),hexaploid,HWE_Prob_hex))
                                 
 
                             if 7 in ploidy:
                                 heptaploid = generics.calcGenoLogLike7_MajorMinor(myReads,mySite,major,minor)
-                                heptaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,heptaploid,HWE_Prob_hept))
+                                heptaploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),heptaploid,HWE_Prob_hept))
                             
 
                             if 8 in ploidy:
                                 octaploid = generics.calcGenoLogLike8_MajorMinor(myReads,mySite,major,minor)
-                                octaploid = list(map(lambda x,y: generics.exp_or_zero(x)*y,octaploid,HWE_Prob_oct))
+                                octaploid = list(map(lambda x,y: generics.log_or_zero(generics.exp_or_zero(x)*y),octaploid,HWE_Prob_oct))
 
 
 

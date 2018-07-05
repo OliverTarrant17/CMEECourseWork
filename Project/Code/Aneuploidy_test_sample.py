@@ -49,7 +49,7 @@ for sample in Included_Samples:
     NUMSITES_HWE=np.zeros(NContigs+1,int)
     win=50
     list_of_window=[] 
-    list_of_window2=[]
+    list_of_window2=[[] for i in range(NContigs)]
 
     for g in list_of_inputs:
         contig+=1
@@ -80,35 +80,35 @@ for sample in Included_Samples:
                     p=[]
                     if 1 in ploidy:
                         haploid = l[9:11]
-                        haploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),haploid)))
+                        haploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),haploid)))
                         p.append(haploid_sum)
                     if 2 in ploidy:
                         diploid = l[11:14]
-                        diploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),diploid)))
+                        diploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),diploid)))
                         p.append(diploid_sum)
                     if 3 in ploidy:
                         triploid = l[14:18]
-                        triploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),triploid)))
+                        triploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),triploid)))
                         p.append(triploid_sum)
                     if 4 in ploidy:
                         tetraploid = l[18:23]
-                        tetraploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),tetraploid)))
+                        tetraploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),tetraploid)))
                         p.append(tetraploid_sum)
                     if 5 in ploidy:
                         pentaploid = l[23:29]
-                        pentaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),pentaploid)))
+                        pentaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),pentaploid)))
                         p.append(pentaploid_sum)
                     if 6 in ploidy:
                         hexaploid = l[29:36]
-                        hexaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),hexaploid)))
+                        hexaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),hexaploid)))
                         p.append(hexaploid_sum)
                     if 7 in ploidy:
                         heptaploid = l[36:44]
-                        heptaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),heptaploid)))
+                        heptaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),heptaploid)))
                         p.append(heptaploid_sum)
                     if 8 in ploidy:
                         octaploid = l[44:53]
-                        octaploid_sum = generics.log_or_zero(sum(map(lambda x:float(x),octaploid)))
+                        octaploid_sum = generics.log_or_zero(sum(map(lambda x:generics.exp_or_zero(float(x)),octaploid)))
                         p.append(octaploid_sum)
 
                     Overall_Prob_HWE[0]+=p # Add probabilities to overall counter
@@ -119,7 +119,7 @@ for sample in Included_Samples:
                     
                 # After going through all samples record information for chunks and 
                 if base_number%win==1:
-                    list_of_window2.append(Overall_Prob_HWE[contig]) # make a list of single base probabilities for each sample at every 5th SNP 
+                    list_of_window2[contig-1].append(Overall_Prob_HWE[contig]) # make a list of single base probabilities for each sample at every 5th SNP 
                 if base_number%win==0: #calculate most likely ploidy for each 50 biallelic bases chunks of supercontig
                     list_of_window.append(Overall_Prob_HWE[contig])
                     if max(Overall_Prob_HWE[contig])<0:
@@ -185,7 +185,7 @@ for sample in Included_Samples:
     for i in range(NContigs*len(list_of_window2)): # cycle through the independently choosen read base
         rand1=random.randint(1,NContigs) # choose base from sample at random
         rand2=random.randint(0,len(list_of_window2)-1) # choose window taken from at random
-        new_part=list_of_window2[rand2][rand1] # record result of this base
+        new_part=list_of_window2[rand1-1][rand2] # record result of this base
         Cont_probs[rand1-1]+=new_part
     for i in range(0,NContigs):
         H_0+=Cont_probs[i][Inferred_Ploidy-1]
@@ -198,6 +198,7 @@ for sample in Included_Samples:
     Normalised_delta=Test/SNPs
     Contigs=NContigs
     x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Contigs]])
+    #import pdb; pdb.set_trace()
     prob_of_aneu=aneuploidy_in_contig(x)[0][1]
     print('Probability of aneuploidy:')
     print(prob_of_aneu)
@@ -219,7 +220,7 @@ for sample in Included_Samples:
             # Remove sample least likely to be base ploidy
             contig_baseline_likelihood=[]
             for i in contigs_included:
-                i=i-1 # sort out indexing
+                #i=i-1 # sort out indexing
                 contig_baseline_likelihood.append(generics.dist(ExpectedPloidy[i])) # list of likelihood of each sample being baseline sample
             contig_to_remove=contigs_included[contig_baseline_likelihood.index(min(contig_baseline_likelihood))] # Choose sample with lowest prob of baseline sample
             contigs_included.remove(contig_to_remove) # Remove this sample
@@ -255,7 +256,7 @@ for sample in Included_Samples:
             Normalised_delta=Test/SNPs
             Contigs=NContigs
             x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Contigs]])
-            prob_of_aneu=aneuploidy_in_sample(x)[0][1]
+            prob_of_aneu=aneuploidy_in_contig(x)[0][1]
             print("Sample being removed {}".format(contig_to_remove))
             print("New probability of aneuploidy: {}".format(prob_of_aneu))
         else:

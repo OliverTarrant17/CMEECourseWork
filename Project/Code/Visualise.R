@@ -1,3 +1,5 @@
+#run with Rscript Visualise.R basenames
+
 rm(list=ls())
 graphics.off()
 library(ggplot2)
@@ -11,6 +13,7 @@ basename_files <- c()
 genolike_files <- c()
 ploids_files <- c()
 out_plot <- c()
+win=50
 
 # Extract file names and build output names
 for(i in 1:length(file_list)){
@@ -29,13 +32,18 @@ for(i in 1:length(file_list)){
 
   Genolikes=read.csv(gzfile(genolikes),sep="\t",header=FALSE) # Load the data
   Ploidies=read.csv(ploidies,sep="\t",header=FALSE) # load the ploidies
-  NSAMS=length(Ploidies)
-
+  #extract the number of smaples
+  sams<-head(Ploidies,1)
+  NSAMS=length(Ploidies)-sum(is.na(sams))
+  Expected_Ploidies<-tail(Ploidies,NSAMS)
+  Ploidies<-head(Ploidies,2)
+  Ploidies <- Ploidies[,colSums(is.na(Ploidies))<nrow(Ploidies)]
 
   Depths=Genolikes$V5
   length_of_sample=length(Depths)/NSAMS
-
-  Meandepth=sum(Depths)/(length_of_sample*sum(Ploidies[1,]))
+  Ploidies_to_sum=Ploidies[1,]
+  Ploidies_to_sum[is.na(Ploidies_to_sum)]<-0
+  Meandepth=sum(Depths)/(length_of_sample*sum(Ploidies_to_sum))
   # create a vector of lists of depths for each sample
 
   sample_depths <- vector("list",NSAMS)
@@ -72,9 +80,24 @@ for(i in 1:length(file_list)){
   }
   depths <- cbind(depths,ploidy)
 
-
-
-
+  # Add the window by window analysis
+  length_of_window=win
+  expected_ploidy<-c()
+  excess=length_of_sample-(win*length(Expected_Ploidies))
+  
+  for(n in 1:NSAMS){
+    for(j in Expected_Ploidies[n,]){
+      expected_ploidy<- c(expected_ploidy,rep(j,length_of_window))
+      }
+    expected_ploidy<-c(expected_ploidy,rep(Expected_Ploidies[n,length(Expected_Ploidies)],excess))
+      
+      
+    
+    
+  }
+  depths <- cbind(depths,expected_ploidy)
+  
+  
   myColors <- mycols <- colors()[c(12,414,576,573,524,436,106,74,75,86,99,137,627,656,367,419,81,410,512,402,468,592,535,429,404,477,50,79,102,20,101,52,51,24,134,616)]
   names(myColors) <- levels(depths$variable)
   colScale <- scale_colour_manual(name = "Sample",values = myColors)
@@ -85,6 +108,7 @@ for(i in 1:length(file_list)){
   plot <- plot + geom_line(data=depths,aes(x=c(1:length(Depths)),y=value,colour=factor(variable))) +colScale # plot depths
   plot <- plot + ggtitle("Predicted ploidies vs depth") + ylab("Depth") # add titles
   plot <- plot + geom_line(data = depths,aes(x=c(1:length(Depths)),y=ploidy*Meandepth), size=1,colour='black') # plot inferred ploidy
+  plot <- plot + geom_line(data = depths,aes(x=c(1:length(Depths)),y=expected_ploidy*Meandepth), size=0.5,colour='red') # plot inferred ploidy
   plot <- plot +scale_y_continuous('Depth',limits=c(0,Meandepth*10),sec.axis = sec_axis(~./Meandepth, name = 'Inferred Ploidy',breaks = c(0,1,2,3,4,5,6,7,8))) # add 2nd y axis
   plot <- plot + scale_x_continuous(name = "Sample", breaks = c(1:NSAMS)*length_of_sample-(length_of_sample/2),labels = c(1:NSAMS)) # change scale on x axis to samples
 
