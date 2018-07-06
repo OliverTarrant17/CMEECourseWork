@@ -300,11 +300,16 @@ for sample in Included_Samples:
     ploidies=ploidies.strip("\t")+"\n"
     aneuploidy=aneuploidy.strip("\t")+"\n"
     content2=ploidies+aneuploidy
+    for i in range(Original_contig_number):
+        i=i+1
+        exp_ploids='\t'.join(map(str,ExpectedPloidy[i]))
+        content2+=exp_ploids+"\n"
     print("Contigs without aneuploidy and ploidy level")
     print(contigs_included)
     print(Inferred_Ploidy)
     print("Contigs with aneuploidy")
     print(contigs_removed)
+    #import pdb; pdb.set_trace()
     with open(directory+'/'+output_2,'wt') as f: 
         f.write(content2)
         ploidies=""
