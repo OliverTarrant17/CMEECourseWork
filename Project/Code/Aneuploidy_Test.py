@@ -10,6 +10,7 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument("input",help="file containing the list of basenames for gzipped mpileup files for use in analysis to be used")
+parser.add_argument("-w","--window",type=int,help="Set the window size for genotype likelihood windows. Must match the value used in Genotype_Likelihood script (reccomended approximately 1/10 of number of SNPs", default=50)
 args = parser.parse_args()
 
 ploidy=[1,2,3,4,5,6,7,8]
@@ -63,7 +64,7 @@ for g in list_of_inputs:
     Overall_Prob_HWE=np.zeros((NSAMS+1,len(ploidy)),float)
     NUMSITES=np.zeros(NSAMS+1,int)
     NUMSITES_HWE=np.zeros(NSAMS+1,int)
-    win=50
+    win=args.window
     list_of_window=[] 
     list_of_window2=[]
     ExpectedPloidy=[[] for i in range(NSAMS+1)]
@@ -271,7 +272,13 @@ for g in list_of_inputs:
     #    Inferred_Ploidy=ploidy_freqs.index(max(ploidy_freqs))+1
     #else:
     #    Inferred_Ploidy=list(Overall_Prob[0]).index(max(list(Overall_Prob[0])))+1
-    Inferred_Ploidy=Baseline_Ploidy
+    
+    # Infer ploidy for samples without aneuploidy
+    temp=[0 for value in range(8)]
+    for sam in samples_included:
+        temp=list(map(lambda x,y: x+y, temp, generics.dist(ExpectedPloidy[sam])))
+    Inferred_Ploidy=temp.index(max(temp))+1
+    #Inferred_Ploidy=list(Overall_Prob[0]).index(max(list(Overall_Prob[0])))+1
     ploidies=""
     aneuploidy=""
     content2=""
@@ -281,7 +288,7 @@ for g in list_of_inputs:
             sam_ploid=Inferred_Ploidy
             aneuploid=0
         else:
-            if base_number>(win*10):
+            if base_number>(win*3):
                 sam_ploid = generics.dist(ExpectedPloidy[sample]).index(max(generics.dist(ExpectedPloidy[sample])))+1 # calculate the ploidy of aneuploidy samples
             else:
                 sam_ploid = list(Overall_Prob[sample]).index(max(list(Overall_Prob[sample])))+1

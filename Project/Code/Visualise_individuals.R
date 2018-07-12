@@ -13,7 +13,7 @@ basename_files <- c()
 genolike_files <- c()
 ploids_files <- c()
 out_plot <- c()
-win=50
+win<-strtoi(args[3])
 
 # Extract file names and build output names
 for(i in 1:length(file_list)){ ###
@@ -43,6 +43,7 @@ for(i in 1:length(file_list)){  ###
   sams<-head(Ploidies,1)
   NSAMS=length(Ploidies)-sum(is.na(sams))
   Expected_Ploidies<-tail(Ploidies,NSAMS)
+  Expected_Ploidies <- Expected_Ploidies[,colSums(is.na(Expected_Ploidies))<nrow(Expected_Ploidies)]
   Ploidies<-head(Ploidies,2)
   Ploidies <- Ploidies[,colSums(is.na(Ploidies))<nrow(Ploidies)]
   
@@ -107,7 +108,7 @@ for(n in 1:NSAMS){
      excess=length_of_samples[i]-(win*length(Exp_Ploidies[[n+(NSAMS*(i-1))]]))
      contig_num<- c(contig_num,rep(i,length_of_samples[i]))
      ploidy_num<- c(ploidy_num,rep(ploidy[[n]][i],length_of_samples[i]))
-     for( j in Exp_Ploidies[[n+(NSAMS*(i-1))]]){
+     for(j in Exp_Ploidies[[n+(NSAMS*(i-1))]]){
         expected_ploidy<-c(expected_ploidy,rep(j,win))
    }
      expected_ploidy<-c(expected_ploidy,rep(j,excess))

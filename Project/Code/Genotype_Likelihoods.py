@@ -35,6 +35,7 @@ parser.add_argument("-d","--downsampling",help="Fraction of data to be used in t
 parser.add_argument("-m","--min_non_major_freq",type=float,help="Set the minimum frequency of non major alleles for bases to be included in the calculations",default=0.2)
 parser.add_argument("-q","--min_quality_score",type=int,help="Set the minimum quality score of a read to be included in the calculation",default=1)
 parser.add_argument("-dp","--min_global_depth",type=float,help="Set the minimum global depth of a base to be included in calculations",default=0)
+parser.add_argument("-w","--window",type=int,help="Set the window size for genotype likelihood windows (reccomended approximately 1/10 of number of SNPs", default=50)
 parser.add_argument("-M2","--max_minor2_freq",type=float,help="Set the maximum frequency of third most prolific alleles for bases to be included in the calculations",default=0.1)
 parser.add_argument("-M3","--max_minor3_freq",type=float,help="Set the maximum frequency of fourth most prolific alleles for bases to be included in the calculations",default=0.1)
 args = parser.parse_args()
@@ -89,7 +90,7 @@ for g1 in list_of_inputs: #output files names
         F+=list(np.repeat(float(vals[0]),int(vals[1])))
     downsampling=float(args.downsampling) # fraction of data to be used (0-1]. 
     Original_sample_number=NSAMS
-    win=50 # window size for calculating ploidy
+    win=args.window # window size for calculating ploidy
     phredscale=33
     NUMSITES=np.zeros(NSAMS+1,int)
     NUMSITES_HWE=np.zeros(NSAMS+1,int)
