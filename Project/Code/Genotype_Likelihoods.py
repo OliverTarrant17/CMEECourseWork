@@ -38,6 +38,7 @@ parser.add_argument("-dp","--min_global_depth",type=float,help="Set the minimum 
 parser.add_argument("-w","--window",type=int,help="Set the window size for genotype likelihood windows (reccomended approximately 1/10 of number of SNPs", default=50)
 parser.add_argument("-M2","--max_minor2_freq",type=float,help="Set the maximum frequency of third most prolific alleles for bases to be included in the calculations",default=0.1)
 parser.add_argument("-M3","--max_minor3_freq",type=float,help="Set the maximum frequency of fourth most prolific alleles for bases to be included in the calculations",default=0.1)
+parser.add_argument("-M","--max_x_meandepth",type=int,help="The max frequency of a base compared to the meandepth to be included. Used to filter out obvious mapping errors", default=5)
 args = parser.parse_args()
 
 
@@ -106,6 +107,18 @@ for g1 in list_of_inputs: #output files names
 
     no_bases=0
     total_bases=0
+    # calculate the meandepth for each sample
+    depths=[0 for i in range(NSAMS)]
+    bases=0
+    with gzip.open(g,'rb') as gz:
+        for line in gz:
+            bases+=1
+            Data=line.decode().strip('\n')# Convert bytes into string
+            l = Data.split('\t')
+            for i in range(NSAMS):
+                depths[i]+=int(l[(i+1)*3])
+    meandepths=list(map(lambda x : x/bases, depths))
+
     with gzip.open(g,'rb') as gz:# opens the mpilup. Use mpileup.read() to display content
         for line in gz:
             Data=line.decode().strip('\n')# Convert bytes into string
@@ -234,6 +247,9 @@ for g1 in list_of_inputs: #output files names
                             myReads=Reads(base,qualities)
                             #find sample depth of filtered data    
                             sampleDepth = len(myReads.base)
+                            if sampleDepth>args.max_x_meandepth*meandepths[n-1]:
+                                sampleDepth=0
+                                myReads=Reads("","")
                             p=[] # list to fill with probabilities for this base
 
 
