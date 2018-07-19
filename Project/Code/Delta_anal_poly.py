@@ -11,6 +11,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
+import pickle
 
 #import the data
 Data=pd.read_csv('../Results/Interpret_delta_new',sep='\t',names=["Ploidies","Inferred_Ploidy","SNPs","Mean_read_depth","H_0","H_1","Delta","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],index_col=False)
@@ -46,8 +47,10 @@ Data['Aneuploidy']=is_aneu
 
 
 #Seperate Data into X: the independent variables and y the dependent variables
-X_All=Data[['Inferred_Ploidy','Mean_read_depth','Normalised_delta','NSAMS','H_0','H_1','SNPs']].values
-X=Data[['Inferred_Ploidy','Mean_read_depth','Normalised_delta','NSAMS']].values
+#X_All=Data[['Inferred_Ploidy','Mean_read_depth','Normalised_delta','NSAMS','H_0','H_1','SNPs']].values
+#X=Data[['Inferred_Ploidy','Mean_read_depth','Normalised_delta','NSAMS']].values
+X_All=Data[['Inferred_Ploidy','Normalised_delta','NSAMS','H_0','H_1','SNPs']].values
+X=Data[['Inferred_Ploidy','Normalised_delta','NSAMS']].values
 y=Data.iloc[:,-1].values
 #X=X[1800:]
 #y=y[1800:]
@@ -81,4 +84,13 @@ print(cm)
 accuracy=(cm[0][0]+cm[1][1])/sum(sum(cm))
 print(accuracy)  
 #can get predictiosn using classifier.predict([[data]])
+
+#save model to disk
+filename = 'Aneuploidy_Classifier.sav'
+pickle.dump(classifier, open(filename, 'wb'))
+
+filename2 = 'Polynomial_Regressor.pk1'
+pickle.dump(polynomial_regressor, open(filename2, 'wb'))
+
+
 

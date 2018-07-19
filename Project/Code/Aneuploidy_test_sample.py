@@ -10,6 +10,7 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument("input",help="file containing the list of basenames for gzipped mpileup files for use in analysis to be used")
+parser.add_argument("-w","--window",type=int,help="Set the window size for genotype likelihood windows. Must match the value used in Genotype_Likelihood script (reccomended approximately 1/10 of number of SNPs", default=50)
 parser.add_argument("Samples_included",help="Which samples to be analysed")
 args = parser.parse_args()
 
@@ -47,7 +48,7 @@ for sample in Included_Samples:
     Original_contig_number=NContigs
     NUMSITES=np.zeros(NContigs+1,int)
     NUMSITES_HWE=np.zeros(NContigs+1,int)
-    win=50
+    win=args.window
     list_of_window=[] 
     list_of_window2=[[] for i in range(NContigs)]
 
@@ -197,7 +198,7 @@ for sample in Included_Samples:
     Mean_haploid_read_depth=average_depth
     Normalised_delta=Test/SNPs
     Contigs=NContigs
-    x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Contigs]])
+    x=np.array([[Ploidy_inferred,Normalised_delta,Contigs]])
     #import pdb; pdb.set_trace()
     prob_of_aneu=aneuploidy_in_contig(x)[0][1]
     print('Probability of aneuploidy:')
@@ -255,7 +256,7 @@ for sample in Included_Samples:
             Mean_haploid_read_depth=average_depth
             Normalised_delta=Test/SNPs
             Contigs=NContigs
-            x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Contigs]])
+            x=np.array([[Ploidy_inferred,Normalised_delta,Contigs]])
             prob_of_aneu=aneuploidy_in_contig(x)[0][1]
             print("Sample being removed {}".format(contig_to_remove))
             print("New probability of aneuploidy: {}".format(prob_of_aneu))
@@ -309,7 +310,7 @@ for sample in Included_Samples:
     print(Inferred_Ploidy)
     print("Contigs with aneuploidy")
     print(contigs_removed)
-    #import pdb; pdb.set_trace()
+    
     with open(directory+'/'+output_2,'wt') as f: 
         f.write(content2)
         ploidies=""

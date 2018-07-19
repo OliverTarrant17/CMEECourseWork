@@ -16,9 +16,11 @@ args = parser.parse_args()
 ploidy=[1,2,3,4,5,6,7,8]
 alleles = ['A','C','G','T']
 
-
-classifier = pickle.load(open('Aneuploidy_Classifier.sav', 'rb'))
-polynomial_regressor = pickle.load(open('Polynomial_Regressor.pk1','rb'))
+import Delta_anal_ANN as DAN
+classifier =DAN.classifier
+#polynomial_regressor = DAN.polynomial_regressor
+#classifier = pickle.load(open('Aneuploidy_Classifier.sav', 'rb'))
+#polynomial_regressor = pickle.load(open('Polynomial_Regressor.pk1','rb'))
 
 
 
@@ -124,14 +126,11 @@ for g in list_of_inputs:
             if base_number%win==1 and n == NSAMS:
                 list_of_window2.append(Overall_Prob_HWE) # make a list of single base probabilities for each sample at every 50th SNP 
             if base_number%win==0 and n == NSAMS: #calculate most likely ploidy for each 50 biallelic bases chunks of supercontig
-                for i in range(NSAMS):
-                    i=i+1
+                for i in range(NSAMS+1):
                     list_of_window.append(Overall_Prob_HWE)
                     max_index=list(Overall_Prob_HWE[i]).index(max(list(Overall_Prob_HWE[i])))
-                    ExpectedPloidy[i].append(max_index+1)      # Make a list of most likely ploidy in each window for each sample
-                    ExpectedPloidy[0].append(max_index+1)                         
+                    ExpectedPloidy[i].append(max_index+1)      # Make a list of most likely ploidy in each window for each sample                         
                     Overall_Prob[i]+=Overall_Prob_HWE[i] # Keep a track of the overall probability of each ploidy at each sample
-                Overall_Prob[0]+=Overall_Prob_HWE[0]
                 Overall_Prob_HWE=np.zeros((NSAMS+1,len(ploidy)),float) # reset the probability holder for the next window
                #end likelihood calc
             # end for sample
@@ -141,17 +140,13 @@ for g in list_of_inputs:
     #Ensure enough reads have been passed to for at least one window, if not use all that are available        
     if base_number<win:
         list_of_window.append(Overall_Prob_HWE)
-        for i in range(NSAMS):
-            i=i+1
+        for i in range(NSAMS+1):
             Overall_Prob[i]+=Overall_Prob_HWE[i]
             max_index=list(Overall_Prob_HWE[i]).index(max(list(Overall_Prob_HWE[i])))
             if max_index==0:
                 ExpectedPloidy[i].append(1)
-                ExpectedPloidy[0].append(1)
             else:
                 ExpectedPloidy[i].append(max_index+1) 
-                ExpectedPloidy[0].append(max_index+1)
-        Overall_Prob[0]+=Overall_Prob_HWE[0]
 
 
     # Perform bootstap analysis for the overall ploidy level
@@ -177,7 +172,7 @@ for g in list_of_inputs:
 #TEST FOR ANEUPLOIDY
     #import Delta_anal_ANN as DAN # for ANN classifier
     def aneuploidy_in_sample(x):
-        x=polynomial_regressor.transform(x)
+        #x=polynomial_regressor.transform(x)
         isit=classifier.predict(x)
         prob=classifier.predict_proba(x)
         return(prob)
@@ -204,8 +199,8 @@ for g in list_of_inputs:
     Mean_haploid_read_depth=average_depth
     Normalised_delta=Test/SNPs
     Samples=NSAMS
-    x=np.array([[Ploidy_inferred,Normalised_delta,Samples]])
-    prob_of_aneu=aneuploidy_in_sample(x)[0][1]
+    x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Samples]])
+    prob_of_aneu=aneuploidy_in_sample(x)[0]
     print('Probability of aneuploidy:')
     print(prob_of_aneu)
 
@@ -261,14 +256,13 @@ for g in list_of_inputs:
             Mean_haploid_read_depth=average_depth
             Normalised_delta=Test/SNPs
             Samples=NSAMS
-            #x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Samples]])
-            x=np.array([[Ploidy_inferred,Normalised_delta,Samples]])
-            prob_of_aneu=aneuploidy_in_sample(x)[0][1]
+            x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Samples]])
+            prob_of_aneu=aneuploidy_in_sample(x)[0]
             print("Sample being removed {}".format(sample_to_remove))
             print("New probability of aneuploidy: {}".format(prob_of_aneu))
         else:
-            samples_removed=samples_removed
-            samples_included=samples_included
+            samples_removed=list(range(1,Original_sample_number+1))
+            samples_included=[]
             prob_of_aneu=0
     print("probability of aneuploidy with samples removed: {}".format(prob_of_aneu))
     #Calculate baseline ploidy by considering windows
@@ -282,12 +276,10 @@ for g in list_of_inputs:
     #    Inferred_Ploidy=list(Overall_Prob[0]).index(max(list(Overall_Prob[0])))+1
     
     # Infer ploidy for samples without aneuploidy
-
-    temp2=[]
+    temp=[0 for value in range(8)]
     for sam in samples_included:
-        temp2=temp2+ExpectedPloidy[sam]
-
-    Inferred_Ploidy=generics.dist(temp2).index(max(generics.dist(temp2)))+1
+        temp=list(map(lambda x,y: x+y, temp, generics.dist(ExpectedPloidy[sam])))
+    Inferred_Ploidy=temp.index(max(temp))+1
     #Inferred_Ploidy=list(Overall_Prob[0]).index(max(list(Overall_Prob[0])))+1
     ploidies=""
     aneuploidy=""
@@ -300,26 +292,8 @@ for g in list_of_inputs:
         else:
             if base_number>(win*3):
                 sam_ploid = generics.dist(ExpectedPloidy[sample]).index(max(generics.dist(ExpectedPloidy[sample])))+1 # calculate the ploidy of aneuploidy samples
-                #if list(Overall_Prob[0]).index(max(list(Overall_Prob[0])))==list(Overall_Prob[sample]).index(max(list(Overall_Prob[sample]))):
-                #    sam_ploid = Inferred_Ploidy
-                #else:
-                #    
-                #    temp=generics.dist(ExpectedPloidy[sample])
-                #    max_temp=temp.index(max(temp))
-                #    temp[Inferred_Ploidy-1]=0
-                #    sam_ploid=temp.index(max(temp))+1
-                  
-
-
             else:
                 sam_ploid = list(Overall_Prob[sample]).index(max(list(Overall_Prob[sample])))+1
-                #if list(Overall_Prob[0]).index(max(list(Overall_Prob[0])))==list(Overall_Prob[sample]).index(max(list(Overall_Prob[sample]))):
-                #    sam_ploid = Inferred_Ploidy
-                #else:
-                #    temp=generics.dist(ExpectedPloidy[sample])
-                #    max_temp=temp.index(max(temp))
-                #    temp[max_temp]=0
-                #    sam_ploid=temp.index(max(temp))+1
             if sam_ploid==Inferred_Ploidy:
                 aneuploid=0
                 samples_included.append(sample)
@@ -348,3 +322,5 @@ for g in list_of_inputs:
         ploidies=""
         aneuploidy=""
         content2=""
+
+

@@ -30,7 +30,7 @@ for(i in 1:length(file_list)){
   genolikes = genolike_files[i]
   ploidies = ploids_files[i]
   output = out_plot[i]
-
+  
   Genolikes=read.csv(gzfile(genolikes),sep="\t",header=FALSE) # Load the data
   Ploidies=read.csv(ploidies,sep="\t",header=FALSE) # load the ploidies
   #extract the number of smaples and extract expected ploidies removing NA values
@@ -40,14 +40,14 @@ for(i in 1:length(file_list)){
   Expected_Ploidies <- Expected_Ploidies[,colSums(is.na(Expected_Ploidies))<nrow(Expected_Ploidies)]
   Ploidies<-head(Ploidies,2)
   Ploidies <- Ploidies[,colSums(is.na(Ploidies))<nrow(Ploidies)]
-
+  
   Depths=Genolikes$V5
   length_of_sample=length(Depths)/NSAMS
   Ploidies_to_sum=Ploidies[1,]
   Ploidies_to_sum[is.na(Ploidies_to_sum)]<-0
   Meandepth=sum(Depths)/(length_of_sample*sum(Ploidies_to_sum))
   # create a vector of lists of depths for each sample
-
+  
   sample_depths <- vector("list",NSAMS)
   for(j in 0:(NSAMS-1)){
     p=1
@@ -62,15 +62,17 @@ for(i in 1:length(file_list)){
       }
     }
   }
-  
+  sample_mean_depth<-c()
   for(sample in 1:NSAMS){
     sample_depths[[sample]]<-sample_depths[[sample]][sample_depths[[sample]]!=0]
-    sample_depths[[sample]]<-rollmean(sample_depths[[sample]],length_of_sample/100,fill=list(0,0,0)) # take rolling average 
-    sample_depths[[sample]]<-sample_depths[[sample]][seq(ceiling(length_of_sample/100)+1,length.out = 100)] # take every len/100 rolling average value
-  }
-
+    
+    #sample_depths[[sample]]<-rollmean(sample_depths[[sample]],length_of_sample/100,fill=list(0,0,0)) # take rolling average 
+    sample_depths[[sample]]<-sample_depths[[sample]][seq(ceiling(length_of_sample/1000)+1,length.out = 1000)] # take every len/100 rolling average value
+    sample_mean_depth[sample]<-mean(sample_depths[[sample]])  
+    }
+  
   depths <- as.data.frame(sample_depths[[1]])
-
+  
   for(i in c(2:NSAMS)){
     depths<-cbind(depths,sample_depths[[i]])
   }
@@ -79,29 +81,29 @@ for(i in 1:length(file_list)){
   
   
   depths <-melt(depths)
-
+  
   ploidy<-c()
-
+  
   for(j in Ploidies){
-    ploidy<- c(ploidy,rep(j[1],100))
-
+    ploidy<- c(ploidy,rep(j[1],1000))
+    
   }
   depths <- cbind(depths,ploidy)
-
+  
   # Add the window by window analysis
   number_of_windows<-length(Expected_Ploidies[1,])
-  normalised_window_length<-floor(100/number_of_windows)
-  ex<-100-(number_of_windows*normalised_window_length)
+  normalised_window_length<-floor(1000/number_of_windows)
+  ex<-1000-(number_of_windows*normalised_window_length)
   expected_ploidy<-c()
-
+  
   
   for(n in 1:NSAMS){
     for(j in Expected_Ploidies[n,]){
       expected_ploidy<- c(expected_ploidy,rep(j,normalised_window_length))
-      }
+    }
     expected_ploidy<-c(expected_ploidy,rep(Expected_Ploidies[n,length(Expected_Ploidies)],ex))
-      
-      
+    
+    
     
     
   }
@@ -111,9 +113,9 @@ for(i in 1:length(file_list)){
   myColors <- mycols <- colors()[c(12,414,576,573,524,436,106,74,75,86,99,137,627,656,367,419,81,410,512,402,468,592,535,429,404,477,50,79,102,20,101,52,51,24,134,616)]
   names(myColors) <- levels(depths$variable)
   colScale <- scale_colour_manual(name = "Sample",values = myColors)
-
-
-
+  
+  
+  
   #plot<-ggplot(data = depths) + xlim(0,length(Depths)) +ylim(0,quantile(Depths,0.9)) # plot axis
   #plot <- plot + theme(legend.position = "right",plot.title = element_text(hjust = 0.5))
   #plot <- plot + geom_line(data=depths,aes(x=c(1:length(Depths)),y=value,colour=factor(variable))) +colScale # plot depths
@@ -122,19 +124,19 @@ for(i in 1:length(file_list)){
   #plot <- plot + geom_line(data = depths,aes(x=c(1:length(Depths)),y=expected_ploidy*Meandepth), size=0.5,colour='red') # plot inferred ploidy
   #plot <- plot +scale_y_continuous('Depth',limits=c(0,Meandepth*10),sec.axis = sec_axis(~./Meandepth, name = 'Inferred Ploidy',breaks = c(0,1,2,3,4,5,6,7,8))) # add 2nd y axis
   #plot <- plot + scale_x_continuous(name = "Sample", breaks = c(1:NSAMS)*length_of_sample-(length_of_sample/2),labels = c(1:NSAMS)) # change scale on x axis to samples
-  
-  plot<-ggplot(data = depths) + xlim(0,100*NSAMS) +ylim(0,quantile(Depths,0.8)) # plot axis
-  plot <- plot + theme(legend.position = "right",plot.title = element_text(hjust = 0.5))
-  plot <- plot + geom_jitter(data=depths,aes(x=c(1:(100*NSAMS)),y=value,colour=factor(variable))) +colScale # plot depths
-  plot <- plot + ggtitle("Predicted ploidies vs depth") + ylab("Depth") # add titles
-  plot <- plot + geom_line(data = depths,aes(x=c(1:(100*NSAMS)),y=ploidy*Meandepth), size=1,colour='black') # plot inferred ploidy
-  plot <- plot + geom_line(data = depths,aes(x=c(1:(100*NSAMS)),y=expected_ploidy*Meandepth), size=0.5,colour='red') # plot inferred ploidy
-  plot <- plot +scale_y_continuous('Depth',limits=c(0,Meandepth*10),sec.axis = sec_axis(~./Meandepth, name = 'Inferred Ploidy',breaks = c(0,1,2,3,4,5,6,7,8))) # add 2nd y axis
-  plot <- plot + scale_x_continuous(name = "Sample", breaks = c(1:NSAMS)*100-(50),labels = c(1:NSAMS)) # change scale on x axis to samples
-  
+  for(sample in 1:NSAMS){
+    plot<-ggplot(data = depths[c((((sample-1)*1000)+1):(sample*1000)),]) + xlim(0,1000) +ylim(0,quantile(Depths,0.8)) # plot axis
+    plot <- plot + theme(legend.position = "right",plot.title = element_text(hjust = 0.5))
+    plot <- plot + geom_jitter(data=depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:(1000)),y=value,colour=factor(variable))) +colScale # plot depths
+    plot <- plot + ggtitle("Predicted ploidies vs depth") + ylab("Depth") # add titles
+    plot <- plot + geom_line(data= depths[c((((sample-1)*1000)+1):(sample*1000)),] ,aes(x=c(1:1000),y=ploidy*sample_mean_depth[sample]), size=1,colour='black') # plot inferred ploidy
+    plot <- plot + geom_line(data = depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:1000),y=expected_ploidy*sample_mean_depth[sample]), size=0.5,colour='red') # plot inferred ploidy
+    plot <- plot +scale_y_continuous('Depth',limits=c(0,sample_mean_depth[sample]*ploidy[(sample*1000)-1]*2),sec.axis = sec_axis(~./Meandepth, name = 'Inferred Ploidy',breaks = c(0:(ploidy[(sample*1000)-1]*2)))) # add 2nd y axis
+    plot <- plot + scale_x_continuous(name = "Sample", breaks = c(500),labels = c(sample)) # change scale on x axis to samples
+    pdf(paste0(output,"_",sample), 11.7, 8.3)
+    plot(plot)
+    graphics.off()
+  }
 
-  pdf(output, 11.7, 8.3)
-  plot(plot)
-  graphics.off()
 }
 
