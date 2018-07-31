@@ -5,6 +5,7 @@ graphics.off()
 library(ggplot2)
 library(RColorBrewer)
 library(reshape2)
+library(zoo)
 args = commandArgs(trailingOnly=TRUE)
 
 input = args[1]
@@ -14,6 +15,12 @@ genolike_files <- c()
 ploids_files <- c()
 out_plot <- c()
 win<-strtoi(args[3])
+
+#mode function
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
 
 # Extract file names and build output names
 for(i in 1:length(file_list)){ ###
@@ -104,12 +111,19 @@ ploidy_num<-c()
 expected_ploidy<-c()
 for(n in 1:NSAMS){
   
+  
    for(i in 1:q){
-     excess=length_of_samples[i]-(win*length(Exp_Ploidies[[n+(NSAMS*(i-1))]]))
+     
+     Exp_Ploidies[[n+(NSAMS*(i-1))]]<-rollapply(Exp_Ploidies[[n+(NSAMS*(i-1))]],width=length(Exp_Ploidies[[n+(NSAMS*(i-1))]])/20,FUN=getmode,by=length(Exp_Ploidies[[n+(NSAMS*(i-1))]])/20)
+     Exp_Ploidies[[n+(NSAMS*(i-1))]]<-Exp_Ploidies[[n+(NSAMS*(i-1))]][seq(1,length(Exp_Ploidies[[n+(NSAMS*(i-1))]]),length.out = min(5,length(Exp_Ploidies[[n+(NSAMS*(i-1))]])))]
+     length_of_win=floor(length_of_samples[i]/length(Exp_Ploidies[[n+(NSAMS*(i-1))]]))
+     excess=length_of_samples[i]-(length(Exp_Ploidies[[n+(NSAMS*(i-1))]])*length_of_win)
+     #excess=length_of_samples[i]-(win*length(Exp_Ploidies[[n+(NSAMS*(i-1))]]))
+     
      contig_num<- c(contig_num,rep(i,length_of_samples[i]))
      ploidy_num<- c(ploidy_num,rep(ploidy[[n]][i],length_of_samples[i]))
      for(j in Exp_Ploidies[[n+(NSAMS*(i-1))]]){
-        expected_ploidy<-c(expected_ploidy,rep(j,win))
+        expected_ploidy<-c(expected_ploidy,rep(j,length_of_win))
    }
      expected_ploidy<-c(expected_ploidy,rep(j,excess))
      
@@ -130,14 +144,16 @@ colScale <- scale_colour_manual(name = "Contig",values = myColors)
 for(i in 1:NSAMS){  
   output = paste0(directory,'/Sample_',i,'_plot.pdf')
   data_to_plot <- depths[depths$variable==paste0(i),]  
-  Meandepth=sum(data_to_plot$value)/sum(data_to_plot$ploidy_num)
-   
-  plot<-ggplot(data = data_to_plot) + xlim(0,genome_length) +ylim(0,quantile(data_to_plot$value,0.8)) # plot axis
-  plot <- plot + geom_jitter(data=data_to_plot,aes(x=c(1:genome_length),y=data_to_plot$value,colour=factor(contig_num))) +colScale# plot depths
-  plot <- plot + ggtitle("Predicted ploidies vs depth") + ylab("Depth") # add titles
-  plot <- plot + geom_line(data = data_to_plot,aes(x=c(1:length(data_to_plot$value)),y=data_to_plot$ploidy_num*Meandepth), size=1,colour='black') # plot inferred ploidy
-  plot <- plot + geom_line(data = data_to_plot,aes(x=c(1:length(data_to_plot$value)),y=data_to_plot$expected_ploidy*Meandepth), size=0.5,colour='red') # plot inferred ploidy
-  plot <- plot + scale_y_continuous('Depth', limits=c(0,Meandepth*10), sec.axis = sec_axis(~./Meandepth,name = 'Inferred Ploidy',breaks = c(0,1,2,3,4,5,6,7,8))) # add 2nd y axis
+  Meandepth=sum(data_to_plot$value)/length(data_to_plot$value)
+  normalised_haploid=mean(data_to_plot$value/Meandepth) 
+  
+  plot<-ggplot(data = data_to_plot) + xlim(0,sum(length_of_samples)) +ylim(0,max(data_to_plot$value)*1.2) # plot axis
+  plot <- plot + theme(legend.position = "top",plot.title = element_text(hjust = 0.5,size = 20,face="bold"),axis.text=element_text(size=14),axis.title=element_text(size=16,face="bold")) # sprt out axis
+  plot <- plot + geom_point(data=data_to_plot,aes(x=c(1:length(data_to_plot$value)),y=data_to_plot$value/Meandepth,colour=factor(contig_num)),alpha=1/3) +colScale# plot depths
+  plot <- plot + ggtitle("Predicted ploidies vs depth") + ylab("Normalised Depth") # add titles
+  plot <- plot + geom_line(data = data_to_plot,aes(x=c(1:length(data_to_plot$value)),y=data_to_plot$ploidy_num*normalised_haploid), size=1,colour='black') # plot inferred ploidy
+  plot <- plot + geom_line(data = data_to_plot,aes(x=c(1:length(data_to_plot$value)),y=data_to_plot$expected_ploidy*normalised_haploid), size=0.25,colour='red',linetyoe="dashed") # plot inferred ploidy
+  plot <- plot + scale_y_continuous('Normalised Depth', limits=c(0,normalised_haploid*max(data_to_plot$ploidy_num)+2), sec.axis = sec_axis(~./normalised_haploid,name = 'Inferred Ploidy',breaks = c(0:max(data_to_plot$expected_ploidy)+1))) # add 2nd y axis
   plot <- plot + scale_x_continuous(name = "Contig", breaks = cumsum(length_of_samples)-length_of_samples/2,labels = c(1:max(contig_num))) # change scale on x axis to samples
    
    
