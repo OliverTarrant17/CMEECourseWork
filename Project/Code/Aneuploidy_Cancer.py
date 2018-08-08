@@ -124,8 +124,7 @@ for g in list_of_inputs:
                 base_number+=1
                 no_bases+=1
             if base_number%win==1 and n == NSAMS:
-                list_of_window2.append(Overall_Prob_HWE) # make a list of single base probabilities for each sample at every 50th SNP 
-                window_start
+                list_of_window2.append(Overall_Prob_HWE) # make a list of single base probabilities for each sample at every 50th SNP
             if base_number%win==0 and n == NSAMS: #calculate most likely ploidy for each 50 biallelic bases chunks of supercontig
                 windows.append(int(l[1]))
                 for i in range(NSAMS+1):
@@ -201,7 +200,7 @@ for g in list_of_inputs:
     Mean_haploid_read_depth=average_depth
     Normalised_delta=Test/SNPs
     Samples=NSAMS
-    x=np.array([[Ploidy_inferred,Mean_haploid_read_depth,Normalised_delta,Samples]])
+    x=np.array([[Ploidy_inferred,Normalised_delta,Samples]])
     prob_of_aneu=aneuploidy_in_sample(x)[0][1]
     print('Probability of aneuploidy:')
     print(prob_of_aneu)
