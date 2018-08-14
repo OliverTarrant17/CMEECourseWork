@@ -15,7 +15,11 @@ args = commandArgs(trailingOnly=TRUE)
 input = args[1]
 BAMS = args[2]
 bams <- as.data.frame(read.csv(BAMS,header=FALSE))
-b <- as.vector(bams$V1) # Generate a list of the bam files from the bamlist
+b2 <- as.vector(bams$V1) # Generate a list of the bam files from the bamlist
+b<-b2
+for(bam in 1:length(b)){
+  b2[bam]<-unlist(strsplit(b[bam],split=".indelRealigned"))[1]
+}
 NSAMS = length(b) # Extract length of bamlist
 
 NB_Data <- as.data.frame(read.csv(paste0(input,'_Negative_Binomial_data.csv'),header = TRUE),mode=numeric)
@@ -42,7 +46,8 @@ for(i in c(1:NSAMS)){
     #geom_line(aes(x=X,y=Poiss.4,color=paste0("Poisson 4")),linetype="dotted") +
     #geom_line(aes(x=X,y=Poiss.5,color=paste0("Poisson 5")),linetype="dotted") +
     labs(x="Occurances of base",y="Frequency",color="Distribution/AIC")+
-    ggtitle(paste0("Fitted distribution sample ",b[i]))+theme(legend.position = "right",plot.title = element_text(hjust = 0.5))
+    ggtitle(paste0("Fitted distribution sample ",b2[i]))+
+    theme(legend.position = "top",plot.title = element_text(hjust = 0.5,size=32,face="bold"),axis.text=element_text(size=28),axis.title = element_text(size=32,face="bold"),legend.text = element_text(size=20),legend.title = element_text(size=24))
   
   pdf(paste0(input,"_sample_",b[i],"_plot.pdf"), 11.7, 8.3)
   plot(plot1)
