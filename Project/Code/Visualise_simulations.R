@@ -144,8 +144,9 @@ for(i in 1:length(file_list)){
     
   #plot <- plot + geom_point(data=depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:(1000)),y=value,colour=factor(expected_ploidy)),size=2,alpha=1/3)  # plot depths
   plot <- plot + geom_point(data=depths[c(1:(NSAMS*1000)),],aes(x=c(1:(1000*NSAMS)),y=value,colour=factor(expected_ploidy)),size=2,alpha=1/3)  # plot depths
-  plot <- plot + geom_line(data= depths[c(1:(NSAMS*1000)),],aes(x=c(1:(1000*NSAMS)),y=depths$plot_mean_depths,colour="Inferred ploidy"),size=1) +guides(color=guide_legend("Localised Ploidy"))+colScale
-  plot <- plot + geom_line(data= depths[c(1:(NSAMS*1000)),],aes(x=c(1:(1000*NSAMS)),y=rep(sample_mean_depth,each=1000),colour="Mean Depth"),size=0.25,linetype="dashed")
+  plot <- plot + geom_line(data= depths[c(1:(NSAMS*1000)),],aes(x=c(1:(1000*NSAMS)),y=depths$plot_mean_depths,colour="Inferred ploidy"),size=1)
+  plot <- plot + geom_line(data= depths[c(1:(NSAMS*1000)),],aes(x=c(1:(1000*NSAMS)),y=rep(sample_mean_depth,each=1000),colour="Mean Depth"),size=0.4,linetype="dashed") +
+    guides(color=guide_legend("Localised Ploidy",override.aes = list(linetype = c(rep("blank", temp), "solid","dashed"),size=c(rep(2,temp),1,0.5),shape = c(rep(16, temp), NA,NA))))+colScale
   plot <- plot + facet_grid(.~depths$variable,scales = "free")#,shrink=FALSE,drop=FALSE)
   plot <- plot + ggtitle(paste0("Inferred ploidies vs depth ")) + ylab("Depth") # add titles
     
