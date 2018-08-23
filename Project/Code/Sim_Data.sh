@@ -21,7 +21,7 @@ do
 		echo $i            # Write the number of the chromosome currently being calculated
 		CHROMDEPTH=${MEANDEPTH}        # Calculate the mean depth expected for this chromosome (mean depth*ploidy of the chromosome)
 
-	    Rscript $POLY/simulMpileup.R --copy $COPIES --sites $NSITES --depth $CHROMDEPTH --offset $offset --errdepth 0.4 --inbred 0.0x${NSAMS}  >> $output
+	    Rscript $POLY/simulMpileup.R --copy $COPIES --sites $NSITES --depth $CHROMDEPTH --offset $offset --errdepth 0.4 --inbred 0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1  >> $output
         gzip $output
 	    
 

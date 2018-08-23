@@ -88,7 +88,11 @@ for g1 in list_of_inputs: #output files names
     temp=inbreed.split(',')
     for t in temp:
         vals=t.split('x')
-        F+=list(np.repeat(float(vals[0]),int(vals[1])))
+        if len(vals)==1:
+            reps=1
+        else:
+            reps=int(vals[1])
+        F+=list(np.repeat(float(vals[0]),reps))
     downsampling=float(args.downsampling) # fraction of data to be used (0-1]. 
     Original_sample_number=NSAMS
     win=args.window # window size for calculating ploidy
