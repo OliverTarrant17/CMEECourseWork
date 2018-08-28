@@ -147,13 +147,13 @@ for(i in 1:length(file_list)){
     
     par(mfrow = c(1,NSAMS))
     plot<-ggplot(data = depths[c((((sample-1)*1000)+1):(sample*1000)),]) + xlim(0,1000) +ylim(0,quantile(Depths,0.8)) # plot axis
-    plot <- plot + theme(legend.position = "top",plot.title = element_text(hjust = 0.5,size = 20,face="bold"),axis.text=element_text(size=14),axis.title=element_text(size=16,face="bold")) # sprt out axis
+    plot <- plot + theme(legend.position = "top",plot.title = element_text(hjust = 0.5,size = 20,face="bold"),axis.text=element_text(size=14),axis.title=element_text(size=16,face="bold"),legend.text = element_text(size=10),legend.title = element_text(size=12)) # sprt out axis
     
     #plot <- plot + geom_point(data=depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:(1000)),y=value,colour=factor(expected_ploidy)),size=2,alpha=1/3)  # plot depths
     plot <- plot + geom_point(data=depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:(1000)),y=value,colour=factor(expected_ploidy)),size=2,alpha=1/3)  # plot depths
     plot <- plot + geom_line(data= depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:1000),y=ploidy*sample_mean_depth[sample],colour="Chromosome inferred ploidy"),size=1) 
     plot <- plot + geom_line(data= depths[c((((sample-1)*1000)+1):(sample*1000)),],aes(x=c(1:1000),y=sample_mean_depth[sample],colour="Mean Depth"),size=0.5,linetype="dashed")+
-      guides(color=guide_legend("Localised Ploidy",override.aes = list(linetype = c(rep("blank", temp), "solid","dashed"),size=c(rep(2,temp),1,0.5),shape = c(rep(16, temp), NA,NA),aplha=1/2)))+colScale
+      guides(color=guide_legend("Localised Ploidy",override.aes = list(linetype = c(rep("blank", temp), "solid","dashed"),size=c(rep(2,temp),1,0.5),shape = c(rep(16, temp), NA,NA),aplha=2/3)))+colScale
     
     plot <- plot + ggtitle(paste0("Predicted ploidies vs depth: ",sample_list[sample])) + ylab("Depth") # add titles
     
